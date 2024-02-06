@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{16D0ADA9-E176-43E0-AB25-BE9F59679F62}|TicketMate.Admin.Api\\TicketMate.Admin.Api.csproj|c:\\users\\anupamadevindibistec\\onedrive - bistec global\\documents\\uom\\software-project-ptes-backend\\ticketmate\\ticketmate.admin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16D0ADA9-E176-43E0-AB25-BE9F59679F62}|TicketMate.Admin.Api\\TicketMate.Admin.Api.csproj|solutionrelative:ticketmate.admin.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984E20BE-1B8F-4231-8322-2B920141ADAA}|TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj|c:\\users\\anupamadevindibistec\\onedrive - bistec global\\documents\\uom\\software-project-ptes-backend\\ticketmate\\ticketmate.admin.application\\handlers\\getusersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984E20BE-1B8F-4231-8322-2B920141ADAA}|TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj|solutionrelative:ticketmate.admin.application\\handlers\\getusersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984E20BE-1B8F-4231-8322-2B920141ADAA}|TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj|c:\\users\\anupamadevindibistec\\onedrive - bistec global\\documents\\uom\\software-project-ptes-backend\\ticketmate\\ticketmate.admin.application\\dtos\\userreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984E20BE-1B8F-4231-8322-2B920141ADAA}|TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj|solutionrelative:ticketmate.admin.application\\dtos\\userreturn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16D0ADA9-E176-43E0-AB25-BE9F59679F62}|TicketMate.Admin.Api\\TicketMate.Admin.Api.csproj|c:\\users\\anupamadevindibistec\\onedrive - bistec global\\documents\\uom\\software-project-ptes-backend\\ticketmate\\ticketmate.admin.api\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16D0ADA9-E176-43E0-AB25-BE9F59679F62}|TicketMate.Admin.Api\\TicketMate.Admin.Api.csproj|solutionrelative:ticketmate.admin.api\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984E20BE-1B8F-4231-8322-2B920141ADAA}|TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj|c:\\users\\anupamadevindibistec\\onedrive - bistec global\\documents\\uom\\software-project-ptes-backend\\ticketmate\\ticketmate.admin.application\\ticketmate.admin.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{984E20BE-1B8F-4231-8322-2B920141ADAA}|TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj|solutionrelative:ticketmate.admin.application\\ticketmate.admin.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984E20BE-1B8F-4231-8322-2B920141ADAA}|TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj|c:\\users\\anupamadevindibistec\\onedrive - bistec global\\documents\\uom\\software-project-ptes-backend\\ticketmate\\ticketmate.admin.application\\handlers\\getusersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984E20BE-1B8F-4231-8322-2B920141ADAA}|TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj|solutionrelative:ticketmate.admin.application\\handlers\\getusersquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{984E20BE-1B8F-4231-8322-2B920141ADAA}|TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj|c:\\users\\anupamadevindibistec\\onedrive - bistec global\\documents\\uom\\software-project-ptes-backend\\ticketmate\\ticketmate.admin.application\\handlers\\getusersqueryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{984E20BE-1B8F-4231-8322-2B920141ADAA}|TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj|solutionrelative:ticketmate.admin.application\\handlers\\getusersqueryvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE469CAF-7128-404F-8A9C-8B40B57665E8}|TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj|c:\\users\\anupamadevindibistec\\onedrive - bistec global\\documents\\uom\\software-project-ptes-backend\\ticketmate\\ticketmate.admin.infastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE469CAF-7128-404F-8A9C-8B40B57665E8}|TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj|solutionrelative:ticketmate.admin.infastructure\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{678512ED-C482-42FC-8EAA-50DE33E92A55}|TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj|c:\\users\\anupamadevindibistec\\onedrive - bistec global\\documents\\uom\\software-project-ptes-backend\\ticketmate\\ticketmate.admin.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{678512ED-C482-42FC-8EAA-50DE33E92A55}|TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj|solutionrelative:ticketmate.admin.domain\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Api\\Program.cs",
+              "RelativeDocumentMoniker": "TicketMate.Admin.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Api\\Program.cs",
+              "RelativeToolTip": "TicketMate.Admin.Api\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-06T17:45:52.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserReturn.cs",
+              "DocumentMoniker": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\Dtos\\UserReturn.cs",
+              "RelativeDocumentMoniker": "TicketMate.Admin.Application\\Dtos\\UserReturn.cs",
+              "ToolTip": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\Dtos\\UserReturn.cs",
+              "RelativeToolTip": "TicketMate.Admin.Application\\Dtos\\UserReturn.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAAAIAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-06T17:24:29.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetUsersQueryValidator.cs",
+              "DocumentMoniker": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\Handlers\\GetUsersQueryValidator.cs",
+              "RelativeDocumentMoniker": "TicketMate.Admin.Application\\Handlers\\GetUsersQueryValidator.cs",
+              "ToolTip": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\Handlers\\GetUsersQueryValidator.cs",
+              "RelativeToolTip": "TicketMate.Admin.Application\\Handlers\\GetUsersQueryValidator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-06T17:14:40.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetUsersQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\Handlers\\GetUsersQueryHandler.cs",
+              "RelativeDocumentMoniker": "TicketMate.Admin.Application\\Handlers\\GetUsersQueryHandler.cs",
+              "ToolTip": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\Handlers\\GetUsersQueryHandler.cs",
+              "RelativeToolTip": "TicketMate.Admin.Application\\Handlers\\GetUsersQueryHandler.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAawBIAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-06T17:14:30.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetUsersQuery.cs",
+              "DocumentMoniker": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\Handlers\\GetUsersQuery.cs",
+              "RelativeDocumentMoniker": "TicketMate.Admin.Application\\Handlers\\GetUsersQuery.cs",
+              "ToolTip": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\Handlers\\GetUsersQuery.cs",
+              "RelativeToolTip": "TicketMate.Admin.Application\\Handlers\\GetUsersQuery.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-06T17:14:07.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TicketMate.Admin.Application",
+              "DocumentMoniker": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
+              "RelativeDocumentMoniker": "TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
+              "ToolTip": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
+              "RelativeToolTip": "TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-06T17:13:39.114Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Infastructure\\Class1.cs",
+              "RelativeDocumentMoniker": "TicketMate.Admin.Infastructure\\Class1.cs",
+              "ToolTip": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Infastructure\\Class1.cs",
+              "RelativeToolTip": "TicketMate.Admin.Infastructure\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-06T11:23:18.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\Class1.cs",
+              "RelativeDocumentMoniker": "TicketMate.Admin.Domain\\Class1.cs",
+              "ToolTip": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\Class1.cs",
+              "RelativeToolTip": "TicketMate.Admin.Domain\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-06T11:16:24.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Api\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "TicketMate.Admin.Api\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\UOM\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Api\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "TicketMate.Admin.Api\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAwCgAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-06T10:50:30.65Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
