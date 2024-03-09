@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicketMate.Admin.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+697858cfef52c145c4655ae7e764ab4e779be004")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddee7c9c50b8f50846c366523a97dbe91daac511")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicketMate.Admin.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicketMate.Admin.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
