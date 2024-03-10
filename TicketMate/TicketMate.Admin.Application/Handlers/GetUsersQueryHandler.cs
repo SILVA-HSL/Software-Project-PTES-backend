@@ -14,7 +14,7 @@ namespace TicketMate.Admin.Application.Handlers
         public async Task<IList<UserReturn>> Handle(GetUsersQuery request, CancellationToken cancellationToken)
         {
             List<UserReturn> userReturn = new List<UserReturn>();
-            request.TrainId = "abc";
+            request.TrainId = "abcd";
             userReturn.Capacity = 10;
             return userReturn;
         }
