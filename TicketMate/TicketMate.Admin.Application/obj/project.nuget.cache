@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3T0ya3wUzJ7pRgCca9WJ0Z0NHy89365B08h5W6p82JGqaeZxCcQtlyTYI1ot5SNn3mW0yhePahtDL/MiJUkvDg==",
+  "dgSpecHash": "PJ3YBlTH+q/+nSPooI6Ai6G6WvpJB4fupmXvoKRAraxBRrjdRnzGUqnCC0fdDzNJdQVoOm9nmY77aianCTmtzQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\New folder (3)\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
+  "projectFilePath": "C:\\Users\\Malinga\\Documents\\academic\\Software Project Backend\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\AnupamaDevindiBISTEC\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
-    "C:\\Users\\AnupamaDevindiBISTEC\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
-    "C:\\Users\\AnupamaDevindiBISTEC\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\AnupamaDevindiBISTEC\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    "C:\\Users\\Malinga\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\Malinga\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\Malinga\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
   ],
   "logs": []
 }

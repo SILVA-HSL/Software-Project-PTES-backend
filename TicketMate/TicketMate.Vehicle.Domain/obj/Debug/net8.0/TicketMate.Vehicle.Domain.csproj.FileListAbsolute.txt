@@ -1,0 +1,12 @@
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\bin\Debug\net8.0\TicketMate.Vehicle.Domain.deps.json
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\bin\Debug\net8.0\TicketMate.Vehicle.Domain.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\bin\Debug\net8.0\TicketMate.Vehicle.Domain.pdb
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\obj\Debug\net8.0\TicketMate.Vehicle.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\obj\Debug\net8.0\TicketMate.Vehicle.Domain.AssemblyInfoInputs.cache
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\obj\Debug\net8.0\TicketMate.Vehicle.Domain.AssemblyInfo.cs
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\obj\Debug\net8.0\TicketMate.Vehicle.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\obj\Debug\net8.0\TicketMate.Vehicle.Domain.sourcelink.json
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\obj\Debug\net8.0\TicketMate.Vehicle.Domain.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\obj\Debug\net8.0\refint\TicketMate.Vehicle.Domain.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\obj\Debug\net8.0\TicketMate.Vehicle.Domain.pdb
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Domain\obj\Debug\net8.0\ref\TicketMate.Vehicle.Domain.dll
