@@ -8,5 +8,9 @@
 
         public int SetsCount { get; set; }
         public bool ACorNONAC { get; set; }
+
+        //public byte[] LicenseImg { get; set; } // Change data type as per your image storage mechanism
+        //public byte[] InsuranceImg { get; set; } // Change data type as per your image storage mechanism
+
     }
 }
