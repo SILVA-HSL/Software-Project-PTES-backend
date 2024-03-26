@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TicketMate",
+    "\\TicketMate\\TicketMate.Booking.Application",
+    "\\TicketMate\\TicketMate.Booking.Application\\Services",
+    "\\TicketMate\\TicketMate.Booking.Domain",
+    "\\TicketMate\\TicketMate.Booking.Infrastructure"
+  ],
+  "SelectedNode": "\\TicketMate\\TicketMate.Booking.Application\\Services\\BookingService.cs",
+  "PreviewInSolutionExplorer": false
+}

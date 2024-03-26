@@ -1,0 +1,206 @@
+{
+  "format": 1,
+  "restore": {
+    "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Application\\TicketMate.Booking.Application.csproj": {}
+  },
+  "projects": {
+    "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Application\\TicketMate.Booking.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Application\\TicketMate.Booking.Application.csproj",
+        "projectName": "TicketMate.Booking.Application",
+        "projectPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Application\\TicketMate.Booking.Application.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj": {
+                "projectPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj"
+              },
+              "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj": {
+                "projectPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
+        "projectName": "TicketMate.Booking.Domain",
+        "projectPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj",
+        "projectName": "TicketMate.Booking.Infrastructure",
+        "projectPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj": {
+                "projectPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

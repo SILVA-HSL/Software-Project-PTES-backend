@@ -1,0 +1,12 @@
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net8.0\TicketMate.Admin.Infastructure.deps.json
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net8.0\TicketMate.Admin.Infastructure.dll
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net8.0\TicketMate.Admin.Infastructure.pdb
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.GeneratedMSBuildEditorConfig.editorconfig
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.AssemblyInfoInputs.cache
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.AssemblyInfo.cs
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.csproj.CoreCompileInputs.cache
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.sourcelink.json
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.dll
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\refint\TicketMate.Admin.Infastructure.dll
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.pdb
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\ref\TicketMate.Admin.Infastructure.dll
