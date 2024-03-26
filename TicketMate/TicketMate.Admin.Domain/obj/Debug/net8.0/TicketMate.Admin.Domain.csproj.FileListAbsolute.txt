@@ -1,0 +1,12 @@
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.deps.json
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfoInputs.cache
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfo.cs
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CoreCompileInputs.cache
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.sourcelink.json
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
+H:\TicketmateBackend\Repository Works\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll

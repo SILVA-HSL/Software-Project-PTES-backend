@@ -178,19 +178,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\AnupamaDevindiBISTEC\\.nuget\\packages\\": {}
+    "C:\\Users\\Acer\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\New folder (3)\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Api\\TicketMate.Admin.Api.csproj",
+      "projectUniqueName": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Admin.Api\\TicketMate.Admin.Api.csproj",
       "projectName": "TicketMate.Admin.Api",
-      "projectPath": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\New folder (3)\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Api\\TicketMate.Admin.Api.csproj",
-      "packagesPath": "C:\\Users\\AnupamaDevindiBISTEC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\New folder (3)\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Api\\obj\\",
+      "projectPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Admin.Api\\TicketMate.Admin.Api.csproj",
+      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+      "outputPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Admin.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\AnupamaDevindiBISTEC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -204,8 +204,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\New folder (3)\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj": {
-              "projectPath": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\New folder (3)\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj"
+            "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj": {
+              "projectPath": "H:\\TicketmateBackend\\Repository Works\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj"
             }
           }
         }
@@ -214,11 +214,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -249,7 +244,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
