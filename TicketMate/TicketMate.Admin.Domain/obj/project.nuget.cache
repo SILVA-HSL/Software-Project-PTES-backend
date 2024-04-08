@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "2zS1KllZZtWhy954mM9denE1yWZPHi8+AnjoLtG2FTtpR00Xm0qJi+BKAVk3rxOs0pjTUmxZLqVNpuWXQ0ZdBQ==",
+  "dgSpecHash": "5RAaczfec9sQe+FCMsjzwurK89l6BYbt1sbAgAK7lSOiyTdwNnnutsTq6w5HqcD0TZHlVCGvWK8q68nzOMveKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\New folder (3)\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

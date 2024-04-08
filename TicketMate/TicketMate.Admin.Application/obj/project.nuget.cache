@@ -1,13 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "3T0ya3wUzJ7pRgCca9WJ0Z0NHy89365B08h5W6p82JGqaeZxCcQtlyTYI1ot5SNn3mW0yhePahtDL/MiJUkvDg==",
+  "dgSpecHash": "KOnqA6SImxef+kB/ixmRRuvND8EdNUu6Nn1XMYn3qjAOfYxW6hcM6DJUHb3dCBXmdJ2xlUXCdXHCNGP6wHyICw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AnupamaDevindiBISTEC\\OneDrive - BISTEC Global\\Documents\\New folder (3)\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
+  "projectFilePath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\AnupamaDevindiBISTEC\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
-    "C:\\Users\\AnupamaDevindiBISTEC\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
-    "C:\\Users\\AnupamaDevindiBISTEC\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\AnupamaDevindiBISTEC\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+    "C:\\Users\\Acer\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
   "logs": []
 }

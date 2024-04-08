@@ -7,10 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TicketMate.Booking.Domain\TicketMate.Booking.Domain.csproj" />
     <ProjectReference Include="..\TicketMate.Booking.Infrastructure\TicketMate.Booking.Infrastructure.csproj" />
   </ItemGroup>
-
-  
 
 </Project>
