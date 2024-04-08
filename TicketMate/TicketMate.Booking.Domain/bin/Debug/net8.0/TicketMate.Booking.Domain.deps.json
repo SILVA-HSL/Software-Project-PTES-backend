@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TicketMate.Booking.Domain/1.0.0": {
+        "runtime": {
+          "TicketMate.Booking.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TicketMate.Booking.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
