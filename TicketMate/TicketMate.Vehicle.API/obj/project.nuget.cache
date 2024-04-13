@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jnM3FSNQevOSCaEJrwRMmnIe2biDSyn00ETiIBsi7qanFrV/ODW4Sm6ng1dHk+cgyRzaUY5A0M+l0w8RUkuUeg==",
+  "dgSpecHash": "k+/io9IY4btc8vrDiKjKj06FVPFEPTwdE7CUjEVNqG2+ycecm+I1xA5tC6R5mWldZ12fSHpArwW6nj5EwzJHTA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Malinga\\Documents\\academic\\Software Project Backend\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Vehicle.API\\TicketMate.Vehicle.API.csproj",
   "expectedPackageFiles": [
@@ -37,7 +37,9 @@
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\9.0.0-preview.2.24128.4\\microsoft.entityframeworkcore.analyzers.9.0.0-preview.2.24128.4.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.entityframeworkcore.design\\9.0.0-preview.2.24128.4\\microsoft.entityframeworkcore.design.9.0.0-preview.2.24128.4.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.0-preview.2.24128.4\\microsoft.entityframeworkcore.relational.9.0.0-preview.2.24128.4.nupkg.sha512",
+    "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.entityframeworkcore.relational.design\\2.0.0-preview1-final\\microsoft.entityframeworkcore.relational.design.2.0.0-preview1-final.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.0-preview.2.24128.4\\microsoft.entityframeworkcore.sqlserver.9.0.0-preview.2.24128.4.nupkg.sha512",
+    "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver.design\\2.0.0-preview1-final\\microsoft.entityframeworkcore.sqlserver.design.2.0.0-preview1-final.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\9.0.0-preview.2.24128.4\\microsoft.entityframeworkcore.tools.9.0.0-preview.2.24128.4.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.0-preview.2.24128.5\\microsoft.extensions.caching.abstractions.9.0.0-preview.2.24128.5.nupkg.sha512",
@@ -65,8 +67,10 @@
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.packaging.tools\\1.0.0-preview1-25301-01\\microsoft.packaging.tools.1.0.0-preview1-25301-01.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\mono.texttemplating\\3.0.0-preview-0045-g9b6fc72764\\mono.texttemplating.3.0.0-preview-0045-g9b6fc72764.nupkg.sha512",
+    "C:\\Users\\Malinga\\.nuget\\packages\\netstandard.library\\2.0.0-preview1-25301-01\\netstandard.library.2.0.0-preview1-25301-01.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
     "C:\\Users\\Malinga\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",

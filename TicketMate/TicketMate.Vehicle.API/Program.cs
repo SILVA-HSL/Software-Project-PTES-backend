@@ -1,12 +1,13 @@
 using TicketMate.Vehicle.API.Models;
 using Microsoft.EntityFrameworkCore;
+using TicketMate.Vehicle.Infastructure;
+using TicketMate.Vehicle.API.Controllers;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//--
-builder.Services.AddDbContext<RegisteredBusesContext>(options =>
-options.UseSqlServer(builder.Configuration.GetConnectionString("DbCon")));
-//
+// Add configuration to the application
+builder.Configuration.AddJsonFile("appsettings.json");
 
 // Add services to the container.
 
@@ -15,11 +16,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+builder.Services.AddDbContext<VehicleDbContext>();
+
+builder.Services.AddScoped<VehicleDbContext>();
+
+
+//---- dependency Injection---------
+builder.Services.AddScoped<IRegBusSer, RegBusSer>();
 
 
 builder.Services.AddCors();
 
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -148,3 +148,11 @@ C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PT
 C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\obj\Debug\net8.0\TicketMate.Vehicle.API.pdb
 C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\obj\Debug\net8.0\TicketMate.Vehicle.API.genruntimeconfig.cache
 C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\obj\Debug\net8.0\ref\TicketMate.Vehicle.API.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\bin\Debug\net8.0\TicketMate.Vehicle.Application.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\bin\Debug\net8.0\TicketMate.Vehicle.Domain.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\bin\Debug\net8.0\TicketMate.Vehicle.Infastructure.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\bin\Debug\net8.0\TicketMate.Vehicle.Application.pdb
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\bin\Debug\net8.0\TicketMate.Vehicle.Domain.pdb
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.API\bin\Debug\net8.0\TicketMate.Vehicle.Infastructure.pdb

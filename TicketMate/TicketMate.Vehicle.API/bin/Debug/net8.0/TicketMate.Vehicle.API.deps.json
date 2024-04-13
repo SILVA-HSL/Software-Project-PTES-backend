@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore.Design": "9.0.0-preview.2.24128.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-preview.2.24128.4",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.0-preview.2.24128.4",
-          "Swashbuckle.AspNetCore": "6.4.0"
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "TicketMate.Vehicle.Application": "1.0.0"
         },
         "runtime": {
           "TicketMate.Vehicle.API.dll": {}
@@ -546,6 +547,18 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Relational.Design/2.0.0-preview1-final": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "9.0.0-preview.2.24128.4",
+          "NETStandard.Library": "2.0.0-preview1-25301-01"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.17128"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.SqlServer/9.0.0-preview.2.24128.4": {
         "dependencies": {
           "Microsoft.Data.SqlClient": "5.2.0-preview5.24024.3",
@@ -555,6 +568,19 @@
           "lib/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
             "assemblyVersion": "9.0.0.0",
             "fileVersion": "9.0.24.12804"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.SqlServer.Design/2.0.0-preview1-final": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational.Design": "2.0.0-preview1-final",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-preview.2.24128.4",
+          "NETStandard.Library": "2.0.0-preview1-25301-01"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.17128"
           }
         }
       },
@@ -800,6 +826,7 @@
           }
         }
       },
+      "Microsoft.Packaging.Tools/1.0.0-preview1-25301-01": {},
       "Microsoft.SqlServer.Server/1.0.0": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.SqlServer.Server.dll": {
@@ -817,6 +844,12 @@
             "assemblyVersion": "3.0.0.0",
             "fileVersion": "3.0.0.0"
           }
+        }
+      },
+      "NETStandard.Library/2.0.0-preview1-25301-01": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0",
+          "Microsoft.Packaging.Tools": "1.0.0-preview1-25301-01"
         }
       },
       "Swashbuckle.AspNetCore/6.4.0": {
@@ -1056,7 +1089,40 @@
         }
       },
       "System.Threading.Channels/7.0.0": {},
-      "System.Threading.Tasks.Extensions/4.5.4": {}
+      "System.Threading.Tasks.Extensions/4.5.4": {},
+      "TicketMate.Vehicle.Application/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.EntityFrameworkCore": "9.0.0-preview.2.24128.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-preview.2.24128.4",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "2.0.0-preview1-final",
+          "TicketMate.Vehicle.Domain": "1.0.0",
+          "TicketMate.Vehicle.Infastructure": "1.0.0"
+        },
+        "runtime": {
+          "TicketMate.Vehicle.Application.dll": {}
+        }
+      },
+      "TicketMate.Vehicle.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.0-preview.2.24128.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-preview.2.24128.4",
+          "Microsoft.Extensions.DependencyInjection": "9.0.0-preview.2.24128.5"
+        },
+        "runtime": {
+          "TicketMate.Vehicle.Domain.dll": {}
+        }
+      },
+      "TicketMate.Vehicle.Infastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.0-preview.2.24128.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-preview.2.24128.4",
+          "TicketMate.Vehicle.Domain": "1.0.0"
+        },
+        "runtime": {
+          "TicketMate.Vehicle.Infastructure.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -1296,12 +1362,26 @@
       "path": "microsoft.entityframeworkcore.relational/9.0.0-preview.2.24128.4",
       "hashPath": "microsoft.entityframeworkcore.relational.9.0.0-preview.2.24128.4.nupkg.sha512"
     },
+    "Microsoft.EntityFrameworkCore.Relational.Design/2.0.0-preview1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3BtBHSgNJaUrj+r5ARBTeRxjMq/og8NdzzdfuyYjwLT6QCX79mCAQ44/MMl5NfwRmPRIerCTUifunQmEZtMQ/w==",
+      "path": "microsoft.entityframeworkcore.relational.design/2.0.0-preview1-final",
+      "hashPath": "microsoft.entityframeworkcore.relational.design.2.0.0-preview1-final.nupkg.sha512"
+    },
     "Microsoft.EntityFrameworkCore.SqlServer/9.0.0-preview.2.24128.4": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-iRkMAJIy0mhudoD23DNmt6VIXpLBOEQEfpN85H9GY1CJ9/Y5yIweBfmHKcAZaHwQNMAqz3ZP2CNIPpif2yijYA==",
       "path": "microsoft.entityframeworkcore.sqlserver/9.0.0-preview.2.24128.4",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.9.0.0-preview.2.24128.4.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.SqlServer.Design/2.0.0-preview1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-c8olmWfi+pQyovpd0o5vlYY3eXeKBruv8oL0s7VY8f0QUvlEplyT2QP+coDAU7JBgNOv50TiuwKVMDH87zskDA==",
+      "path": "microsoft.entityframeworkcore.sqlserver.design/2.0.0-preview1-final",
+      "hashPath": "microsoft.entityframeworkcore.sqlserver.design.2.0.0-preview1-final.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Tools/9.0.0-preview.2.24128.4": {
       "type": "package",
@@ -1492,6 +1572,13 @@
       "path": "microsoft.openapi/1.2.3",
       "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
     },
+    "Microsoft.Packaging.Tools/1.0.0-preview1-25301-01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-i0gGYp5lCB3NVx3FglfIXsRZ0kld4e+Wr++svzMOB1g21mos0yOFmohLujdb/HqkjaJfENdH5/CCV5rfhb2RWw==",
+      "path": "microsoft.packaging.tools/1.0.0-preview1-25301-01",
+      "hashPath": "microsoft.packaging.tools.1.0.0-preview1-25301-01.nupkg.sha512"
+    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1505,6 +1592,13 @@
       "sha512": "sha512-g2HV/qFp/0zQwPKG7fJvDZcG8F7iOYOjbiAyU75cx4uRMYKdJ3WBmEzuhWBpX1dgfBD6CXm0KKglxBukAImN/A==",
       "path": "mono.texttemplating/3.0.0-preview-0045-g9b6fc72764",
       "hashPath": "mono.texttemplating.3.0.0-preview-0045-g9b6fc72764.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.0-preview1-25301-01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JgI5IsPMAkYqYeahc+T1G20qqE2qu/P0ZyW2GUPUxxfiT2nQGNDDPq9KHCPUODA3AMSHOp1Vnp6Sxa6jgVYfkg==",
+      "path": "netstandard.library/2.0.0-preview1-25301-01",
+      "hashPath": "netstandard.library.2.0.0-preview1-25301-01.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/6.4.0": {
       "type": "package",
@@ -1750,6 +1844,21 @@
       "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
+    "TicketMate.Vehicle.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketMate.Vehicle.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketMate.Vehicle.Infastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

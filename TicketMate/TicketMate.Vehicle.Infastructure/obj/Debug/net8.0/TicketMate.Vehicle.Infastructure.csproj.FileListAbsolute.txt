@@ -10,3 +10,9 @@ C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PT
 C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Infastructure\obj\Debug\net8.0\refint\TicketMate.Vehicle.Infastructure.dll
 C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Infastructure\obj\Debug\net8.0\TicketMate.Vehicle.Infastructure.pdb
 C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Infastructure\obj\Debug\net8.0\ref\TicketMate.Vehicle.Infastructure.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Infastructure\bin\Debug\net8.0\TicketMate.Vehicle.Infastructure.runtimeconfig.json
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Infastructure\bin\Debug\net8.0\TicketMate.Vehicle.Domain.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Infastructure\bin\Debug\net8.0\TicketMate.Vehicle.Domain.pdb
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Infastructure\obj\Debug\net8.0\TicketMate.Vehicle.Infastructure.csproj.AssemblyReference.cache
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Infastructure\obj\Debug\net8.0\TicketMate.Vehicle.Infastructure.csproj.CopyComplete
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Vehicle.Infastructure\obj\Debug\net8.0\TicketMate.Vehicle.Infastructure.genruntimeconfig.cache

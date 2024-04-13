@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using TicketMate.Vehicle.API.Models;
+using TicketMate.Vehicle.Infastructure;
 
 namespace TicketMate.Vehicle.API.Controllers
 {
@@ -9,81 +9,41 @@ namespace TicketMate.Vehicle.API.Controllers
     [ApiController]
     public class BusRegController : ControllerBase
     {
-        private readonly RegisteredBusesContext _registeredBusesContext;
+        private readonly IRegBusSer _regBusService;
 
-        public BusRegController(RegisteredBusesContext busRegistrationContext)
+        public BusRegController(IRegBusSer regBusService)
         {
-            _registeredBusesContext = busRegistrationContext;
+            _regBusService = regBusService;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<RegisteredBuses>>> GetRegBuses()
+        public async Task<ActionResult<IEnumerable<RegisteredBus>>> GetRegBuses()
         {
-            if (_registeredBusesContext.Buses == null)
-            {
-                return NotFound();
-            }
-            return await _registeredBusesContext.Buses.ToListAsync();
+            return await _regBusService.GetRegBuses();
         }
-        [HttpGet("{id}")]
-        public async Task<ActionResult<RegisteredBuses>> GetRegBus(int id)
-        {
-            if (_registeredBusesContext.Buses == null)
-            {
-                return NotFound();
-            }
-            var employee = await _registeredBusesContext.Buses.FindAsync(id);
-            if (employee == null)
-            {
-                return NotFound();
-            }
-            return employee;
-        }
-        [HttpPost]
-        public async Task<ActionResult<RegisteredBuses>> PostRegBuses(RegisteredBuses busRegistration)
-        {
-            _registeredBusesContext.Buses.Add(busRegistration);
-            await _registeredBusesContext.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetRegBus), new { id = busRegistration.BusId }, busRegistration);
+        [HttpGet("{id}")]
+        public async Task<ActionResult<RegisteredBus>> GetRegBus(int id)
+        {
+            return await _regBusService.GetRegBus(id);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<RegisteredBus>> PostRegBuses(RegisteredBus busRegistration)
+        {
+            return await _regBusService.PostRegBuses(busRegistration);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult> PutRegBuses(int id, RegisteredBuses busRegistration)
+        public async Task<ActionResult> PutRegBuses(int id, RegisteredBus busRegistration)
         {
-            if (id != busRegistration.BusId)
-            {
-                return BadRequest();
-            }
-            _registeredBusesContext.Entry(busRegistration).State = EntityState.Modified;
-            try
-            {
-                await _registeredBusesContext.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                throw;
-            }
-            return Ok();
+            return await _regBusService.PutRegBuses(id, busRegistration);
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteRegBus(int id)
         {
-            if (_registeredBusesContext.Buses == null)
-            {
-                return NotFound();
-            }
-            var bus = await _registeredBusesContext.Buses.FindAsync(id);
-            if (bus == null)
-            {
-                return NotFound();
-            }
-            _registeredBusesContext.Buses.Remove(bus);
-            await _registeredBusesContext.SaveChangesAsync();
-
-            return Ok();
+            return await _regBusService.DeleteRegBus(id);
         }
-
     }
 }

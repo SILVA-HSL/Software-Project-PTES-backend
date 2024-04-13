@@ -785,6 +785,23 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Relational.Design/2.0.0-preview1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "2.0.0-preview1-final",
+          "NETStandard.Library": "2.0.0-preview1-25301-01"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.SqlServer/9.0.0-preview.2.24128.4": {
         "type": "package",
         "dependencies": {
@@ -798,6 +815,24 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.EntityFrameworkCore.SqlServer.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.EntityFrameworkCore.SqlServer.Design/2.0.0-preview1-final": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational.Design": "2.0.0-preview1-final",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.0-preview1-final",
+          "NETStandard.Library": "2.0.0-preview1-25301-01"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.dll": {
             "related": ".xml"
           }
         }
@@ -1247,6 +1282,12 @@
           }
         }
       },
+      "Microsoft.Packaging.Tools/1.0.0-preview1-25301-01": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Microsoft.SqlServer.Server/1.0.0": {
         "type": "package",
         "compile": {
@@ -1273,6 +1314,22 @@
         },
         "build": {
           "buildTransitive/Mono.TextTemplating.targets": {}
+        }
+      },
+      "NETStandard.Library/2.0.0-preview1-25301-01": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.Packaging.Tools": "1.0.0-preview1-25301-01"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/_._": {}
         }
       },
       "Swashbuckle.AspNetCore/6.4.0": {
@@ -1870,6 +1927,54 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
+        }
+      },
+      "TicketMate.Vehicle.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Microsoft.EntityFrameworkCore": "9.0.0-preview.2.24128.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-preview.2.24128.4",
+          "Microsoft.EntityFrameworkCore.SqlServer.Design": "2.0.0-preview1-final",
+          "TicketMate.Vehicle.Domain": "1.0.0",
+          "TicketMate.Vehicle.Infastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TicketMate.Vehicle.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketMate.Vehicle.Application.dll": {}
+        }
+      },
+      "TicketMate.Vehicle.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.0-preview.2.24128.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-preview.2.24128.4",
+          "Microsoft.Extensions.DependencyInjection": "9.0.0-preview.2.24128.5"
+        },
+        "compile": {
+          "bin/placeholder/TicketMate.Vehicle.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketMate.Vehicle.Domain.dll": {}
+        }
+      },
+      "TicketMate.Vehicle.Infastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.0-preview.2.24128.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-preview.2.24128.4",
+          "TicketMate.Vehicle.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TicketMate.Vehicle.Infastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketMate.Vehicle.Infastructure.dll": {}
         }
       }
     }
@@ -3265,6 +3370,19 @@
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.Relational.Design/2.0.0-preview1-final": {
+      "sha512": "3BtBHSgNJaUrj+r5ARBTeRxjMq/og8NdzzdfuyYjwLT6QCX79mCAQ44/MMl5NfwRmPRIerCTUifunQmEZtMQ/w==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.relational.design/2.0.0-preview1-final",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.xml",
+        "microsoft.entityframeworkcore.relational.design.2.0.0-preview1-final.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.design.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.SqlServer/9.0.0-preview.2.24128.4": {
       "sha512": "iRkMAJIy0mhudoD23DNmt6VIXpLBOEQEfpN85H9GY1CJ9/Y5yIweBfmHKcAZaHwQNMAqz3ZP2CNIPpif2yijYA==",
       "type": "package",
@@ -3278,6 +3396,19 @@
         "lib/net8.0/Microsoft.EntityFrameworkCore.SqlServer.xml",
         "microsoft.entityframeworkcore.sqlserver.9.0.0-preview.2.24128.4.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.SqlServer.Design/2.0.0-preview1-final": {
+      "sha512": "c8olmWfi+pQyovpd0o5vlYY3eXeKBruv8oL0s7VY8f0QUvlEplyT2QP+coDAU7JBgNOv50TiuwKVMDH87zskDA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.sqlserver.design/2.0.0-preview1-final",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.dll",
+        "lib/netstandard1.3/Microsoft.EntityFrameworkCore.SqlServer.Design.xml",
+        "microsoft.entityframeworkcore.sqlserver.design.2.0.0-preview1-final.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.design.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Tools/9.0.0-preview.2.24128.4": {
@@ -4172,6 +4303,33 @@
         "microsoft.openapi.nuspec"
       ]
     },
+    "Microsoft.Packaging.Tools/1.0.0-preview1-25301-01": {
+      "sha512": "i0gGYp5lCB3NVx3FglfIXsRZ0kld4e+Wr++svzMOB1g21mos0yOFmohLujdb/HqkjaJfENdH5/CCV5rfhb2RWw==",
+      "type": "package",
+      "path": "microsoft.packaging.tools/1.0.0-preview1-25301-01",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "build/Microsoft.DotNet.PlatformAbstractions.dll",
+        "build/Microsoft.Extensions.DependencyModel.dll",
+        "build/Microsoft.Packaging.Tools.Tasks.dll",
+        "build/Microsoft.Packaging.Tools.Trimming.targets",
+        "build/Microsoft.Packaging.Tools.targets",
+        "build/Newtonsoft.Json.dll",
+        "build/System.Collections.Immutable.dll",
+        "build/System.Reflection.Metadata.dll",
+        "build/desktop/Microsoft.DotNet.PlatformAbstractions.dll",
+        "build/desktop/Microsoft.Extensions.DependencyModel.dll",
+        "build/desktop/Microsoft.Packaging.Tools.Tasks.dll",
+        "build/desktop/Newtonsoft.Json.dll",
+        "build/desktop/System.Collections.Immutable.dll",
+        "build/desktop/System.Reflection.Metadata.dll",
+        "dotnet_library_license.txt",
+        "microsoft.packaging.tools.1.0.0-preview1-25301-01.nupkg.sha512",
+        "microsoft.packaging.tools.nuspec"
+      ]
+    },
     "Microsoft.SqlServer.Server/1.0.0": {
       "sha512": "N4KeF3cpcm1PUHym1RmakkzfkEv3GRMyofVv40uXsQhCQeglr2OHNcUk2WOG51AKpGO8ynGpo9M/kFXSzghwug==",
       "type": "package",
@@ -4205,6 +4363,135 @@
         "mono.texttemplating.3.0.0-preview-0045-g9b6fc72764.nupkg.sha512",
         "mono.texttemplating.nuspec",
         "readme.md"
+      ]
+    },
+    "NETStandard.Library/2.0.0-preview1-25301-01": {
+      "sha512": "JgI5IsPMAkYqYeahc+T1G20qqE2qu/P0ZyW2GUPUxxfiT2nQGNDDPq9KHCPUODA3AMSHOp1Vnp6Sxa6jgVYfkg==",
+      "type": "package",
+      "path": "netstandard.library/2.0.0-preview1-25301-01",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "build/NETStandard.Library.targets",
+        "build/netstandard2.0/NETStandard.Library.targets",
+        "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
+        "build/netstandard2.0/ref/System.AppContext.dll",
+        "build/netstandard2.0/ref/System.Collections.Concurrent.dll",
+        "build/netstandard2.0/ref/System.Collections.NonGeneric.dll",
+        "build/netstandard2.0/ref/System.Collections.Specialized.dll",
+        "build/netstandard2.0/ref/System.Collections.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.Composition.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.EventBasedAsync.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.Primitives.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.TypeConverter.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.dll",
+        "build/netstandard2.0/ref/System.Console.dll",
+        "build/netstandard2.0/ref/System.Core.dll",
+        "build/netstandard2.0/ref/System.Data.Common.dll",
+        "build/netstandard2.0/ref/System.Data.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Contracts.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Debug.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.FileVersionInfo.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Process.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.StackTrace.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.TextWriterTraceListener.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Tools.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.TraceSource.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Tracing.dll",
+        "build/netstandard2.0/ref/System.Drawing.Primitives.dll",
+        "build/netstandard2.0/ref/System.Drawing.dll",
+        "build/netstandard2.0/ref/System.Dynamic.Runtime.dll",
+        "build/netstandard2.0/ref/System.Globalization.Calendars.dll",
+        "build/netstandard2.0/ref/System.Globalization.Extensions.dll",
+        "build/netstandard2.0/ref/System.Globalization.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.FileSystem.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.ZipFile.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.DriveInfo.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.Primitives.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.Watcher.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.dll",
+        "build/netstandard2.0/ref/System.IO.IsolatedStorage.dll",
+        "build/netstandard2.0/ref/System.IO.MemoryMappedFiles.dll",
+        "build/netstandard2.0/ref/System.IO.Pipes.dll",
+        "build/netstandard2.0/ref/System.IO.UnmanagedMemoryStream.dll",
+        "build/netstandard2.0/ref/System.IO.dll",
+        "build/netstandard2.0/ref/System.Linq.Expressions.dll",
+        "build/netstandard2.0/ref/System.Linq.Parallel.dll",
+        "build/netstandard2.0/ref/System.Linq.Queryable.dll",
+        "build/netstandard2.0/ref/System.Linq.dll",
+        "build/netstandard2.0/ref/System.Net.Http.dll",
+        "build/netstandard2.0/ref/System.Net.NameResolution.dll",
+        "build/netstandard2.0/ref/System.Net.NetworkInformation.dll",
+        "build/netstandard2.0/ref/System.Net.Ping.dll",
+        "build/netstandard2.0/ref/System.Net.Primitives.dll",
+        "build/netstandard2.0/ref/System.Net.Requests.dll",
+        "build/netstandard2.0/ref/System.Net.Security.dll",
+        "build/netstandard2.0/ref/System.Net.Sockets.dll",
+        "build/netstandard2.0/ref/System.Net.WebHeaderCollection.dll",
+        "build/netstandard2.0/ref/System.Net.WebSockets.Client.dll",
+        "build/netstandard2.0/ref/System.Net.WebSockets.dll",
+        "build/netstandard2.0/ref/System.Net.dll",
+        "build/netstandard2.0/ref/System.Numerics.dll",
+        "build/netstandard2.0/ref/System.ObjectModel.dll",
+        "build/netstandard2.0/ref/System.Reflection.Extensions.dll",
+        "build/netstandard2.0/ref/System.Reflection.Primitives.dll",
+        "build/netstandard2.0/ref/System.Reflection.dll",
+        "build/netstandard2.0/ref/System.Resources.Reader.dll",
+        "build/netstandard2.0/ref/System.Resources.ResourceManager.dll",
+        "build/netstandard2.0/ref/System.Resources.Writer.dll",
+        "build/netstandard2.0/ref/System.Runtime.CompilerServices.VisualC.dll",
+        "build/netstandard2.0/ref/System.Runtime.Extensions.dll",
+        "build/netstandard2.0/ref/System.Runtime.Handles.dll",
+        "build/netstandard2.0/ref/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "build/netstandard2.0/ref/System.Runtime.InteropServices.dll",
+        "build/netstandard2.0/ref/System.Runtime.Numerics.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Formatters.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Json.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Primitives.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Xml.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.dll",
+        "build/netstandard2.0/ref/System.Runtime.dll",
+        "build/netstandard2.0/ref/System.Security.Claims.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Algorithms.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Csp.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Encoding.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Primitives.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.X509Certificates.dll",
+        "build/netstandard2.0/ref/System.Security.Principal.dll",
+        "build/netstandard2.0/ref/System.Security.SecureString.dll",
+        "build/netstandard2.0/ref/System.ServiceModel.Web.dll",
+        "build/netstandard2.0/ref/System.Text.Encoding.Extensions.dll",
+        "build/netstandard2.0/ref/System.Text.Encoding.dll",
+        "build/netstandard2.0/ref/System.Text.RegularExpressions.dll",
+        "build/netstandard2.0/ref/System.Threading.Overlapped.dll",
+        "build/netstandard2.0/ref/System.Threading.Tasks.Parallel.dll",
+        "build/netstandard2.0/ref/System.Threading.Tasks.dll",
+        "build/netstandard2.0/ref/System.Threading.Thread.dll",
+        "build/netstandard2.0/ref/System.Threading.ThreadPool.dll",
+        "build/netstandard2.0/ref/System.Threading.Timer.dll",
+        "build/netstandard2.0/ref/System.Threading.dll",
+        "build/netstandard2.0/ref/System.Transactions.dll",
+        "build/netstandard2.0/ref/System.ValueTuple.dll",
+        "build/netstandard2.0/ref/System.Web.dll",
+        "build/netstandard2.0/ref/System.Windows.dll",
+        "build/netstandard2.0/ref/System.Xml.Linq.dll",
+        "build/netstandard2.0/ref/System.Xml.ReaderWriter.dll",
+        "build/netstandard2.0/ref/System.Xml.Serialization.dll",
+        "build/netstandard2.0/ref/System.Xml.XDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XPath.XDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XPath.dll",
+        "build/netstandard2.0/ref/System.Xml.XmlDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XmlSerializer.dll",
+        "build/netstandard2.0/ref/System.Xml.dll",
+        "build/netstandard2.0/ref/System.dll",
+        "build/netstandard2.0/ref/mscorlib.dll",
+        "build/netstandard2.0/ref/netstandard.dll",
+        "dotnet_library_license.txt",
+        "lib/netstandard1.0/_._",
+        "netstandard.library.2.0.0-preview1-25301-01.nupkg.sha512",
+        "netstandard.library.nuspec"
       ]
     },
     "Swashbuckle.AspNetCore/6.4.0": {
@@ -5426,6 +5713,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "TicketMate.Vehicle.Application/1.0.0": {
+      "type": "project",
+      "path": "../TicketMate.Vehicle.Application/TicketMate.Vehicle.Application.csproj",
+      "msbuildProject": "../TicketMate.Vehicle.Application/TicketMate.Vehicle.Application.csproj"
+    },
+    "TicketMate.Vehicle.Domain/1.0.0": {
+      "type": "project",
+      "path": "../TicketMate.Vehicle.Domain/TicketMate.Vehicle.Domain.csproj",
+      "msbuildProject": "../TicketMate.Vehicle.Domain/TicketMate.Vehicle.Domain.csproj"
+    },
+    "TicketMate.Vehicle.Infastructure/1.0.0": {
+      "type": "project",
+      "path": "../TicketMate.Vehicle.Infastructure/TicketMate.Vehicle.Infastructure.csproj",
+      "msbuildProject": "../TicketMate.Vehicle.Infastructure/TicketMate.Vehicle.Infastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5435,7 +5737,8 @@
       "Microsoft.EntityFrameworkCore.Design >= 9.0.0-preview.2.24128.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0-preview.2.24128.4",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0-preview.2.24128.4",
-      "Swashbuckle.AspNetCore >= 6.4.0"
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "TicketMate.Vehicle.Application >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5469,7 +5772,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Malinga\\Documents\\academic\\Software Project Backend\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Vehicle.Application\\TicketMate.Vehicle.Application.csproj": {
+              "projectPath": "C:\\Users\\Malinga\\Documents\\academic\\Software Project Backend\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Vehicle.Application\\TicketMate.Vehicle.Application.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

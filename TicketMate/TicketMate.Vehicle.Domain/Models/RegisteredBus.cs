@@ -1,6 +1,6 @@
 ﻿namespace TicketMate.Vehicle.API.Models
 {
-    public class RegisteredBuses
+    public class RegisteredBus
     {
         public int BusId { get; set; }
         public string BusNo { get; set; }

@@ -6,4 +6,28 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Handlers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.2.24128.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0-preview.2.24128.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0-preview.2.24128.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="2.0.0-preview1-final" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0-preview.2.24128.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TicketMate.Vehicle.Domain\TicketMate.Vehicle.Domain.csproj" />
+    <ProjectReference Include="..\TicketMate.Vehicle.Infastructure\TicketMate.Vehicle.Infastructure.csproj" />
+  </ItemGroup>
+
 </Project>
