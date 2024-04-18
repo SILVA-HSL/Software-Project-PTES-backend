@@ -47,8 +47,8 @@ namespace TicketMate.Booking.Api.Controllers
                 // return Ok(newTravelSearch);
 
             }
-            
-                
+
+
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
@@ -66,7 +66,7 @@ namespace TicketMate.Booking.Api.Controllers
             {
                 // Retrieve search results based on vehicle type, start location, end location, and travel date
                 var searchResults = _travelSearchHandler.GetTravelSearchResults(vehicleType, startLocation, endLocation, travelDate);
-                    
+
 
                 return Ok(searchResults);
 

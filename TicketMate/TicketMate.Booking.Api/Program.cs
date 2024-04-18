@@ -14,6 +14,11 @@ builder.Services.AddScoped<IBookingService, BookingService>();
 // In ConfigureServices method of Startup.cs
 builder.Services.AddScoped<TravelSearchHandler>();
 
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+    });
 
 builder.Services.AddDbContext<BookingDbContext>(options =>
 {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj": {}
+    "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj": {}
   },
   "projects": {
-    "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj": {
+    "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
+        "projectUniqueName": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
         "projectName": "TicketMate.Booking.Domain",
-        "projectPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
+        "projectPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\obj\\",
+        "outputPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -73,14 +73,14 @@
         }
       }
     },
-    "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj": {
+    "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj",
+        "projectUniqueName": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj",
         "projectName": "TicketMate.Booking.Infrastructure",
-        "projectPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj",
+        "projectPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Infrastructure\\TicketMate.Booking.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Infrastructure\\obj\\",
+        "outputPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -97,8 +97,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj": {
-                "projectPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj"
+              "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj": {
+                "projectPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj"
               }
             }
           }

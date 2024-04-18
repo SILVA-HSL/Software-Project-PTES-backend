@@ -11,28 +11,33 @@ namespace TicketMate.Booking.Application.Services
 {
     public class BookingService : IBookingService
     {
-        private readonly BookingDbContext _context = new BookingDbContext();
+        private readonly BookingDbContext _context;
 
-        public List<TravelSearch> getAllLocations()
+        public BookingService(BookingDbContext context)
         {
-            return _context.TravelSearch.ToList();
+            _context = context;
         }
+
+        /* public List<TravelSearch> getAllLocations()
+         {
+             return _context.TravelSearch.ToList();
+         }*/
 
 
         public List<StopPoints> getAllStartLocations()
         {
-            return _context.Stops.Select(x => new StopPoints
+            return _context.SelectedBusStands.Select(x => new StopPoints
             {
-                StopName = x.StopName
+                StopName = x.BusStation
             }).ToList();
         }
 
 
         public List<StopPoints> getAllEndLocations()
         {
-            return _context.Stops.Select(x => new StopPoints
+            return _context.SelectedBusStands.Select(x => new StopPoints
             {
-                StopName = x.StopName
+                StopName = x.BusStation
             })
                 .ToList();
         }
@@ -55,12 +60,7 @@ namespace TicketMate.Booking.Application.Services
             return newTravelSearch;
 
 
-
-
         }
-
-
-
 
     }
 }

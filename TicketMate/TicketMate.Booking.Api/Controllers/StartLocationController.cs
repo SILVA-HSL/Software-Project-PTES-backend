@@ -9,7 +9,7 @@ namespace TicketMate.Booking.Api.Controllers
     [ApiController]
     public class StartLocationController : ControllerBase
     {
-        private IBookingService  _travelSearchStart;
+        private IBookingService _travelSearchStart;
 
         public StartLocationController(IBookingService travelSearchStart)
         {

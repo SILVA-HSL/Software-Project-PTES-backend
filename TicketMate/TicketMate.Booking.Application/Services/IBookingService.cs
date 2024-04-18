@@ -9,7 +9,7 @@ namespace TicketMate.Booking.Application.Services
 {
     public interface IBookingService
     {
-        public List<TravelSearch> getAllLocations();
+        // public List<TravelSearch> getAllLocations();
 
         public List<StopPoints> getAllStartLocations();
 

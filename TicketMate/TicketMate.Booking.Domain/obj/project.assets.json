@@ -178,11 +178,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
+      "projectUniqueName": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
       "projectName": "TicketMate.Booking.Domain",
-      "projectPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
+      "projectPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\obj\\",
+      "outputPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using TicketMate.Booking.Api.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
+using TicketMate.Booking.Application.Dtos;
+using TicketMate.Booking.Domain.Dtos;
 
 
 namespace TicketMate.Booking.Infrastructure
@@ -16,18 +18,24 @@ namespace TicketMate.Booking.Infrastructure
         public DbSet<StopPoints> Stops { get; set; }
         public DbSet<TravelSessions> TravelSessions { get; set; }
 
+        public DbSet<SelectedBusStands> SelectedBusStands { get; set; }
+
+        public DbSet<ScheduledBuses> ScheduledBuses { get; set; }
+
+        public DbSet<ScheduledBusDates> ScheduledBusDates { get; set; }
+
 
         public BookingDbContext(DbContextOptions<BookingDbContext> options) : base(options)
         {
 
         }
 
-       public BookingDbContext()
+        public BookingDbContext()
         {
 
         }
 
-       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var connectionString = "Server=tcp:ticketmateserver.database.windows.net,1433;Initial Catalog=PTEScentralDb;Persist Security Info=False;User ID=adminPTES;Password=#ticket@MS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;";
             optionsBuilder.UseSqlServer(connectionString);
@@ -36,6 +44,23 @@ namespace TicketMate.Booking.Infrastructure
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            modelBuilder.Entity<ScheduledBuses>()
+         .HasMany(sb => sb.SelectedBusStands)
+         .WithOne(sbs => sbs.ScheduledBus)
+         .HasForeignKey(sbs => sbs.ScheduledBusScheduleId);
+
+
+            //      modelBuilder.Entity<SelectedBusStands>()
+            //    .HasOne(sbs => sbs.ScheduledBus)
+            //    .WithMany(sb => sb.SelectedBusStands)
+            //   .HasForeignKey(sbs => sbs.ScheduledBusScheduleId);
+
+            modelBuilder.Entity<ScheduledBusDates>()
+         .HasOne(sbd => sbd.ScheduledBus)
+         .WithMany(sb => sb.ScheduledBusDatesList)
+         .HasForeignKey(sbd => sbd.ScheduledBusScheduleId);
+
 
             modelBuilder.Entity<StopPoints>().HasData(
                 new StopPoints
@@ -330,4 +355,7 @@ namespace TicketMate.Booking.Infrastructure
         }
 
     }
+
 }
+
+

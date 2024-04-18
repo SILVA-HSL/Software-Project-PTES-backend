@@ -3248,11 +3248,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Api\\TicketMate.Booking.Api.csproj",
+      "projectUniqueName": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Api\\TicketMate.Booking.Api.csproj",
       "projectName": "TicketMate.Booking.Api",
-      "projectPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Api\\TicketMate.Booking.Api.csproj",
+      "projectPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Api\\TicketMate.Booking.Api.csproj",
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Api\\obj\\",
+      "outputPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3269,8 +3269,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Application\\TicketMate.Booking.Application.csproj": {
-              "projectPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Application\\TicketMate.Booking.Application.csproj"
+            "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Application\\TicketMate.Booking.Application.csproj": {
+              "projectPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Application\\TicketMate.Booking.Application.csproj"
             }
           }
         }
