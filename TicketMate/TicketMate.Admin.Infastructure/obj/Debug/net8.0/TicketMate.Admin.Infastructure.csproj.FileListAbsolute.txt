@@ -8,9 +8,7 @@ C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net8.0\TicketMate.Admin.Infastructure.runtimeconfig.json
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net8.0\TicketMate.Admin.Infastructure.dll
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net8.0\TicketMate.Admin.Infastructure.pdb
-C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net8.0\TicketMate.Admin.Application.dll
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
-C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net8.0\TicketMate.Admin.Application.pdb
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.dll
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\refint\TicketMate.Admin.Infastructure.dll

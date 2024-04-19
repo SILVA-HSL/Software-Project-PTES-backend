@@ -16,7 +16,8 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
           "Swashbuckle.AspNetCore": "6.4.0",
           "System.IdentityModel.Tokens.Jwt": "7.4.0",
-          "TicketMate.Admin.Domain": "1.0.0"
+          "TicketMate.Admin.Domain": "1.0.0",
+          "TicketMate.Admin.Infastructure": "1.0.0"
         },
         "runtime": {
           "TicketMate.Admin.Application.dll": {}
@@ -1986,6 +1987,21 @@
         "runtime": {
           "TicketMate.Admin.Domain.dll": {}
         }
+      },
+      "TicketMate.Admin.Infastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.2",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
+          "Microsoft.IdentityModel.Tokens": "7.4.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "System.IdentityModel.Tokens.Jwt": "7.4.0",
+          "TicketMate.Admin.Domain": "1.0.0"
+        },
+        "runtime": {
+          "TicketMate.Admin.Infastructure.dll": {}
+        }
       }
     }
   },
@@ -3165,6 +3181,11 @@
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
     },
     "TicketMate.Admin.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TicketMate.Admin.Infastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

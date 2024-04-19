@@ -138,6 +138,9 @@
             "projectReferences": {
               "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
                 "projectPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj"
+              },
+              "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj": {
+                "projectPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj"
               }
             }
           }
@@ -322,9 +325,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj": {
-                "projectPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj"
-              },
               "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
                 "projectPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj"
               }

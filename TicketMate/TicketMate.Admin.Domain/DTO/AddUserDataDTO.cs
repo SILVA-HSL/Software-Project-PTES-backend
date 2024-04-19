@@ -19,5 +19,6 @@ namespace TicketMate.Admin.Domain.DTO
         public string UserType { get; set; } = "passenger";
         public string OwnVehicleType { get; set; }
         public string DrivingLicenseNo { get; set; }
+        public Boolean isDeleted { get; set; } = false;
     }
 }

@@ -2926,7 +2926,8 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
           "Swashbuckle.AspNetCore": "6.4.0",
           "System.IdentityModel.Tokens.Jwt": "7.4.0",
-          "TicketMate.Admin.Domain": "1.0.0"
+          "TicketMate.Admin.Domain": "1.0.0",
+          "TicketMate.Admin.Infastructure": "1.0.0"
         },
         "compile": {
           "bin/placeholder/TicketMate.Admin.Application.dll": {}
@@ -2965,7 +2966,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
           "Swashbuckle.AspNetCore": "6.4.0",
           "System.IdentityModel.Tokens.Jwt": "7.4.0",
-          "TicketMate.Admin.Application": "1.0.0",
           "TicketMate.Admin.Domain": "1.0.0"
         },
         "compile": {
