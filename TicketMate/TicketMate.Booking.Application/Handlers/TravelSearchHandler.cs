@@ -63,18 +63,23 @@ namespace TicketMate.Booking.Application.Handlers
                 {
                     // Retrieve schedule ids where travel date matches the scheduled date
                     List<string> scheduleIds = _dbContext.ScheduledBusDates
-     .Where(sb => sb.ScheduleDate == travelDate)
+     .Where(sb => sb.DepartureDate == travelDate)
      .Select(sb => sb.ScheduledBusScheduleId)
      .ToList();
 
 
                     // Fetch all ScheduledBuses from the database
-                    var allBuses = _dbContext.ScheduledBuses.Include(sb => sb.SelectedBusStands).ToList();
+                    var allBuses = _dbContext.ScheduledBuses
+                        .Include(sb => sb.SelectedBusStands)
+                        .Include(sb => sb.ScheduledBusDatesList)
+                        .ToList();
 
                     // Filter by start and end locations
                     searchResults = allBuses
                         .Where(sb => scheduleIds.Any(s => s == sb.ScheduleId) && // Compare strings directly
                                      IsSequentialBusStations(sb.SelectedBusStands, startLocation, endLocation))
+
+
                         .ToList();
 
                 }
