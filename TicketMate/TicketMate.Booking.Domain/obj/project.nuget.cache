@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Y0cbw9wAbmELaj13BnAZohZ067O8q3ylOOP4TrnAmh3iFAqsg6TwXNbfpkQc7mmES4PKlxM4jMd605GmLYUtNw==",
+  "success": true,
+  "projectFilePath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
