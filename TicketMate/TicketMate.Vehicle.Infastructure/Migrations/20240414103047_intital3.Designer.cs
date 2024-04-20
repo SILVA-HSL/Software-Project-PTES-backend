@@ -11,8 +11,8 @@ using TicketMate.Vehicle.Infastructure;
 namespace TicketMate.Vehicle.Infastructure.Migrations
 {
     [DbContext(typeof(VehicleDbContext))]
-    [Migration("20240412174157_initial2")]
-    partial class initial2
+    [Migration("20240414103047_intital3")]
+    partial class intital3
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -39,7 +39,15 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("InsuranceImgURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("LicenNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LicenseImgURL")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -90,22 +98,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ScheduledBusDateScheduleDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ScheduledBusDateScheduleId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("SelectedBusStandBusStation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("SelectedBusStandScheduleId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("StartLocation")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -115,64 +107,84 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
 
                     b.HasKey("ScheduleId");
 
-                    b.HasIndex("ScheduledBusDateScheduleId", "ScheduledBusDateScheduleDate");
-
-                    b.HasIndex("SelectedBusStandScheduleId", "SelectedBusStandBusStation");
-
                     b.ToTable("ScheduledBuses");
                 });
 
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledBusDate", b =>
                 {
-                    b.Property<string>("ScheduleId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ScheduleDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ScheduledBusScheduleId")
+                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("ScheduleId", "ScheduleDate");
+                    b.HasKey("Id");
+
+                    b.HasIndex("ScheduledBusScheduleId");
 
                     b.ToTable("ScheduledBusDates");
                 });
 
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.SelectedBusStand", b =>
                 {
-                    b.Property<string>("ScheduleId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("BusStation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ScheduledBusScheduleId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("ScheduleId", "BusStation");
+                    b.HasKey("Id");
+
+                    b.HasIndex("ScheduledBusScheduleId");
 
                     b.ToTable("SelectedBusStands");
                 });
 
-            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledBus", b =>
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.SelectedSeatStructure", b =>
                 {
-                    b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledBusDate", "ScheduledBusDate")
-                        .WithMany()
-                        .HasForeignKey("ScheduledBusDateScheduleId", "ScheduledBusDateScheduleDate")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                    b.HasOne("TicketMate.Vehicle.Domain.Models.SelectedBusStand", "SelectedBusStand")
-                        .WithMany()
-                        .HasForeignKey("SelectedBusStandScheduleId", "SelectedBusStandBusStation")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Navigation("ScheduledBusDate");
+                    b.Property<int>("RegisteredBusBusId")
+                        .HasColumnType("int");
 
-                    b.Navigation("SelectedBusStand");
+                    b.Property<bool>("SeatAvailability")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("SeatId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RegisteredBusBusId");
+
+                    b.ToTable("SelectedSeatStructures");
                 });
 
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledBusDate", b =>
                 {
                     b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledBus", "ScheduledBus")
                         .WithMany("ScheduledBusDates")
-                        .HasForeignKey("ScheduleId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .HasForeignKey("ScheduledBusScheduleId")
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ScheduledBus");
@@ -182,11 +194,25 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                 {
                     b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledBus", "ScheduledBus")
                         .WithMany("SelectedBusStands")
-                        .HasForeignKey("ScheduleId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("ScheduledBusScheduleId");
 
                     b.Navigation("ScheduledBus");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.SelectedSeatStructure", b =>
+                {
+                    b.HasOne("TicketMate.Vehicle.API.Models.RegisteredBus", "RegisteredBus")
+                        .WithMany("SelectedSeatStructures")
+                        .HasForeignKey("RegisteredBusBusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("RegisteredBus");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.API.Models.RegisteredBus", b =>
+                {
+                    b.Navigation("SelectedSeatStructures");
                 });
 
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledBus", b =>

@@ -1,12 +1,11 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace TicketMate.Vehicle.Infastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class initial : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -38,13 +37,11 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     RoutNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     StartLocation = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EndLocation = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DepartureTime = table.Column<TimeSpan>(type: "time", nullable: false),
-                    ArrivalTime = table.Column<TimeSpan>(type: "time", nullable: false),
+                    DepartureTime = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ArrivalTime = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Comfortability = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Duration = table.Column<TimeSpan>(type: "time", nullable: false),
-                    TicketPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    SelectedBusStandScheduleId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    SelectedBusStandBusStation = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    Duration = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TicketPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -52,46 +49,64 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "SelectedBusStands",
+                name: "ScheduledBusDates",
                 columns: table => new
                 {
-                    ScheduleId = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    BusStation = table.Column<string>(type: "nvarchar(450)", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ScheduleDate = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ScheduledBusScheduleId = table.Column<string>(type: "nvarchar(450)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SelectedBusStands", x => new { x.ScheduleId, x.BusStation });
+                    table.PrimaryKey("PK_ScheduledBusDates", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_SelectedBusStands_ScheduledBuses_ScheduleId",
-                        column: x => x.ScheduleId,
+                        name: "FK_ScheduledBusDates_ScheduledBuses_ScheduledBusScheduleId",
+                        column: x => x.ScheduledBusScheduleId,
                         principalTable: "ScheduledBuses",
                         principalColumn: "ScheduleId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SelectedBusStands",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    BusStation = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ScheduledBusScheduleId = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SelectedBusStands", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SelectedBusStands_ScheduledBuses_ScheduledBusScheduleId",
+                        column: x => x.ScheduledBusScheduleId,
+                        principalTable: "ScheduledBuses",
+                        principalColumn: "ScheduleId",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ScheduledBuses_SelectedBusStandScheduleId_SelectedBusStandBusStation",
-                table: "ScheduledBuses",
-                columns: new[] { "SelectedBusStandScheduleId", "SelectedBusStandBusStation" });
+                name: "IX_ScheduledBusDates_ScheduledBusScheduleId",
+                table: "ScheduledBusDates",
+                column: "ScheduledBusScheduleId");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_ScheduledBuses_SelectedBusStands_SelectedBusStandScheduleId_SelectedBusStandBusStation",
-                table: "ScheduledBuses",
-                columns: new[] { "SelectedBusStandScheduleId", "SelectedBusStandBusStation" },
-                principalTable: "SelectedBusStands",
-                principalColumns: new[] { "ScheduleId", "BusStation" },
-                onDelete: ReferentialAction.Cascade);
+            migrationBuilder.CreateIndex(
+                name: "IX_SelectedBusStands_ScheduledBusScheduleId",
+                table: "SelectedBusStands",
+                column: "ScheduledBusScheduleId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_ScheduledBuses_SelectedBusStands_SelectedBusStandScheduleId_SelectedBusStandBusStation",
-                table: "ScheduledBuses");
-
             migrationBuilder.DropTable(
                 name: "RegisteredBuses");
+
+            migrationBuilder.DropTable(
+                name: "ScheduledBusDates");
 
             migrationBuilder.DropTable(
                 name: "SelectedBusStands");

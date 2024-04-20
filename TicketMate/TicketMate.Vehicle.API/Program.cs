@@ -22,7 +22,8 @@ builder.Services.AddScoped<VehicleDbContext>();
 
 
 //---- dependency Injection---------
-builder.Services.AddScoped<IRegBusSer, RegBusSer>();
+//builder.Services.AddScoped<IRegBusSer, RegBusSer>();
+builder.Services.AddScoped<ISelSeaStrSer, SelSeaStrSer>();
 
 
 builder.Services.AddCors();

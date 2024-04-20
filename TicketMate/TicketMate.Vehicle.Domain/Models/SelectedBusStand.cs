@@ -1,17 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace TicketMate.Vehicle.Domain.Models
 {
     public class SelectedBusStand
     {
-        public string ScheduleId { get; set; }
+        public int Id { get; set; }
+
+        [ForeignKey("ScheduleId")]
+        public string ScheduledBusScheduleId { get; set; }
         public string BusStation {  get; set; }
+        public string StandArrivalTime { get; set; }
 
         // Foreign key property referencing ScheduledBus
-        public ScheduledBus ScheduledBus { get; set; }
+        [JsonIgnore]
+        public ScheduledBus? ScheduledBus { get; set; }
     }
 }
