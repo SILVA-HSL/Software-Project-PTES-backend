@@ -1,27 +1,70 @@
+//using AuthAuthentication.Repositories;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using TicketMate.Booking.Application.Handlers;
-using TicketMate.Booking.Application.Services;
-using TicketMate.Booking.Infrastructure;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using TicketMate.Admin.Application.Services;
+using TicketMate.Admin.Infastructure;
+
 
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IBookingService, BookingService>();
-// In ConfigureServices method of Startup.cs
-builder.Services.AddScoped<TravelSearchHandler>();
 
-
-builder.Services.AddDbContext<BookingDbContext>(options =>
-{
-    //options.UseSqlServer("Server=DILSHAN;Database=BookingDataBase;Trusted_Connection=True;TrustServerCertificate=true;");
-    options.UseSqlServer("Server=tcp:ticketmateserver.database.windows.net,1433;Initial Catalog=PTEScentralDb;Persist Security Info=False;User ID=adminPTES;Password=#ticket@MS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
+builder.Services.AddDbContext<AuthDbContext>(options =>
+{ 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AuthConnection"));
 });
+
+builder.Services.AddDbContext<TicketMate.Admin.Infastructure.userDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("AuthConnection"));
+});
+
+builder.Services.AddScoped<ITokenRepository, TokenRepository>();
+
+builder.Services.AddIdentityCore<IdentityUser>()
+    .AddRoles<IdentityRole>()
+    .AddTokenProvider<DataProtectorTokenProvider<IdentityUser>>("")
+    .AddEntityFrameworkStores<AuthDbContext>()
+    .AddDefaultTokenProviders();
+
+
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequiredLength = 8;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredUniqueChars = 1;
+});
+
+
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["jwt:Issuer"],
+            ValidAudience = builder.Configuration["jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["jwt:KEY"]))
+        };
+    });
+
+// Add services to the container.
+//builder.Services.AddControllersWithViews();
 
 builder.Services.AddCors(options =>
 {
@@ -33,25 +76,42 @@ builder.Services.AddCors(options =>
     });
 });
 
-/*builder.Services.AddControllers()
-    .AddJsonOptions(options =>
-    {
-        options.JsonSerializerOptions.Converters.Add(new Ticketmate.TravelSearchApi2.Models.Custom_Converters.DateOnlyConverter());
-    });*/
-
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TicketMate.TravelSearch.Api2"));
-}
+    app.UseSwaggerUI();
 
+}
+//configure the http request pipeline.
+/*    if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
+
+    app.UseHsts();
+}
+*/
+
+
+
+
+
+app.UseStaticFiles();
+
+
+app.UseRouting();
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
+
+/*app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+*/
+//app.UseExceptionHandler("/Home/Error");
 
 app.UseCors("AllowLocalhost");
 
