@@ -12,7 +12,7 @@ namespace TicketMate.Vehicle.Domain.Models
     public class SelectedSeatStructure
     {
         public int Id { get; set; }
-        public int SeatId { get; set; }
+        public string SeatId { get; set; }
         public bool SeatAvailability { get; set; }
 
         [ForeignKey("BusId")]

@@ -19,6 +19,18 @@ namespace TicketMate.Vehicle.Infastructure
         public DbSet<ScheduledBus> ScheduledBuses { get; set; }
         public DbSet<ScheduledBusDate> ScheduledBusDates {  get; set; }
         public DbSet<SelectedSeatStructure> SelectedSeatStructures { get; set; }
+        public DbSet<RegisteredLocomotive> RegisteredLocomotives { get; set; }
+        public DbSet<RegisteredCarriage> RegisteredCarriages { get; set; }
+        public DbSet<ScheduledTrain> ScheduledTrains { get; set; }
+        public DbSet<ScheduledCarriage> ScheduledCarriages { get; set; }
+        public DbSet<ScheduledLocomotive> ScheduledLocomotives { get; set; }
+        public DbSet<ScheduledTrainDate> ScheduledTrainDates { get; set; }
+        public DbSet<SelCarriageSeatStructure> SelCarriageSeatStructures { get; set; }
+        public DbSet<BusRoute>  BusRoutes { get; set; }
+        public DbSet<BusRouteStand> BusRouteStands { get; set; }
+        public DbSet<TrainRaliway> TrainRaliways { get; set; }
+        public DbSet<TrainRaliwayStation> TrainRaliwayStations { get; set; }
+        public DbSet<SelectedTrainStation> SelectedTrainStations { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //var connectionString = "server = MSI; database = Vehicle; Integrated Security = True; MultipleActiveResultSets = true; MultipleActiveResultSets = true; TrustServerCertificate = True;";
@@ -31,6 +43,13 @@ namespace TicketMate.Vehicle.Infastructure
                .Property(b => b.TicketPrice)
                .HasColumnType("decimal(18,2)");
 
+            modelBuilder.Entity<ScheduledTrain>()
+                .Property(b => b.FirstClassTicketPrice)
+                .HasColumnType("decimal(18,2)");
+
+            modelBuilder.Entity<ScheduledTrain>()
+                .Property(b => b.SecondClassTicketPrice)
+                .HasColumnType("decimal(18,2)");
         }
 
     }

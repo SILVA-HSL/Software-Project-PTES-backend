@@ -56,10 +56,125 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.ToTable("RegisteredBuses");
                 });
 
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.BusRoute", b =>
+                {
+                    b.Property<int>("RoutId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoutId"));
+
+                    b.Property<string>("EndStand")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoutNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("StartStand")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("RoutId");
+
+                    b.ToTable("BusRoutes");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.BusRouteStand", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int?>("BusRouteRoutId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StandName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("BusRouteRoutId");
+
+                    b.ToTable("BusRouteStands");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.RegisteredCarriage", b =>
+                {
+                    b.Property<int>("CarriageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CarriageId"));
+
+                    b.Property<string>("CarriageNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<float>("Height")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Length")
+                        .HasColumnType("real");
+
+                    b.Property<int>("SeatsCount")
+                        .HasColumnType("int");
+
+                    b.Property<float>("Weight")
+                        .HasColumnType("real");
+
+                    b.Property<float>("Width")
+                        .HasColumnType("real");
+
+                    b.HasKey("CarriageId");
+
+                    b.ToTable("RegisteredCarriages");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.RegisteredLocomotive", b =>
+                {
+                    b.Property<int>("LocomotiveId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LocomotiveId"));
+
+                    b.Property<string>("LocomotiveCapacity")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LocomotiveModel")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LocomotiveNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LocomotiveSpeed")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LocomotiveType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("LocomotiveId");
+
+                    b.ToTable("RegisteredLocomotives");
+                });
+
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledBus", b =>
                 {
-                    b.Property<string>("ScheduleId")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("ScheduleId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ScheduleId"));
 
                     b.Property<string>("ArrivalTime")
                         .IsRequired()
@@ -125,15 +240,161 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ScheduledBusScheduleId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("ScheduledBusScheduleId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ScheduledBusScheduleId");
 
                     b.ToTable("ScheduledBusDates");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledCarriage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClassType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("RegisteredCarriageCarriageId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ScheduledTrainSchedulId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RegisteredCarriageCarriageId");
+
+                    b.HasIndex("ScheduledTrainSchedulId");
+
+                    b.ToTable("ScheduledCarriages");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledLocomotive", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("RegisteredLocomotiveLocomotiveId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ScheduledTrainSchedulId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RegisteredLocomotiveLocomotiveId");
+
+                    b.HasIndex("ScheduledTrainSchedulId");
+
+                    b.ToTable("ScheduledLocomotives");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledTrain", b =>
+                {
+                    b.Property<int>("SchedulId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SchedulId"));
+
+                    b.Property<string>("Duration")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("EndStation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("FirstClassTicketPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("SecondClassTicketPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("StartStation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrainArrivalTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrainDepartureTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrainRoutNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrainType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SchedulId");
+
+                    b.ToTable("ScheduledTrains");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledTrainDate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ArrivalDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DepartureDate")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ScheduledTrainSchedulId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ScheduledTrainSchedulId");
+
+                    b.ToTable("ScheduledTrainDates");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.SelCarriageSeatStructure", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("Avalability")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("RegisteredCarriageCarriageId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SeatId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RegisteredCarriageCarriageId");
+
+                    b.ToTable("SelCarriageSeatStructures");
                 });
 
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.SelectedBusStand", b =>
@@ -148,9 +409,8 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ScheduledBusScheduleId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("ScheduledBusScheduleId")
+                        .HasColumnType("int");
 
                     b.Property<string>("StandArrivalTime")
                         .IsRequired()
@@ -177,14 +437,104 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Property<bool>("SeatAvailability")
                         .HasColumnType("bit");
 
-                    b.Property<int>("SeatId")
-                        .HasColumnType("int");
+                    b.Property<string>("SeatId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("RegisteredBusBusId");
 
                     b.ToTable("SelectedSeatStructures");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.SelectedTrainStation", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int?>("ScheduledTrainSchedulId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TrainDepartureTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrainStationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrainarrivalTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("ScheduledTrainSchedulId");
+
+                    b.ToTable("SelectedTrainStations");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.TrainRaliway", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("EndStation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RailwayName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("RailwayNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("StartStation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TrainRaliways");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.TrainRaliwayStation", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<int?>("TrainRaliwayId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TrainStationName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("TrainRaliwayId");
+
+                    b.ToTable("TrainRaliwayStations");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.BusRouteStand", b =>
+                {
+                    b.HasOne("TicketMate.Vehicle.Domain.Models.BusRoute", "BusRoute")
+                        .WithMany("BusRouteStands")
+                        .HasForeignKey("BusRouteRoutId");
+
+                    b.Navigation("BusRoute");
                 });
 
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledBus", b =>
@@ -209,6 +559,54 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Navigation("ScheduledBus");
                 });
 
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledCarriage", b =>
+                {
+                    b.HasOne("TicketMate.Vehicle.Domain.Models.RegisteredCarriage", "RegisteredCarriage")
+                        .WithMany("ScheduledCarriages")
+                        .HasForeignKey("RegisteredCarriageCarriageId");
+
+                    b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledTrain", "ScheduledTrain")
+                        .WithMany("ScheduledCarriages")
+                        .HasForeignKey("ScheduledTrainSchedulId");
+
+                    b.Navigation("RegisteredCarriage");
+
+                    b.Navigation("ScheduledTrain");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledLocomotive", b =>
+                {
+                    b.HasOne("TicketMate.Vehicle.Domain.Models.RegisteredLocomotive", "RegisteredLocomotive")
+                        .WithMany("ScheduledLocomotives")
+                        .HasForeignKey("RegisteredLocomotiveLocomotiveId");
+
+                    b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledTrain", "ScheduledTrain")
+                        .WithMany("ScheduledLocomotives")
+                        .HasForeignKey("ScheduledTrainSchedulId");
+
+                    b.Navigation("RegisteredLocomotive");
+
+                    b.Navigation("ScheduledTrain");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledTrainDate", b =>
+                {
+                    b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledTrain", "ScheduledTrain")
+                        .WithMany("ScheduledTrainDates")
+                        .HasForeignKey("ScheduledTrainSchedulId");
+
+                    b.Navigation("ScheduledTrain");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.SelCarriageSeatStructure", b =>
+                {
+                    b.HasOne("TicketMate.Vehicle.Domain.Models.RegisteredCarriage", "RegisteredCarriage")
+                        .WithMany("SelCarriageSeatStructures")
+                        .HasForeignKey("RegisteredCarriageCarriageId");
+
+                    b.Navigation("RegisteredCarriage");
+                });
+
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.SelectedBusStand", b =>
                 {
                     b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledBus", "ScheduledBus")
@@ -231,6 +629,24 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Navigation("RegisteredBus");
                 });
 
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.SelectedTrainStation", b =>
+                {
+                    b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledTrain", "ScheduledTrain")
+                        .WithMany("SelectedTrainStations")
+                        .HasForeignKey("ScheduledTrainSchedulId");
+
+                    b.Navigation("ScheduledTrain");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.TrainRaliwayStation", b =>
+                {
+                    b.HasOne("TicketMate.Vehicle.Domain.Models.TrainRaliway", "TrainRaliway")
+                        .WithMany("TrainRaliwayStations")
+                        .HasForeignKey("TrainRaliwayId");
+
+                    b.Navigation("TrainRaliway");
+                });
+
             modelBuilder.Entity("TicketMate.Vehicle.API.Models.RegisteredBus", b =>
                 {
                     b.Navigation("ScheduledBuses");
@@ -238,11 +654,44 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Navigation("SelectedSeatStructures");
                 });
 
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.BusRoute", b =>
+                {
+                    b.Navigation("BusRouteStands");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.RegisteredCarriage", b =>
+                {
+                    b.Navigation("ScheduledCarriages");
+
+                    b.Navigation("SelCarriageSeatStructures");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.RegisteredLocomotive", b =>
+                {
+                    b.Navigation("ScheduledLocomotives");
+                });
+
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledBus", b =>
                 {
                     b.Navigation("ScheduledBusDates");
 
                     b.Navigation("SelectedBusStands");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.ScheduledTrain", b =>
+                {
+                    b.Navigation("ScheduledCarriages");
+
+                    b.Navigation("ScheduledLocomotives");
+
+                    b.Navigation("ScheduledTrainDates");
+
+                    b.Navigation("SelectedTrainStations");
+                });
+
+            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.TrainRaliway", b =>
+                {
+                    b.Navigation("TrainRaliwayStations");
                 });
 #pragma warning restore 612, 618
         }

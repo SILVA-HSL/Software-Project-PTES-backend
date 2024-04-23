@@ -13,7 +13,7 @@ namespace TicketMate.Vehicle.Domain.Models
     public class ScheduledBus
     {
         [Key]
-        public string ScheduleId {  get; set; }
+        public int ScheduleId {  get; set; }
 
         [ForeignKey("BusId")]
         public int RegisteredBusBusId { get; set; }

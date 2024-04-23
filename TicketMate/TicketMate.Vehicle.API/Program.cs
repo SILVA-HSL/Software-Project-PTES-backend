@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using TicketMate.Vehicle.Infastructure;
 using TicketMate.Vehicle.API.Controllers;
 using Microsoft.Extensions.Configuration;
+using TicketMate.Vehicle.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,8 +23,9 @@ builder.Services.AddScoped<VehicleDbContext>();
 
 
 //---- dependency Injection---------
-//builder.Services.AddScoped<IRegBusSer, RegBusSer>();
+builder.Services.AddScoped<IRegBusSer, RegBusSer>();
 builder.Services.AddScoped<ISelSeaStrSer, SelSeaStrSer>();
+builder.Services.AddScoped<IScheduledBusSer, ScheduledBusSer>();
 
 
 builder.Services.AddCors();

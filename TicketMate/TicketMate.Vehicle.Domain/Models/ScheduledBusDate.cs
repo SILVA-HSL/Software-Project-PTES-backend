@@ -14,7 +14,7 @@ namespace TicketMate.Vehicle.Domain.Models
         public int Id { get; set; }
 
         [ForeignKey("ScheduleId")]
-        public string ScheduledBusScheduleId { get; set; }
+        public int ScheduledBusScheduleId { get; set; }
         public string ArrivalDate { get; set; }
         public string DepartureDate { get; set; }
 
