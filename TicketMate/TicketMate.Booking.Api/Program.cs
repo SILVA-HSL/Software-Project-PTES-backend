@@ -23,7 +23,13 @@ builder.Services.AddControllers()
 builder.Services.AddDbContext<BookingDbContext>(options =>
 {
     //options.UseSqlServer("Server=DILSHAN;Database=BookingDataBase;Trusted_Connection=True;TrustServerCertificate=true;");
-    options.UseSqlServer("Server=tcp:ticketmateserver.database.windows.net,1433;Initial Catalog=PTEScentralDb;Persist Security Info=False;User ID=adminPTES;Password=#ticket@MS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;");
+    options.UseSqlServer("Server=tcp:ticketmateserver.database.windows.net,1433;Initial Catalog=PTEScentralDb;Persist Security Info=False;User ID=adminPTES;Password=#ticket@MS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;",
+
+        sqlServerOptions =>
+        {
+            sqlServerOptions.EnableRetryOnFailure();
+        }
+        );
 });
 
 builder.Services.AddCors(options =>

@@ -15,7 +15,7 @@ namespace TicketMate.Booking.Infrastructure
     public class BookingDbContext : DbContext
     {
         public DbSet<TravelSearch> TravelSearch { get; set; }
-        public DbSet<StopPoints> Stops { get; set; }
+        // public DbSet<StopPoints> Stops { get; set; }
         public DbSet<TravelSessions> TravelSessions { get; set; }
 
         public DbSet<SelectedBusStands> SelectedBusStands { get; set; }
@@ -24,6 +24,21 @@ namespace TicketMate.Booking.Infrastructure
 
         public DbSet<ScheduledBusDates> ScheduledBusDates { get; set; }
 
+        public DbSet<SelectedTrainStations> SelectedTrainStations { get; set; }
+
+        public DbSet<ScheduledTrainDates> ScheduledTrainDates { get; set; }
+
+        public DbSet<ScheduledTrains> ScheduledTrains { get; set; }
+
+        public DbSet<BusRouteStands> BusRouteStands { get; set; }
+
+        public DbSet<TrainRaliwayStations> TrainRaliwayStations { get; set; }
+
+        public DbSet<RegisteredBuses> RegisteredBuses { get; set; }
+
+        public DbSet<SelectedSeatStructures> SelectedSeatStructures { get; set; }
+
+        // public DbSet<RegisteredBusDetails> RegisteredBusDetails { get; set; }
 
         public BookingDbContext(DbContextOptions<BookingDbContext> options) : base(options)
         {

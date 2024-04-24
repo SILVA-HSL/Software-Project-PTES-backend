@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using TicketMate.Booking.Application.Dtos;
 
@@ -11,7 +12,7 @@ namespace TicketMate.Booking.Domain.Dtos
     public class ScheduledBuses
     {
         [Key]
-        public string ScheduleId { get; set; }
+        public int ScheduleId { get; set; }
         public int RegisteredBusBusId { get; set; }
         public string BusNo { get; set; }
         public int DriverId { get; set; }
@@ -25,10 +26,12 @@ namespace TicketMate.Booking.Domain.Dtos
         public string Duration { get; set; }
         public decimal TicketPrice { get; set; }
 
-        // Navigation property for SelectedBusStand
-       // public SelectedBusStands SelectedBusStand { get; set; }
+      
         public List<SelectedBusStands> SelectedBusStands { get; set; }           
-       // public ScheduledBusDates ScheduledBusDates { get; set; }
+       
         public List<ScheduledBusDates> ScheduledBusDatesList { get; set; }
+
+        
+        public RegisteredBuses RegisteredBus { get; set; }
     }
 }
