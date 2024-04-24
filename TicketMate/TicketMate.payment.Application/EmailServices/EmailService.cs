@@ -29,6 +29,7 @@ namespace TicketMate.Payment.EmailService
             email.From.Add(MailboxAddress.Parse(config.GetSection("EmailUserName").Value));
 
             // Set the recipient's email address
+          
             email.To.Add(MailboxAddress.Parse(request.To)); // Fix the error by using the correct property name
 
             // Set the email subject
