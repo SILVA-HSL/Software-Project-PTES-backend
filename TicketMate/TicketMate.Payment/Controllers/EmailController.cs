@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using TicketMate.Payment.Data;
 using TicketMate.Payment.DTOs;
 using TicketMate.Payment.EmailService;
-using TicketMate.Admin.Infastructure;
 
 namespace TicketMate.Payment.Controllers
 {
@@ -16,10 +15,10 @@ namespace TicketMate.Payment.Controllers
         // Declaring a private readonly field to hold an instance of the email service
         private readonly IEmailService emailService;
        //private readonly UserDataDBContext dbContext;
-        private readonly userDbContext dbContext;
+        private readonly UserDataDBContext dbContext;
 
         // Constructor for the EmailController, injecting an instance of IEmailService
-        public EmailController(IEmailService emailService, userDbContext dbContext)
+        public EmailController(IEmailService emailService, UserDataDBContext dbContext)
         {
             this.emailService = emailService;
             this.dbContext = dbContext;
@@ -58,30 +57,18 @@ namespace TicketMate.Payment.Controllers
             // Returning an HTTP response indicating success with a message
             return Ok("Mail sent!");
         }
-        public IActionResult GetEmailAddress()
+        private string GetEmailAddress()
         {
             // Retrieve the user from the database where FirstName is "shanuka"
             //var user = dbContext.Users.FirstOrDefault(u => u.FirstName == "himasha");
             //var user= dbContext.users.FirstOrDefault(u => u.FirstName == "himasha");
-            try
-            {
-                var user = dbContext.users.Where(u => u.FirstName == "himasha")
-                    .Select(u => new { u.Email }).FirstOrDefault();
-                if (user != null)
-                {
-                    return Ok(user);
-                }
-                return BadRequest("user not found");
 
-            }catch(Exception e)
-            {
-                return BadRequest(e.Message);
-            }
+            var user = dbContext.Users.Where(u => u.FirstName == "himasha").SingleOrDefault();
           
 
 
             // If the user is found, return their email address; otherwise, return an empty string
-            //return user != null ? user.Email : string.Empty;
+            return user != null ? user.Email : string.Empty;
            
 
         }
@@ -89,7 +76,7 @@ namespace TicketMate.Payment.Controllers
         {
             // Retrieve the user from the database where FirstName is "shanuka"
            // var user = dbContext.Users.FirstOrDefault(u => u.FirstName == "himasha");
-           var user = dbContext.users.FirstOrDefault(u => u.FirstName == "himasha");
+           var user = dbContext.Users.Where(u => u.FirstName == "himasha").SingleOrDefault();
 
             // If the user is found, return their email address; otherwise, return an empty string
             return user != null ? user.OwnVehicleType + " your payment receip is attached" : string.Empty;

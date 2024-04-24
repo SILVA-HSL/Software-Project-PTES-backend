@@ -7,7 +7,7 @@
         public string LastName { get; set; }
 
         public string Email { get; set; }
-        public DateOnly Dob { get; set; }
+        public string Dob { get; set; }
 
         public string NIC { get; set; }
 

@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TicketMate.Payment.Data;
 using TicketMate.Payment.EmailService;
-using TicketMate.Admin.Infastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IEmailService, EmailService>();
 
-builder.Services.AddDbContext<userDbContext>(options =>
+builder.Services.AddDbContext<UserDataDBContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("TicketMateConnection")));
 
 builder.Services.AddCors(options =>
