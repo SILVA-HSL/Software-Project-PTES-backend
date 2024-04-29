@@ -20,31 +20,6 @@ namespace TicketMate.Booking.Application.Services
             _context = context;
         }
 
-        /* public List<TravelSearch> getAllLocations()
-         {
-             return _context.TravelSearch.ToList();
-         }*/
-
-
-        /*  public List<StopPoints> getAllStartLocations()
-          {
-              return _context.SelectedBusStands.Select(x => new StopPoints
-              {
-                  StopName = x.BusStation
-              }).ToList();
-          }
-
-
-          public List<StopPoints> getAllEndLocations()
-          {
-              return _context.SelectedBusStands.Select(x => new StopPoints
-              {
-                  StopName = x.BusStation
-              })
-                  .ToList();
-          }
-        */
-
         public List<BusRouteStands> getAllBusStands()
         {
             return _context.BusRouteStands

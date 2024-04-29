@@ -10,12 +10,6 @@ namespace TicketMate.Booking.Application.Services
 {
     public interface IBookingService
     {
-        // public List<TravelSearch> getAllLocations();
-
-        // public List<StopPoints> getAllStartLocations();
-
-        // public List<StopPoints> getAllEndLocations();
-
         public List<BusRouteStands> getAllBusStands();
 
         public List<TrainRaliwayStations> getAllTrainStations();
@@ -23,9 +17,6 @@ namespace TicketMate.Booking.Application.Services
         public TravelSearch AddTravelSearch(TravelSearch inputTravelSearch);
 
         public RegisteredBusDetails GetBusDetailsWithSeats(int registeredBusBusId);
-
-
-
 
     }
 }

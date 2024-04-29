@@ -191,51 +191,8 @@ namespace TicketMate.Booking.Application.Handlers
                 throw new Exception($"Error while retrieving travel search results: {ex.Message}");
             }
         }
-
-
-
-        //Method to get train travel search results from the database
-        /* public IEnumerable<ScheduledTrains> GetTrainTravelSearchResults(string startLocation, string endLocation, string travelDate)
-                     {
-             try
-             {
-                             IEnumerable<ScheduledTrains> searchResult = new List<ScheduledTrains>();
-
-
-                             // Retrieve schedule ids where travel date matches the scheduled date for trains
-                             List<int> scheduleIds = _dbContext.ScheduledTrainDates
-                                 .Where(std => std.DepartureDate == travelDate)
-                                 .Select(std => std.ScheduledTrainSchedulId)
-                                 .ToList();
-
-                             // Fetch all ScheduledTrains from the database
-                             var allTrains = _dbContext.ScheduledTrains
-                                 .Include(st => st.SelectedTrainStations)
-                                 .Include(st => st.ScheduledTrainDates)
-                                 .ToList();
-
-                 // Filter by start and end locations
-                 searchResult = allTrains
-                                 .Where(st => scheduleIds.Any(s => s == st.SchedulId) &&
-                                  IsSequentialTrainStations(st.SelectedTrainStations, startLocation, endLocation))
-                             .ToList();
-
-
-
-
-                 return searchResult;
-             }
-
-
-             catch (Exception ex)
-             {
-                 throw new Exception($"Error while retrieving travel search results: {ex.Message}");
-             }
-         }
-
-         */
-
-        // Helper method to check if the start location comes before the end location in the sequence of bus stations
+       
+        // Helper method to check if the start location comes before the end location in the sequence of bus stands
         private bool IsSequentialBusStations(List<SelectedBusStands> busStations, string startLocation, string endLocation)
         {
             // Get the indexes of the start and end locations in the list of bus stations
@@ -246,7 +203,7 @@ namespace TicketMate.Booking.Application.Handlers
             return startIndex != -1 && endIndex != -1 && startIndex < endIndex;
         }
 
-
+        // Helper method to check if the start location comes before the end location in the sequence of train stations
         private bool IsSequentialTrainStations(List<SelectedTrainStations> trainStations, string startLocation, string endLocation)
         {
             // Get the indexes of the start and end locations in the list of train stations
@@ -257,22 +214,5 @@ namespace TicketMate.Booking.Application.Handlers
             return startIndex != -1 && endIndex != -1 && startIndex < endIndex;
         }
 
-
-
-
-
-        //Method to get all travel sessions from the database
-        public IEnumerable<TravelSessions> GetAllTravelSearchResults()
-        {
-            try
-            {
-                var allSearchResults = _dbContext.TravelSessions.ToList();
-                return allSearchResults;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error while retrieving all travel search results: {ex.Message}");
-            }
-        }
     }
 }

@@ -22,10 +22,6 @@ namespace TicketMate.Booking.Domain.Dtos
         public decimal FirstClassTicketPrice { get; set; }
         public decimal SecondClassTicketPrice { get; set; }
 
-        // [JsonIgnore]
-        // public List<ScheduledCarriage> ScheduledCarriages { get; set; }
-        // [JsonIgnore]
-        //public List<ScheduledLocomotive> ScheduledLocomotives { get; set; }
 
         [JsonIgnore]
         public List<ScheduledTrainDates> ScheduledTrainDates { get; set; }

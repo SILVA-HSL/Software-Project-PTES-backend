@@ -5,13 +5,12 @@ using TicketMate.Booking.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Add services to the container.
 builder.Services.AddScoped<IBookingService, BookingService>();
-// In ConfigureServices method of Startup.cs
 builder.Services.AddScoped<TravelSearchHandler>();
 
 builder.Services.AddControllers()
@@ -22,10 +21,9 @@ builder.Services.AddControllers()
 
 builder.Services.AddDbContext<BookingDbContext>(options =>
 {
-    //options.UseSqlServer("Server=DILSHAN;Database=BookingDataBase;Trusted_Connection=True;TrustServerCertificate=true;");
-    options.UseSqlServer("Server=tcp:ticketmateserver.database.windows.net,1433;Initial Catalog=PTEScentralDb;Persist Security Info=False;User ID=adminPTES;Password=#ticket@MS;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;",
+ options.UseSqlServer("Server=tcp:ptesserver.database.windows.net,1433;Initial Catalog=ptescentral;Persist Security Info=False;User ID=AdminPTES;Password=PTES@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
 
-        sqlServerOptions =>
+sqlServerOptions =>
         {
             sqlServerOptions.EnableRetryOnFailure();
         }
@@ -42,15 +40,10 @@ builder.Services.AddCors(options =>
     });
 });
 
-/*builder.Services.AddControllers()
-    .AddJsonOptions(options =>
-    {
-        options.JsonSerializerOptions.Converters.Add(new Ticketmate.TravelSearchApi2.Models.Custom_Converters.DateOnlyConverter());
-    });*/
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

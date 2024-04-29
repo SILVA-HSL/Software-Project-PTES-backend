@@ -17,9 +17,5 @@ namespace TicketMate.Booking.Domain.Dtos
         public int ScheduledTrainSchedulId { get; set; }
         public ScheduledTrains ScheduledTrain { get; set; }
 
-        
-       // public ScheduledTrainDates ScheduledTrainDates { get; set; }
-
-
     }
 }
