@@ -12,9 +12,9 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicketMate.Booking.Api")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3e7d61c95511a234dbfa9685ce553a909a7bb48")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5c693d4fd99051a032356d11424143d21ed8755")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicketMate.Booking.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicketMate.Booking.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

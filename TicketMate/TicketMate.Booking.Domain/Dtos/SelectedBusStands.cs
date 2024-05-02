@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -15,7 +16,7 @@ namespace TicketMate.Booking.Application.Dtos
         public string BusStation { get; set; }
 
         // Foreign key to link to ScheduledBuses
-        public string ScheduledBusScheduleId { get; set; }
+        public int ScheduledBusScheduleId { get; set; }
 
         public string StandArrivalTime { get; set; }
         public ScheduledBuses ScheduledBus { get; set; }

@@ -8,14 +8,5 @@
         public string? EndLocation { get; set; }
         public String TravelDate { get; set; }
 
-
-        /*public TravelSearch()
-        {
-            if (TravelDate == null)
-            {
-                TravelDate = DateOnly.FromDateTime(DateTime.Now);
-            }
-        }
-        */
     }
 }

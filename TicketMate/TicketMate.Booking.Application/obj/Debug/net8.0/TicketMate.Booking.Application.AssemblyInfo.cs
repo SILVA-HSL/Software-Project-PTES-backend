@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicketMate.Booking.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88a440533ce8b3df7fc78e1cf14c32d433957e71")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3e7d61c95511a234dbfa9685ce553a909a7bb48")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicketMate.Booking.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicketMate.Booking.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
