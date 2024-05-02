@@ -21,23 +21,28 @@ namespace TicketMate.Admin.Api.Controllers
         }
 
 
-        
+        // POST api/auth/register
         [HttpPost]
         [Route("register")]
         public async Task<IActionResult> Register([FromBody] RegisterRequestcsDto registerRequestcsDto)
         {
+            // Create a new IdentityUser based on the provided username and email
             var identityUser = new IdentityUser
             {
                 UserName = registerRequestcsDto.Username,
                 Email = registerRequestcsDto.Username
             };
+            // Create the user in the database using the UserManager
+
             var result = await userManager.CreateAsync(identityUser, registerRequestcsDto.Password);
             if (result.Succeeded)
             {
+                // If roles are specified, add the user to the first role in the list
                 if (registerRequestcsDto.Roles != null && registerRequestcsDto.Roles.Any())
                 {
                     result = await userManager.AddToRoleAsync(identityUser, registerRequestcsDto.Roles[0]);
 
+                    // If the user was successfully added to the role, return a success message
 
                     if (result.Succeeded)
                     {
@@ -45,6 +50,8 @@ namespace TicketMate.Admin.Api.Controllers
                     }
                 }
             }
+            // If the user was created or added to a role, return a success message
+
             return Ok("User created");
 
         } 
@@ -54,6 +61,8 @@ namespace TicketMate.Admin.Api.Controllers
         [Route("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDto loginRequestDto)
         {
+            // Find the user by their username
+
             var user = await userManager.FindByNameAsync(loginRequestDto.Username);
 
             if (user != null)
@@ -79,6 +88,7 @@ namespace TicketMate.Admin.Api.Controllers
                     }
                 }
             }
+            // If the login was unsuccessful, return a bad request message
             return BadRequest("Username or password incorrect");
 
 

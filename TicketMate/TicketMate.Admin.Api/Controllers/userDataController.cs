@@ -43,6 +43,7 @@ using TicketMate.Admin.Infastructure;
 using TicketMate.Admin.Domain.DTO;
 using Microsoft.Extensions.Logging;
 using Microsoft.CodeAnalysis.Elfie.Diagnostics;
+using TicketMate.Admin.Application.Services;
 
 namespace TicketMate.Admin.Api.Controllers
 {
@@ -51,14 +52,22 @@ namespace TicketMate.Admin.Api.Controllers
 
     public class userDataController : ControllerBase
     {
-        public readonly userDbContext _context;
+        public readonly IUserService _userService;
 
-        public userDataController(DbContextOptions<userDbContext> options)
+        public userDataController(IUserService userService)
+        {
+            _userService = userService;
+        }       
+
+
+        //public readonly userDbContext _context;
+
+     /*   public userDataController(DbContextOptions<userDbContext> options)
         {
             _context = new userDbContext(options);
 
         }
-
+     
 
         [HttpPost]
         public void Post([FromBody] AddUserDataDTO userDatas)
@@ -89,6 +98,8 @@ namespace TicketMate.Admin.Api.Controllers
 
         }
 
+        */
+
 
         [HttpGet]
         public IActionResult GetUserData()
@@ -96,8 +107,7 @@ namespace TicketMate.Admin.Api.Controllers
             try
             {
 
-                var userData = _context.users.Where(u => u.isDeleted == false && u.RequestStatus == true).ToList();
-               // var ownerData=_context.users.Where(u => u.isDeleted == false && u.RequestStatus == false).ToList();
+               var userData = _userService.GetUserData();
                 return Ok(userData);
 
             }
@@ -116,15 +126,9 @@ namespace TicketMate.Admin.Api.Controllers
         {
             try
             {
-                var userData = _context.users.Find(Id);
-                if (userData != null)
-                {
-                    userData.isDeleted=true;
-
-                    _context.SaveChanges();
-                    return Ok("User Data Updated");
-                }
-                return BadRequest("User Data Not Found");
+                var userData = _userService.UpdateUserData(Id);
+                return Ok(userData);
+               
             }
             catch (Exception e)
             {
@@ -138,12 +142,12 @@ namespace TicketMate.Admin.Api.Controllers
         {
             try
             {
-                var userData = _context.users.Where(u => u.FirstName == firstname).ToList();
-                if (userData != null)
+                var userData = _userService.searchUser(firstname);
+                if (userData == null)
                 {
-                    return Ok(userData);
+                    return NotFound("User Data Not Found");
                 }
-                return BadRequest("User Data Not Found");
+                return Ok(userData);
             }
             catch (Exception e)
             {
@@ -156,8 +160,12 @@ namespace TicketMate.Admin.Api.Controllers
         {
             try
             {
-                var userData = _context.users.Where(u => u.RequestStatus == false && u.isDeleted==false).ToList();
-                    return Ok(userData);
+                var userData = _userService.GetOwnerRequests();
+                if (userData == null)
+                {
+                    return NotFound("Owner Data Not Found");
+                }
+                return Ok(userData);
                
 
 
@@ -168,41 +176,35 @@ namespace TicketMate.Admin.Api.Controllers
             }
         }
 
+        
+
         [HttpPut("handleReject/{Id?}")]
         public IActionResult handleReject(int Id)
         {
             try
             {
-                var userData = _context.users.Find(Id);
-                if (userData != null)
-                {
-                    userData.isDeleted = true;
-
-                    _context.SaveChanges();
-                    return Ok("rejection success");
-                }
-                return BadRequest("User Data Not Found");
+               var handleReject = _userService.handleReject(Id);
+                return Ok(handleReject);
+                
             }
             catch (Exception e)
             {
                 return BadRequest(e);
             }
         }
+        
 
         [HttpPut("handleAccept/{Id?}")]
         public IActionResult handleAccept(int Id)
         {
             try
             {
-                var userData = _context.users.Find(Id);
-                if (userData != null)
+                var handleAccept = _userService.handleAccept(Id);
+                if (handleAccept == "User Data Not Found")
                 {
-                    userData.RequestStatus = true;
-
-                    _context.SaveChanges();
-                    return Ok("acceptance success");
+                    return NotFound("User Data Not Found");
                 }
-                return BadRequest("User Data Not Found");
+                return Ok(handleAccept);
             }
             catch (Exception e)
             {
