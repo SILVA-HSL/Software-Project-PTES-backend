@@ -15,7 +15,7 @@ namespace TicketMate.Booking.Domain.Dtos
         public string ArrivalDate { get; set; }
 
         // Foreign key to link to ScheduledBuses
-        public string ScheduledBusScheduleId { get; set; } 
+        public int ScheduledBusScheduleId { get; set; } 
         public ScheduledBuses ScheduledBus { get; set; }
 
     }

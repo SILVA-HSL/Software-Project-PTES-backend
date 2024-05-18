@@ -30,11 +30,12 @@ namespace TicketMate.Booking.Application.Handlers
                     VehicleType = inputTravelSearch.VehicleType,
                     StartLocation = inputTravelSearch.StartLocation,
                     EndLocation = inputTravelSearch.EndLocation,
+
                     TravelDate = inputTravelSearch.TravelDate
                 };
 
                 _dbContext.TravelSearch.Add(newTravelSearch);
-                await _dbContext.SaveChangesAsync();
+                //   await _dbContext.SaveChangesAsync();
 
                 return newTravelSearch;
             }
@@ -51,48 +52,26 @@ namespace TicketMate.Booking.Application.Handlers
         }
 
 
-        //Method to get travel search results from the database
-        public IEnumerable<ScheduledBuses> GetTravelSearchResults(string vehicleType, string startLocation, string endLocation, string travelDate)
+        public IEnumerable<object> GetTravelSearchResults(string VehicleType, string StartLocation, string EndLocation, string TravelDate)
         {
             try
             {
-                IEnumerable<ScheduledBuses> searchResults = new List<ScheduledBuses>();
 
-                // Check vehicle type
-                if (vehicleType == "Bus")
+
+                if (VehicleType == "Bus")
                 {
-                    // Retrieve schedule ids where travel date matches the scheduled date
-                    List<string> scheduleIds = _dbContext.ScheduledBusDates
-     .Where(sb => sb.DepartureDate == travelDate)
-     .Select(sb => sb.ScheduledBusScheduleId)
-     .ToList();
-
-
-                    // Fetch all ScheduledBuses from the database
-                    var allBuses = _dbContext.ScheduledBuses
-                        .Include(sb => sb.SelectedBusStands)
-                        .Include(sb => sb.ScheduledBusDatesList)
-                        .ToList();
-
-                    // Filter by start and end locations
-                    searchResults = allBuses
-                        .Where(sb => scheduleIds.Any(s => s == sb.ScheduleId) && // Compare strings directly
-                                     IsSequentialBusStations(sb.SelectedBusStands, startLocation, endLocation))
-
-
-                        .ToList();
-
+                    return GetBusTravelSearchResults(StartLocation, EndLocation, TravelDate);
                 }
-                else if (vehicleType == "Train")
+                else if (VehicleType == "Train")
                 {
-                    // Implement train search logic.
+                    return GetTrainTravelSearchResults(StartLocation, EndLocation, TravelDate);
                 }
                 else
                 {
                     throw new ArgumentException("Invalid vehicle type");
                 }
 
-                return searchResults;
+
             }
             catch (Exception ex)
             {
@@ -100,9 +79,121 @@ namespace TicketMate.Booking.Application.Handlers
             }
         }
 
+        //Method to get bus travel search results from the database
+        public IEnumerable<ScheduledBuses> GetBusTravelSearchResults(string startLocation, string endLocation, string travelDate)
+        {
+            try
+            {
+                IEnumerable<ScheduledBuses> searchResult = new List<ScheduledBuses>();
 
 
-        // Helper method to check if the start location comes before the end location in the sequence of bus stations
+
+                // Retrieve schedule ids where travel date matches the scheduled date
+                List<int> scheduleIds = _dbContext.ScheduledBusDates
+                    .Where(sb => sb.DepartureDate == travelDate)
+                    .Select(sb => sb.ScheduledBusScheduleId)
+                    .ToList();
+
+
+                // Fetch all ScheduledBuses from the database
+                var allBuses = _dbContext.ScheduledBuses
+                    .Include(sb => sb.SelectedBusStands)
+                    .Include(sb => sb.ScheduledBusDatesList)
+                    .ToList();
+
+                // Filter by start and end locations
+                searchResult = allBuses
+                    .Where(sb => scheduleIds.Any(s => s == sb.ScheduleId) &&
+                                 IsSequentialBusStations(sb.SelectedBusStands, startLocation, endLocation))
+
+
+                    .ToList();
+                return searchResult;
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error while retrieving travel search results: {ex.Message}");
+            }
+
+        }
+
+
+        //Method to get train travel search results from the database
+        public IEnumerable<object> GetTrainTravelSearchResults(string startLocation, string endLocation, string travelDate)
+        {
+            try
+            {
+                List<object> searchResult = new List<object>();
+
+                // Retrieve schedule ids where travel date matches the scheduled date for trains
+                List<int> scheduleIds = _dbContext.ScheduledTrainDates
+                    .Where(std => std.DepartureDate == travelDate)
+                    .Select(std => std.ScheduledTrainSchedulId)
+                    .ToList();
+
+                // Fetch all ScheduledTrains from the database
+                var allTrains = _dbContext.ScheduledTrains
+                    .Include(st => st.SelectedTrainStations)
+                    .Include(st => st.ScheduledTrainDates) // Include ScheduledTrainDates
+                    .ToList();
+
+                // Filter by start and end locations
+                var filteredTrains = allTrains
+                    .Where(st => scheduleIds.Contains(st.SchedulId) &&
+                                 IsSequentialTrainStations(st.SelectedTrainStations, startLocation, endLocation))
+                    .ToList();
+
+                // Populate response for each train
+                foreach (var train in filteredTrains)
+                {
+                    var selectedStations = train.SelectedTrainStations
+                        .OrderBy(station => station.id) // Order by the station ID to ensure correct sequence
+                        .Select(station => new
+                        {
+                            station.id,
+                            station.TrainStationName,
+                            station.TrainDepartureTime
+                        })
+                        .ToList();
+
+                    var trainDates = train.ScheduledTrainDates
+                         .Where(date => date.DepartureDate == travelDate) // Filter by the travel date
+                         .Select(date => new
+                         {
+                             date.ArrivalDate,
+                             date.DepartureDate
+                         })
+                         .FirstOrDefault(); // Get the first matching date
+
+                    var trainResponse = new
+                    {
+                        train.SchedulId,
+                        train.TrainRoutNo,
+                        train.StartStation,
+                        train.EndStation,
+                        train.TrainDepartureTime,
+                        train.TrainArrivalTime,
+                        train.Duration,
+                        train.TrainType,
+                        train.FirstClassTicketPrice,
+                        train.SecondClassTicketPrice,
+                        stopStations = selectedStations, // Include the stop stations in the response
+                        trainDates // Include the train dates in the response
+                    };
+
+                    searchResult.Add(trainResponse);
+                }
+
+                return searchResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Error while retrieving travel search results: {ex.Message}");
+            }
+        }
+
+        // Helper method to check if the start location comes before the end location in the sequence of bus stands
         private bool IsSequentialBusStations(List<SelectedBusStands> busStations, string startLocation, string endLocation)
         {
             // Get the indexes of the start and end locations in the list of bus stations
@@ -113,37 +204,16 @@ namespace TicketMate.Booking.Application.Handlers
             return startIndex != -1 && endIndex != -1 && startIndex < endIndex;
         }
 
-
-        /* public IEnumerable<TravelSessions> GetTravelSearchResults(string vehicleType, string startLocation, string endLocation, string travelDate)
-         {
-             try
-             {
-                 var searchResults = _dbContext.TravelSessions
-                     .Where(ts => ts.VehicleType == vehicleType && ts.StartLocation == startLocation && ts.EndLocation == endLocation && ts.TravelDate == travelDate)
-                     .ToList();
-
-                 return searchResults;
-             }
-             catch (Exception ex)
-             {
-                 throw new Exception($"Error while retrieving travel search results: {ex.Message}");
-             }
-         }
-        */
-
-
-        //Method to get all travel sessions from the database
-        public IEnumerable<TravelSessions> GetAllTravelSearchResults()
+        // Helper method to check if the start location comes before the end location in the sequence of train stations
+        private bool IsSequentialTrainStations(List<SelectedTrainStations> trainStations, string startLocation, string endLocation)
         {
-            try
-            {
-                var allSearchResults = _dbContext.TravelSessions.ToList();
-                return allSearchResults;
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Error while retrieving all travel search results: {ex.Message}");
-            }
+            // Get the indexes of the start and end locations in the list of train stations
+            var startIndex = trainStations.FindIndex(sts => sts.TrainStationName == startLocation);
+            var endIndex = trainStations.FindIndex(sts => sts.TrainStationName == endLocation);
+
+            // Return true if the start location index is less than the end location index
+            return startIndex != -1 && endIndex != -1 && startIndex < endIndex;
         }
+
     }
 }

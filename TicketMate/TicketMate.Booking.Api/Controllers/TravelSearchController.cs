@@ -31,8 +31,6 @@ namespace TicketMate.Booking.Api.Controllers
 
                 var newTravelSearch = await _travelSearchHandler.AddTravelSearch(inputTravelSearch);
 
-
-
                 // After saving the new travel search, automatically redirect to the GET API with the same parameters
                 return RedirectToAction("GetTravelSearchResults", new
                 {
@@ -44,18 +42,11 @@ namespace TicketMate.Booking.Api.Controllers
 
                     );
 
-                // return Ok(newTravelSearch);
-
             }
-
-
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
             }
-
-
-
         }
 
 
