@@ -34,7 +34,7 @@ namespace TicketMate.Booking.Application.Handlers
                 };
 
                 _dbContext.TravelSearch.Add(newTravelSearch);
-                await _dbContext.SaveChangesAsync();
+             //   await _dbContext.SaveChangesAsync();
 
                 return newTravelSearch;
             }
