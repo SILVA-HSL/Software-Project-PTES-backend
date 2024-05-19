@@ -43,7 +43,8 @@ namespace TicketMate.Booking.Api.Controllers
                     );
 
             }
-             catch (Exception ex)
+            catch (Exception ex)
+
             {
                 return BadRequest(ex.Message);
             }

@@ -15,7 +15,7 @@ namespace TicketMate.Booking.Infrastructure
     public class BookingDbContext : DbContext
     {
         public DbSet<TravelSearch> TravelSearch { get; set; }
-       
+
         //public DbSet<TravelSessions> TravelSessions { get; set; }
 
         public DbSet<SelectedBusStands> SelectedBusStands { get; set; }

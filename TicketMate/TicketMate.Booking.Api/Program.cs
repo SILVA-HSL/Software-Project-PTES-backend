@@ -21,13 +21,14 @@ builder.Services.AddControllers()
 
 builder.Services.AddDbContext<BookingDbContext>(options =>
 {
- options.UseSqlServer("Server=tcp:ptesserver.database.windows.net,1433;Initial Catalog=ptescentral;Persist Security Info=False;User ID=AdminPTES;Password=PTES@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+    options.UseSqlServer("Server=tcp:ptesserver.database.windows.net,1433;Initial Catalog=ptescentral;Persist Security Info=False;User ID=AdminPTES;Password=PTES@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
 
-sqlServerOptions =>
-        {
-            sqlServerOptions.EnableRetryOnFailure();
-        }
-        );
+   sqlServerOptions =>
+   {
+       sqlServerOptions.EnableRetryOnFailure();
+   }
+           );
+
 });
 
 builder.Services.AddCors(options =>

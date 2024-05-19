@@ -30,11 +30,13 @@ namespace TicketMate.Booking.Application.Handlers
                     VehicleType = inputTravelSearch.VehicleType,
                     StartLocation = inputTravelSearch.StartLocation,
                     EndLocation = inputTravelSearch.EndLocation,
+
                     TravelDate = inputTravelSearch.TravelDate
                 };
 
                 _dbContext.TravelSearch.Add(newTravelSearch);
-             //   await _dbContext.SaveChangesAsync();
+                //   await _dbContext.SaveChangesAsync();
+
 
                 return newTravelSearch;
             }
@@ -94,11 +96,13 @@ namespace TicketMate.Booking.Application.Handlers
                     .ToList();
 
 
+
                 // Fetch all ScheduledBuses from the database
                 var allBuses = _dbContext.ScheduledBuses
                     .Include(sb => sb.SelectedBusStands)
                     .Include(sb => sb.ScheduledBusDatesList)
                     .ToList();
+
 
                 // Filter by start and end locations
                 searchResult = allBuses
@@ -106,8 +110,10 @@ namespace TicketMate.Booking.Application.Handlers
                                  IsSequentialBusStations(sb.SelectedBusStands, startLocation, endLocation))
 
 
+
                     .ToList();
                 return searchResult;
+
 
             }
             catch (Exception ex)
@@ -191,7 +197,7 @@ namespace TicketMate.Booking.Application.Handlers
                 throw new Exception($"Error while retrieving travel search results: {ex.Message}");
             }
         }
-       
+
         // Helper method to check if the start location comes before the end location in the sequence of bus stands
         private bool IsSequentialBusStations(List<SelectedBusStands> busStations, string startLocation, string endLocation)
         {
