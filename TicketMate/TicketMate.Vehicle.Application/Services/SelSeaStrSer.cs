@@ -40,6 +40,21 @@ namespace TicketMate.Vehicle.API.Controllers
             return seatStructure;
         }
 
+        public async Task<ActionResult<IEnumerable<SelectedSeatStructure>>> GetSelectedSeatStructuresByBusId(int busId)
+        {
+            var seatStructures = await _vehicleDbContext.SelectedSeatStructures
+                .Where(s => s.RegisteredBusBusId == busId)
+                .ToListAsync();
+
+            if (seatStructures == null || !seatStructures.Any())
+            {
+                return new NotFoundResult();
+            }
+
+            return seatStructures;
+        }
+
+
         public async Task<ActionResult<SelectedSeatStructure>> PostSelectedSeatStructure(SelectedSeatStructure seatStructure)
         {
             _vehicleDbContext.SelectedSeatStructures.Add(seatStructure);

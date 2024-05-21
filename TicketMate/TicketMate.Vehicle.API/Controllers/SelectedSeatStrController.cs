@@ -30,6 +30,12 @@ namespace TicketMate.Vehicle.API.Controllers
             return await _selSeatStructureService.GetSelectedSeatStructure(id);
         }
 
+        [HttpGet("bus/{busId}")]
+        public async Task<ActionResult<IEnumerable<SelectedSeatStructure>>> GetSelectedSeatStructuresByBusId(int busId)
+        {
+            return await _selSeatStructureService.GetSelectedSeatStructuresByBusId(busId);
+        }
+
         [HttpPost]
         public async Task<ActionResult<SelectedSeatStructure>> PostSelectedSeatStructure(SelectedSeatStructure seatStructure)
         {

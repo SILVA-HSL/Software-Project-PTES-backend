@@ -10,6 +10,7 @@ namespace TicketMate.Vehicle.API.Controllers
     {
         Task<ActionResult<IEnumerable<SelectedSeatStructure>>> GetSelectedSeatStructures();
         Task<ActionResult<SelectedSeatStructure>> GetSelectedSeatStructure(int id);
+        Task<ActionResult<IEnumerable<SelectedSeatStructure>>> GetSelectedSeatStructuresByBusId(int busId);
         Task<ActionResult<SelectedSeatStructure>> PostSelectedSeatStructure(SelectedSeatStructure seatStructure);
         Task<ActionResult> PutSelectedSeatStructure(int id, SelectedSeatStructure seatStructure);
         Task<ActionResult> DeleteSelectedSeatStructure(int id);

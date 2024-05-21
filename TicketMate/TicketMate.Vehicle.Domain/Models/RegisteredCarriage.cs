@@ -13,6 +13,7 @@ namespace TicketMate.Vehicle.Domain.Models
         [Key]
         public int CarriageId { get; set; }
         public string CarriageNo { get; set; }
+        public int CarriageClass { get; set; }
         public int SeatsCount { get; set; }
         public float Length { get; set; }
         public float Width { get; set; }

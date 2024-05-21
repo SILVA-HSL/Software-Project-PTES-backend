@@ -13,6 +13,7 @@ namespace TicketMate.Vehicle.Domain.Models
         [Key]
         public int SchedulId { get; set; }
         public string TrainRoutNo { get; set; }
+        public string TrainName { get; set; }
         public string StartStation { get; set; }
         public string EndStation { get; set; }
         public string TrainDepartureTime { get; set; }
