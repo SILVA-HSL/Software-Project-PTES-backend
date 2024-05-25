@@ -37,7 +37,6 @@ namespace TicketMate.Booking.Application.Handlers
                 _dbContext.TravelSearch.Add(newTravelSearch);
                 //   await _dbContext.SaveChangesAsync();
 
-
                 return newTravelSearch;
             }
             catch (DbUpdateException ex)
@@ -96,13 +95,11 @@ namespace TicketMate.Booking.Application.Handlers
                     .ToList();
 
 
-
                 // Fetch all ScheduledBuses from the database
                 var allBuses = _dbContext.ScheduledBuses
                     .Include(sb => sb.SelectedBusStands)
                     .Include(sb => sb.ScheduledBusDatesList)
                     .ToList();
-
 
                 // Filter by start and end locations
                 searchResult = allBuses
@@ -110,10 +107,8 @@ namespace TicketMate.Booking.Application.Handlers
                                  IsSequentialBusStations(sb.SelectedBusStands, startLocation, endLocation))
 
 
-
                     .ToList();
                 return searchResult;
-
 
             }
             catch (Exception ex)

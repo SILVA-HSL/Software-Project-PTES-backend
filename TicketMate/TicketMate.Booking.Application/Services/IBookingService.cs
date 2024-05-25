@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TicketMate.Booking.Api.Models;
 using TicketMate.Booking.Domain.Dtos;
+using TicketMate.Booking.Domain.Models;
 
 namespace TicketMate.Booking.Application.Services
 {
@@ -18,5 +20,10 @@ namespace TicketMate.Booking.Application.Services
 
         public RegisteredBusDetails GetBusDetailsWithSeats(int registeredBusBusId);
 
+        public RegisteredTrainDetails GetTrainDetailsWithSeats(int SchedulId);
+
+        public List<BusBooking> GetUserBusBookings(string passengerId);
+
+            public List<BusBooking> GetBookingsOfBusSchedule(int scheduleId, string selectedDate);
     }
 }

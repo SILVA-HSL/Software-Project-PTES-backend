@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TicketMate.Booking.Api.Models;
 using TicketMate.Booking.Domain.Dtos;
+using TicketMate.Booking.Domain.Models;
 using TicketMate.Booking.Infrastructure;
 
 namespace TicketMate.Booking.Application.Services
@@ -57,7 +58,7 @@ namespace TicketMate.Booking.Application.Services
             };
 
             _context.TravelSearch.Add(newTravelSearch);
-            _context.SaveChangesAsync();
+           // _context.SaveChangesAsync();
 
             return newTravelSearch;
 
@@ -84,6 +85,51 @@ namespace TicketMate.Booking.Application.Services
 
             return busDetailsDto;
         }
+
+        public RegisteredTrainDetails GetTrainDetailsWithSeats(int schedulId)
+        {
+            var scheduledTrain = _context.ScheduledTrains
+                .Include(st => st.ScheduledCarriages)
+                    .ThenInclude(sc => sc.RegisteredCarriage)
+                        .ThenInclude(rc => rc.SelCarriageSeatStructures)
+                .FirstOrDefault(st => st.SchedulId == schedulId);
+
+            if (scheduledTrain == null)
+            {
+                // Handle scenario where no scheduled train is found with the provided ID
+                return null;
+            }
+
+            var registeredTrainDetails = new RegisteredTrainDetails
+            {
+                ScheduledCarriages = scheduledTrain.ScheduledCarriages,
+                RegisteredCarriages = scheduledTrain.ScheduledCarriages
+                    .Select(sc => sc.RegisteredCarriage)
+                    .ToList(),
+                SelCarriageSeatStructures = scheduledTrain.ScheduledCarriages
+                    .SelectMany(sc => sc.RegisteredCarriage.SelCarriageSeatStructures)
+                    .ToList()
+            };
+
+            return registeredTrainDetails;
+        }
+
+        public List<BusBooking> GetUserBusBookings(string passengerId)
+        {
+            return _context.BusBookings
+                .Where(b => b.PassengerId == passengerId)
+                .ToList();
+        }
+
+        public List<BusBooking> GetBookingsOfBusSchedule(int scheduleId, string selectedDate)
+        {
+            return _context.BusBookings
+                .Where(b => b.BusScheduleId == scheduleId)
+                .Where(b => b.BookingDate == selectedDate)
+                .ToList();
+
+        }
+
 
     }
 }
