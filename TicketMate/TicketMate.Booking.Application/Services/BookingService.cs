@@ -130,6 +130,41 @@ namespace TicketMate.Booking.Application.Services
 
         }
 
+        public ScheduledBuses GetBusScheduleDetails(int scheduleId)
+        {
+            var schedule = _context.ScheduledBuses
+                .Include(sb => sb.SelectedBusStands)
+                .Include(sb => sb.ScheduledBusDatesList)
+                .FirstOrDefault(sb => sb.ScheduleId == scheduleId);
+
+            return schedule;
+        }
+
+        public async Task UpdateBookedSeats(int id, string bookingSeatNO)
+        {
+            var busBooking = await _context.BusBookings.FindAsync(id);
+            if (busBooking == null)
+            {
+                throw new Exception("Bus booking not found");
+            }
+
+            busBooking.BookingSeatNO = bookingSeatNO;
+            await _context.SaveChangesAsync();
+
+        }
+
+        public async Task DeleteBusBooking(int id)
+        {
+            var busBooking = _context.BusBookings.Find(id);
+            if (busBooking == null)
+            {
+                throw new Exception("Bus booking not found");
+            }
+
+            _context.BusBookings.Remove(busBooking);
+            await _context.SaveChangesAsync();
+        }   
+
 
     }
 }

@@ -25,5 +25,12 @@ namespace TicketMate.Booking.Application.Services
         public List<BusBooking> GetUserBusBookings(string passengerId);
 
             public List<BusBooking> GetBookingsOfBusSchedule(int scheduleId, string selectedDate);
+
+        public ScheduledBuses GetBusScheduleDetails(int scheduleId);
+
+        public  Task UpdateBookedSeats(int id, string bookingSeatNO);
+
+        public Task DeleteBusBooking(int id);
+
     }
 }
