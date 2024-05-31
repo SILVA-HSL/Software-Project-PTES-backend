@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Reflection.Emit;
 using TicketMate.Booking.Application.Dtos;
 using TicketMate.Booking.Domain.Dtos;
+using TicketMate.Booking.Domain.Models;
 
 
 namespace TicketMate.Booking.Infrastructure
@@ -16,7 +17,13 @@ namespace TicketMate.Booking.Infrastructure
     {
         public DbSet<TravelSearch> TravelSearch { get; set; }
 
-        //public DbSet<TravelSessions> TravelSessions { get; set; }
+        public DbSet<BusBooking> BusBookings { get; set; }
+
+        public DbSet<TrainBooking> TrainBookings { get; set; }
+
+        public DbSet<CancelledBusBooking> CancelledBusBookings { get; set; }
+
+        public DbSet<CancelledTrainBooking> CancelledTrainBookings { get; set; }
 
         public DbSet<SelectedBusStands> SelectedBusStands { get; set; }
 
@@ -48,6 +55,13 @@ namespace TicketMate.Booking.Infrastructure
         {
 
         }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var connectionString = "Server=tcp:ptesserver.database.windows.net,1433;Initial Catalog=ptescentral;Persist Security Info=False;User ID=AdminPTES;Password=PTES@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            optionsBuilder.UseSqlServer(connectionString);
+        }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

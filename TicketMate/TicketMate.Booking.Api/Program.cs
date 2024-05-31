@@ -28,7 +28,6 @@ builder.Services.AddDbContext<BookingDbContext>(options =>
        sqlServerOptions.EnableRetryOnFailure();
    }
            );
-
 });
 
 builder.Services.AddCors(options =>

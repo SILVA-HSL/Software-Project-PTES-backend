@@ -23,6 +23,8 @@ namespace TicketMate.Booking.Domain.Dtos
         public string ArrivalTime { get; set; }
         public string Comfortability { get; set; }
         public string Duration { get; set; }
+
+
         public decimal TicketPrice { get; set; }
 
       

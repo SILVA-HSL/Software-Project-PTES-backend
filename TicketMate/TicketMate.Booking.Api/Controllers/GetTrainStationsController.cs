@@ -21,6 +21,5 @@ namespace TicketMate.Booking.Api.Controllers
             var trainStations = _trainService.getAllTrainStations();
             return Ok(trainStations);
         }
-
     }
 }
