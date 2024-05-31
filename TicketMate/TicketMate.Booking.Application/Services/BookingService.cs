@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TicketMate.Booking.Api.Models;
 using TicketMate.Booking.Domain.Dtos;
+using TicketMate.Booking.Domain.Models;
 using TicketMate.Booking.Infrastructure;
 
 namespace TicketMate.Booking.Application.Services
@@ -57,7 +58,7 @@ namespace TicketMate.Booking.Application.Services
             };
 
             _context.TravelSearch.Add(newTravelSearch);
-            _context.SaveChangesAsync();
+           // _context.SaveChangesAsync();
 
             return newTravelSearch;
 
@@ -84,6 +85,113 @@ namespace TicketMate.Booking.Application.Services
 
             return busDetailsDto;
         }
+
+        public RegisteredTrainDetails GetTrainDetailsWithSeats(int schedulId)
+        {
+            var scheduledTrain = _context.ScheduledTrains
+                .Include(st => st.ScheduledCarriages)
+                    .ThenInclude(sc => sc.RegisteredCarriage)
+                        .ThenInclude(rc => rc.SelCarriageSeatStructures)
+                .FirstOrDefault(st => st.SchedulId == schedulId);
+
+            if (scheduledTrain == null)
+            {
+                // Handle scenario where no scheduled train is found with the provided ID
+                return null;
+            }
+
+            var registeredTrainDetails = new RegisteredTrainDetails
+            {
+                ScheduledCarriages = scheduledTrain.ScheduledCarriages,
+                RegisteredCarriages = scheduledTrain.ScheduledCarriages
+                    .Select(sc => sc.RegisteredCarriage)
+                    .ToList(),
+                SelCarriageSeatStructures = scheduledTrain.ScheduledCarriages
+                    .SelectMany(sc => sc.RegisteredCarriage.SelCarriageSeatStructures)
+                    .ToList()
+            };
+
+            return registeredTrainDetails;
+        }
+        
+
+        // Methods for get bus bookings of a given user
+        public List<BusBooking> GetUserBusBookings(string passengerId)
+        {
+            return _context.BusBookings
+                .Where(b => b.PassengerId == passengerId)
+                .ToList();
+        }
+
+        // Methods for get train bookings of a given user
+        public List<TrainBooking> GetUserTrainBookings(string passengerId)
+        {
+            return _context.TrainBookings
+               .Where(b => b.PassengerId == passengerId)
+               .ToList();
+        }
+
+        // Methods for get bus bookings of a given schedule and given date
+        public List<BusBooking> GetBookingsOfBusSchedule(int scheduleId, string selectedDate)
+        {
+            return _context.BusBookings
+                .Where(b => b.BusScheduleId == scheduleId)
+                .Where(b => b.BookingDate == selectedDate)
+                .ToList();
+
+        }
+
+        // Methods for get train bookings of a given schedule and given date
+        public List<TrainBooking> GetBookingsOfTrainSchedule(int scheduleId, string selectedDate)
+        {
+            return _context.TrainBookings
+                .Where(b => b.TrainScheduleId == scheduleId)
+                .Where(b => b.BookingDate == selectedDate)
+                .ToList();
+        }
+
+        public ScheduledBuses GetBusScheduleDetails(int scheduleId)
+        {
+            var schedule = _context.ScheduledBuses
+                .Include(sb => sb.SelectedBusStands)
+                .Include(sb => sb.ScheduledBusDatesList)
+                .FirstOrDefault(sb => sb.ScheduleId == scheduleId);
+
+            return schedule;
+        }
+
+        public List<ScheduledTrains> GetTrainScheduleDetails(int scheduleId)
+        {
+            return _context.ScheduledTrains
+                .Where(b => b.SchedulId == scheduleId)
+                .ToList();
+        }
+
+        public async Task UpdateBusBookedSeats(int id, string bookingSeatNO)
+        {
+            var busBooking = await _context.BusBookings.FindAsync(id);
+            if (busBooking == null)
+            {
+                throw new Exception("Bus booking not found");
+            }
+
+            busBooking.BookingSeatNO = bookingSeatNO;
+            await _context.SaveChangesAsync();
+
+        }
+
+        public async Task DeleteBusBooking(int id)
+        {
+            var busBooking = _context.BusBookings.Find(id);
+            if (busBooking == null)
+            {
+                throw new Exception("Bus booking not found");
+            }
+
+            _context.BusBookings.Remove(busBooking);
+            await _context.SaveChangesAsync();
+        }   
+
 
     }
 }

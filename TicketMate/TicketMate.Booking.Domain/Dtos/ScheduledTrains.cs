@@ -29,5 +29,8 @@ namespace TicketMate.Booking.Domain.Dtos
         [JsonIgnore]
         public List<SelectedTrainStations> SelectedTrainStations { get; set; }
 
+        [JsonIgnore]
+        public List<ScheduledCarriages>? ScheduledCarriages { get; set; }
+
     }
 }
