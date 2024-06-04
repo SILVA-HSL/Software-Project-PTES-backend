@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TicketMate.Reporting.Api.props" />
+</Project>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "fIappHJlW34HCagsko6ViH+pBOqXc4vtxk3f5j6r26Q=",
+  "Source": "TicketMate.Reporting.Api",
+  "BasePath": "_content/TicketMate.Reporting.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
