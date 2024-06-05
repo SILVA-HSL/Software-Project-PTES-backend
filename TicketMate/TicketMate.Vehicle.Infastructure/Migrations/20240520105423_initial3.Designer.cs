@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TicketMate.Vehicle.Infastructure;
 
@@ -10,9 +11,11 @@ using TicketMate.Vehicle.Infastructure;
 namespace TicketMate.Vehicle.Infastructure.Migrations
 {
     [DbContext(typeof(VehicleDbContext))]
-    partial class VehicleDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240520105423_initial3")]
+    partial class initial3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -40,9 +43,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("DeleteState")
-                        .HasColumnType("bit");
-
                     b.Property<string>("InsuranceImgURL")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -57,10 +57,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
 
                     b.Property<int>("SetsCount")
                         .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("BusId");
 
@@ -94,20 +90,20 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
 
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.BusRouteStand", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<int>("BusRouteRoutId")
+                    b.Property<int?>("BusRouteRoutId")
                         .HasColumnType("int");
 
                     b.Property<string>("StandName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
                     b.HasIndex("BusRouteRoutId");
 
@@ -202,9 +198,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("DeleteState")
-                        .HasColumnType("bit");
-
                     b.Property<string>("DepartureTime")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -234,10 +227,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Property<decimal>("TicketPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("ScheduleId");
 
                     b.HasIndex("RegisteredBusBusId");
@@ -260,9 +249,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Property<string>("DepartureDate")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsCompleted")
-                        .HasColumnType("bit");
 
                     b.Property<int>("ScheduledBusScheduleId")
                         .HasColumnType("int");
@@ -355,10 +341,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TrainDepartureTime")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TrainName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -556,67 +538,11 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.ToTable("TrainRaliwayStations");
                 });
 
-            modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.userDataModel", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ContactNo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DOB")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("DrivingLicenseNo")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("NIC")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("OwnVehicleType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("RequestStatus")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("isDeleted")
-                        .HasColumnType("bit");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("users");
-                });
-
             modelBuilder.Entity("TicketMate.Vehicle.Domain.Models.BusRouteStand", b =>
                 {
                     b.HasOne("TicketMate.Vehicle.Domain.Models.BusRoute", "BusRoute")
                         .WithMany("BusRouteStands")
-                        .HasForeignKey("BusRouteRoutId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BusRouteRoutId");
 
                     b.Navigation("BusRoute");
                 });

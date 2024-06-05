@@ -12,5 +12,6 @@ namespace TicketMate.Vehicle.API.Controllers
         Task<ActionResult<RegisteredBus>> PostRegBuses(RegisteredBus busRegistration);
         Task<ActionResult> PutRegBuses(int id, RegisteredBus busRegistration);
         Task<ActionResult> DeleteRegBus(int id);
+        Task<ActionResult<IEnumerable<RegisteredBus>>> GetRegBusesByUserId(string userId); // New method
     }
 }

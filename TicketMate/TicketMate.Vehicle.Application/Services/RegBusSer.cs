@@ -31,12 +31,12 @@ namespace TicketMate.Vehicle.API.Controllers
             {
                 return new NotFoundResult();
             }
-            var employee = await _vehicleDbContext.RegisteredBuses.FindAsync(id);
-            if (employee == null)
+            var bus = await _vehicleDbContext.RegisteredBuses.FindAsync(id);
+            if (bus == null)
             {
                 return new NotFoundResult();
             }
-            return employee;
+            return bus;
         }
 
         public async Task<ActionResult<RegisteredBus>> PostRegBuses(RegisteredBus busRegistration)
@@ -80,6 +80,22 @@ namespace TicketMate.Vehicle.API.Controllers
             await _vehicleDbContext.SaveChangesAsync();
 
             return new OkResult();
+        }
+
+        public async Task<ActionResult<IEnumerable<RegisteredBus>>> GetRegBusesByUserId(string userId)
+        {
+            if (_vehicleDbContext.RegisteredBuses == null)
+            {
+                return new NotFoundResult();
+            }
+            var buses = await _vehicleDbContext.RegisteredBuses
+                .Where(bus => bus.UserId == userId)
+                .ToListAsync();
+            if (buses == null || buses.Count == 0)
+            {
+                return new NotFoundResult();
+            }
+            return buses;
         }
     }
 }

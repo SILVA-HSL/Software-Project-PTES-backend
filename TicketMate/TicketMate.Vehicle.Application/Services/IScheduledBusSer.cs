@@ -15,5 +15,8 @@ namespace TicketMate.Vehicle.Application.Services
         Task<ActionResult<ScheduledBus>> PostScheduledBus(ScheduledBus scheduledBus);
         Task<ActionResult> PutScheduledBus(int id, ScheduledBus scheduledBus);
         Task<ActionResult> DeleteScheduledBus(int id);
+
+        // New method to get scheduled buses by UserId
+        Task<ActionResult<IEnumerable<ScheduledBus>>> GetScheduledBusesByUserId(string userId);
     }
 }

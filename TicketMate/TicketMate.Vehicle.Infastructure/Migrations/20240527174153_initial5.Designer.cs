@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TicketMate.Vehicle.Infastructure;
 
@@ -10,9 +11,11 @@ using TicketMate.Vehicle.Infastructure;
 namespace TicketMate.Vehicle.Infastructure.Migrations
 {
     [DbContext(typeof(VehicleDbContext))]
-    partial class VehicleDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240527174153_initial5")]
+    partial class initial5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -39,9 +42,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Property<string>("BusNo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("DeleteState")
-                        .HasColumnType("bit");
 
                     b.Property<string>("InsuranceImgURL")
                         .IsRequired()
@@ -202,9 +202,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("DeleteState")
-                        .HasColumnType("bit");
-
                     b.Property<string>("DepartureTime")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -234,10 +231,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Property<decimal>("TicketPrice")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("ScheduleId");
 
                     b.HasIndex("RegisteredBusBusId");
@@ -260,9 +253,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Property<string>("DepartureDate")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsCompleted")
-                        .HasColumnType("bit");
 
                     b.Property<int>("ScheduledBusScheduleId")
                         .HasColumnType("int");

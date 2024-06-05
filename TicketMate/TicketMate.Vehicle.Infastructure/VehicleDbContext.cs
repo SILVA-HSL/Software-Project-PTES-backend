@@ -31,6 +31,7 @@ namespace TicketMate.Vehicle.Infastructure
         public DbSet<TrainRaliway> TrainRaliways { get; set; }
         public DbSet<TrainRaliwayStation> TrainRaliwayStations { get; set; }
         public DbSet<SelectedTrainStation> SelectedTrainStations { get; set; }
+        public DbSet<userDataModel>users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //var connectionString = "server = MSI; database = Vehicle; Integrated Security = True; MultipleActiveResultSets = true; MultipleActiveResultSets = true; TrustServerCertificate = True;";

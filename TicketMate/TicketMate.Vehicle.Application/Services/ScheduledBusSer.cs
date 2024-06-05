@@ -72,5 +72,13 @@ namespace TicketMate.Vehicle.Application.Services
 
             return new OkResult();
         }
+
+        public async Task<ActionResult<IEnumerable<ScheduledBus>>> GetScheduledBusesByUserId(string userId)
+        {
+            var scheduledBuses = await _vehicleDbContext.ScheduledBuses
+                .Where(sb => sb.UserId == userId)
+                .ToListAsync();
+            return new ActionResult<IEnumerable<ScheduledBus>>(scheduledBuses);
+        }
     }
 }

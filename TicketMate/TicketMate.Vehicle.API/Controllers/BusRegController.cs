@@ -28,6 +28,12 @@ namespace TicketMate.Vehicle.API.Controllers
             return await _regBusService.GetRegBus(id);
         }
 
+        [HttpGet("byUser/{userId}")]
+        public async Task<ActionResult<IEnumerable<RegisteredBus>>> GetRegBusesByUserId(string userId)
+        {
+            return await _regBusService.GetRegBusesByUserId(userId);
+        }
+
         [HttpPost]
         public async Task<ActionResult<RegisteredBus>> PostRegBuses(RegisteredBus busRegistration)
         {

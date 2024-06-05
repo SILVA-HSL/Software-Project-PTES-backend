@@ -48,5 +48,12 @@ namespace TicketMate.Vehicle.API.Controllers
         {
             return await _scheduledBusService.DeleteScheduledBus(id);
         }
+
+        // New endpoint to get scheduled buses by UserId
+        [HttpGet("user/{userId}")]
+        public async Task<ActionResult<IEnumerable<ScheduledBus>>> GetScheduledBusesByUserId(string userId)
+        {
+            return await _scheduledBusService.GetScheduledBusesByUserId(userId);
+        }
     }
 }
