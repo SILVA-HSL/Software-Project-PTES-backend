@@ -106,5 +106,30 @@ namespace TicketMate.Admin.Application.Services
         }
 
 
+        public void addUser(userDataModel userDatas)
+        {
+            var userData = new userDataModel
+            {
+                FirstName = userDatas.FirstName,
+                LastName = userDatas.LastName,
+                Email = userDatas.Email,
+                DOB = userDatas.DOB,
+                NIC = userDatas.NIC,
+                ContactNo = userDatas.ContactNo,
+                UserName = userDatas.UserName,
+                Password = userDatas.Password,
+                UserType = userDatas.UserType,
+                OwnVehicleType = userDatas.OwnVehicleType,
+                DrivingLicenseNo = userDatas.DrivingLicenseNo,
+                isDeleted = false,
+                RequestStatus = true
+
+            };
+
+            _context.users.Add(userData);
+            _context.SaveChanges();
+        }
+
+
     }
 }

@@ -22,6 +22,7 @@ namespace TicketMate.Admin.Application.Services
         public List<userDataModel> GetOwnerRequests();
         public string handleReject(int Id);
         public string handleAccept(int Id);
+        public void addUser(userDataModel userDatas);
 
 
 

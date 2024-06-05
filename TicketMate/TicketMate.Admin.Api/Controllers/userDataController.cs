@@ -57,48 +57,63 @@ namespace TicketMate.Admin.Api.Controllers
         public userDataController(IUserService userService)
         {
             _userService = userService;
-        }       
+        }
 
 
         //public readonly userDbContext _context;
 
-     /*   public userDataController(DbContextOptions<userDbContext> options)
-        {
-            _context = new userDbContext(options);
+        /*   public userDataController(DbContextOptions<userDbContext> options)
+           {
+               _context = new userDbContext(options);
 
-        }
-     
+           }
 
+
+           [HttpPost]
+           public void Post([FromBody] AddUserDataDTO userDatas)
+           {
+               var userData = new userDataModel
+               {
+
+                   FirstName = userDatas.FirstName,
+                   LastName = userDatas.LastName,
+                   Email = userDatas.Email,
+                   DOB = userDatas.DOB,
+                   NIC = userDatas.NIC,
+                   ContactNo = userDatas.ContactNo,
+                   UserName = userDatas.UserName,
+                   Password = userDatas.Password,
+                   UserType = userDatas.UserType,
+                   OwnVehicleType = userDatas.OwnVehicleType,
+                   DrivingLicenseNo = userDatas.DrivingLicenseNo,
+                   isDeleted = false,
+                   RequestStatus = true
+
+               };
+
+               _context.users.Add(userData);
+               _context.SaveChanges();
+
+
+
+           }
+
+           */
         [HttpPost]
-        public void Post([FromBody] AddUserDataDTO userDatas)
+        public IActionResult addUser(userDataModel userData)
         {
-            var userData = new userDataModel
+            try
             {
+                _userService.addUser(userData);
+                return Ok("successfully added user.");
 
-                FirstName = userDatas.FirstName,
-                LastName = userDatas.LastName,
-                Email = userDatas.Email,
-                DOB = userDatas.DOB,
-                NIC = userDatas.NIC,
-                ContactNo = userDatas.ContactNo,
-                UserName = userDatas.UserName,
-                Password = userDatas.Password,
-                UserType = userDatas.UserType,
-                OwnVehicleType = userDatas.OwnVehicleType,
-                DrivingLicenseNo = userDatas.DrivingLicenseNo,
-                isDeleted = false,
-                RequestStatus = true
-
-            };
-
-            _context.users.Add(userData);
-            _context.SaveChanges();
-
-
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
 
         }
-
-        */
 
 
         [HttpGet]
