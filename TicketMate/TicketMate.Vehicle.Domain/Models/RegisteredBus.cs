@@ -21,6 +21,10 @@ namespace TicketMate.Vehicle.API.Models
         [Required(AllowEmptyStrings = false)]
         public string InsuranceImgURL { get; set; }
 
+        public string UserId { get; set; }
+
+        public bool DeleteState { get; set; } = true;
+
         [JsonIgnore]
         public List<SelectedSeatStructure>? SelectedSeatStructures { get; set; }
         [JsonIgnore]

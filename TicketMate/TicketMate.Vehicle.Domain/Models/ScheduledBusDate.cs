@@ -18,6 +18,8 @@ namespace TicketMate.Vehicle.Domain.Models
         public string ArrivalDate { get; set; }
         public string DepartureDate { get; set; }
 
+        public bool IsCompleted { get; set; } = false;
+
         [JsonIgnore]
         public ScheduledBus? ScheduledBus { get; set; }
     }

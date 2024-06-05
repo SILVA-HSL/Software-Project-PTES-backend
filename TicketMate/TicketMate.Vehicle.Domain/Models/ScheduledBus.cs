@@ -29,6 +29,9 @@ namespace TicketMate.Vehicle.Domain.Models
         public string Duration { get; set; }
         public decimal TicketPrice { get; set; }
 
+        public string UserId { get; set; }
+        public bool DeleteState { get; set; } = true;
+
         [JsonIgnore]
         public List<SelectedBusStand>? SelectedBusStands { get; set; }
         
