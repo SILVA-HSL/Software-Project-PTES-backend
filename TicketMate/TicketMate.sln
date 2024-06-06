@@ -3,20 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34407.89
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketMate.Admin.Api", "TicketMate.Admin.Api\TicketMate.Admin.Api.csproj", "{16D0ADA9-E176-43E0-AB25-BE9F59679F62}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Booking", "Booking", "{5D1D6C94-1FFD-4FDD-87B5-90878BF88A14}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketMate.Admin.Application", "TicketMate.Admin.Application\TicketMate.Admin.Application.csproj", "{984E20BE-1B8F-4231-8322-2B920141ADAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketMate.Booking.Api", "TicketMate.Booking.Api\TicketMate.Booking.Api.csproj", "{FBF0CD7C-070E-4F3C-9037-EC9DE73992E0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketMate.Admin.Domain", "TicketMate.Admin.Domain\TicketMate.Admin.Domain.csproj", "{678512ED-C482-42FC-8EAA-50DE33E92A55}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketMate.Admin.Infastructure", "TicketMate.Admin.Infastructure\TicketMate.Admin.Infastructure.csproj", "{EE469CAF-7128-404F-8A9C-8B40B57665E8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TicketMate.UserManage", "TicketMate.UserManage", "{2AF64178-AFD1-4879-8791-CFD8B7CEE1E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketMate.Booking.Application", "TicketMate.Booking.Application\TicketMate.Booking.Application.csproj", "{1E817180-1FE7-4BF6-9B7D-F91C456F6369}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C3798C7E-458B-4B52-AE80-2D118101889E}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketMate.Booking.Domain", "TicketMate.Booking.Domain\TicketMate.Booking.Domain.csproj", "{DED62B33-11EF-46AE-B5C7-812836DD904B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TicketMate.Booking.Infrastructure", "TicketMate.Booking.Infrastructure\TicketMate.Booking.Infrastructure.csproj", "{297974E4-CB14-4523-8412-098EDFE414F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,31 +24,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{16D0ADA9-E176-43E0-AB25-BE9F59679F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{16D0ADA9-E176-43E0-AB25-BE9F59679F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{16D0ADA9-E176-43E0-AB25-BE9F59679F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{16D0ADA9-E176-43E0-AB25-BE9F59679F62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{984E20BE-1B8F-4231-8322-2B920141ADAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{984E20BE-1B8F-4231-8322-2B920141ADAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{984E20BE-1B8F-4231-8322-2B920141ADAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{984E20BE-1B8F-4231-8322-2B920141ADAA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{678512ED-C482-42FC-8EAA-50DE33E92A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{678512ED-C482-42FC-8EAA-50DE33E92A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{678512ED-C482-42FC-8EAA-50DE33E92A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{678512ED-C482-42FC-8EAA-50DE33E92A55}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EE469CAF-7128-404F-8A9C-8B40B57665E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE469CAF-7128-404F-8A9C-8B40B57665E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE469CAF-7128-404F-8A9C-8B40B57665E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE469CAF-7128-404F-8A9C-8B40B57665E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF0CD7C-070E-4F3C-9037-EC9DE73992E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF0CD7C-070E-4F3C-9037-EC9DE73992E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF0CD7C-070E-4F3C-9037-EC9DE73992E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF0CD7C-070E-4F3C-9037-EC9DE73992E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E817180-1FE7-4BF6-9B7D-F91C456F6369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E817180-1FE7-4BF6-9B7D-F91C456F6369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E817180-1FE7-4BF6-9B7D-F91C456F6369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E817180-1FE7-4BF6-9B7D-F91C456F6369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DED62B33-11EF-46AE-B5C7-812836DD904B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED62B33-11EF-46AE-B5C7-812836DD904B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED62B33-11EF-46AE-B5C7-812836DD904B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED62B33-11EF-46AE-B5C7-812836DD904B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{297974E4-CB14-4523-8412-098EDFE414F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{297974E4-CB14-4523-8412-098EDFE414F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{297974E4-CB14-4523-8412-098EDFE414F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{297974E4-CB14-4523-8412-098EDFE414F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{16D0ADA9-E176-43E0-AB25-BE9F59679F62} = {2AF64178-AFD1-4879-8791-CFD8B7CEE1E0}
-		{984E20BE-1B8F-4231-8322-2B920141ADAA} = {2AF64178-AFD1-4879-8791-CFD8B7CEE1E0}
-		{678512ED-C482-42FC-8EAA-50DE33E92A55} = {2AF64178-AFD1-4879-8791-CFD8B7CEE1E0}
-		{EE469CAF-7128-404F-8A9C-8B40B57665E8} = {2AF64178-AFD1-4879-8791-CFD8B7CEE1E0}
+		{FBF0CD7C-070E-4F3C-9037-EC9DE73992E0} = {5D1D6C94-1FFD-4FDD-87B5-90878BF88A14}
+		{1E817180-1FE7-4BF6-9B7D-F91C456F6369} = {5D1D6C94-1FFD-4FDD-87B5-90878BF88A14}
+		{DED62B33-11EF-46AE-B5C7-812836DD904B} = {5D1D6C94-1FFD-4FDD-87B5-90878BF88A14}
+		{297974E4-CB14-4523-8412-098EDFE414F0} = {5D1D6C94-1FFD-4FDD-87B5-90878BF88A14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {37EBAA5E-8803-41FD-8612-1E6365CB2A04}

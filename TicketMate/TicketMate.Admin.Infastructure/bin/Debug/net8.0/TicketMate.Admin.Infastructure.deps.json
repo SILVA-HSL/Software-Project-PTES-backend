@@ -17,6 +17,9 @@
           "Swashbuckle.AspNetCore": "6.4.0",
           "System.IdentityModel.Tokens.Jwt": "7.4.0",
           "TicketMate.Admin.Domain": "1.0.0"
+          "Swashbuckle.AspNetCore.Swagger": "6.5.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.5.0",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.5.0"
         },
         "runtime": {
           "TicketMate.Admin.Infastructure.dll": {}
@@ -1603,6 +1606,7 @@
         }
       },
       "NuGet.DependencyResolver.Core/6.9.1": {
+      "Swashbuckle.AspNetCore.Swagger/6.5.0": {
         "dependencies": {
           "NuGet.Configuration": "6.9.1",
           "NuGet.LibraryModel": "6.9.1",
@@ -1755,6 +1759,7 @@
         }
       },
       "System.Composition.Hosting/7.0.0": {
+      "Swashbuckle.AspNetCore.SwaggerGen/6.5.0": {
         "dependencies": {
           "System.Composition.Runtime": "7.0.0"
         },
@@ -2737,6 +2742,7 @@
       "path": "microsoft.openapi/1.2.3",
       "hashPath": "microsoft.openapi.1.2.3.nupkg.sha512"
     },
+    "Swashbuckle.AspNetCore.Swagger/6.5.0": {
     "Microsoft.SqlServer.Server/1.0.0": {
       "type": "package",
       "serviceable": true,
