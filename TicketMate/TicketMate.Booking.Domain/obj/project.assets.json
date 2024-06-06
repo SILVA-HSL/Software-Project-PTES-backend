@@ -173,19 +173,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Acer\\.nuget\\packages\\": {}
+    "C:\\Users\\ME\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
       "projectName": "TicketMate.Booking.Domain",
-      "projectPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
-      "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-      "outputPath": "H:\\TicketmateBackend\\RepoWorksNew2\\TicketMate\\TicketMate.Booking.Domain\\obj\\",
+      "projectPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
+      "packagesPath": "C:\\Users\\ME\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Booking.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ME\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -240,7 +240,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
