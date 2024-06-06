@@ -310,6 +310,15 @@ namespace TicketMate.Booking.Application.Services
                 .ToList();
         }
 
+        public List<TrainFeedBack> GetTrainFeedBackForOperations(string passengerId, string trainName , int bookingId)
+        {
+            return _context.TrainFeedBacks
+                .Where(b => b.PassengerId == passengerId)
+                .Where(b => b.TrainName == trainName)
+                .Where(b => b.BookingId == bookingId)
+                .ToList();
+        }
+
         public async Task DeleteBusFeedBack(int id)
         {
             var busFeedBack = _context.BusFeedBacks.Find(id);
@@ -320,6 +329,19 @@ namespace TicketMate.Booking.Application.Services
             }
 
             _context.BusFeedBacks.Remove(busFeedBack);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteTrainFeedBack(int id)
+        {
+            var trainFeedBack = _context.TrainFeedBacks.Find(id);
+
+            if (trainFeedBack == null)
+            {
+                throw new Exception("Bus booking not found");
+            }
+
+            _context.TrainFeedBacks.Remove(trainFeedBack);
             await _context.SaveChangesAsync();
         }
 
@@ -343,11 +365,42 @@ namespace TicketMate.Booking.Application.Services
                 .ToList();
         }
 
+        public List<TrainFeedBack> GetFeedbacksForTrain(string trainName)
+        {
+            return _context.TrainFeedBacks
+                .Where(b => b.TrainName == trainName)
+                .ToList();
+        }
+
         public List<AspNetUsers> GetUserName(string UserId)
         {
             return _context.AspNetUsers
                 .Where(b => b.Id == UserId)
                 .ToList();
+        }
+
+        public List<ScheduledTrains> GetTrainName(int trainScheduleId)
+        {
+            return _context.ScheduledTrains
+                .Where(b => b.SchedulId == trainScheduleId)
+                .ToList();
+        }
+
+        public async Task SaveTrainFeedback(TrainFeedbackDto feedbackDto)
+        {
+            var feedback = new TrainFeedBack
+            {
+                TrainScheduleId = feedbackDto.TrainScheduleId,
+                BookingId = feedbackDto.BookingId,
+                PassengerId = feedbackDto.PassengerId,
+                TrainName = feedbackDto.TrainName,
+                Rate = feedbackDto.Rate,
+                FeedBack = feedbackDto.FeedBack,
+                GivenDate = DateTime.Parse(feedbackDto.GivenDate).ToString("yyyy-MM-dd")
+            };
+
+            _context.TrainFeedBacks.Add(feedback);
+            await _context.SaveChangesAsync();
         }
 
 

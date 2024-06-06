@@ -26,6 +26,8 @@ namespace TicketMate.Booking.Infrastructure
 
         public DbSet<BusFeedBack> BusFeedBacks { get; set; }
 
+        public DbSet<TrainFeedBack> TrainFeedBacks { get; set; }
+
         public DbSet<SelectedBusStands> SelectedBusStands { get; set; }
 
         public DbSet<ScheduledBuses> ScheduledBuses { get; set; }
