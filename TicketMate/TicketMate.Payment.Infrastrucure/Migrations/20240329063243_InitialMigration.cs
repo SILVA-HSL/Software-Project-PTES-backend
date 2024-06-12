@@ -11,6 +11,7 @@ namespace TicketMate.Payment.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            /*
             migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
@@ -33,13 +34,14 @@ namespace TicketMate.Payment.Migrations
                 {
                     table.PrimaryKey("PK_Users", x => x.Id);
                 });
+            */
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
-        {
+        {/*
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Users");*/
         }
     }
 }

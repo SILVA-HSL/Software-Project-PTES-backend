@@ -4,6 +4,126 @@
     "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment\\TicketMate.Payment.Api.csproj": {}
   },
   "projects": {
+    "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
+        "projectName": "TicketMate.Admin.Application",
+        "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.2.0, )"
+            },
+            "Microsoft.AspNet.Cors": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -53,9 +173,17 @@
               "target": "Package",
               "version": "[5.3.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -66,6 +194,22 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.0, )"
             }
           },
           "imports": [
@@ -88,12 +232,131 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.payment.Application.csproj": {
+    "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.payment.Application.csproj",
-        "projectName": "TicketMate.payment.Application",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.payment.Application.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj",
+        "projectName": "TicketMate.Admin.Infastructure",
+        "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Infastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj"
+              },
+              "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "Microsoft.AspNet.Cors": {
+              "target": "Package",
+              "version": "[5.3.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.Payment.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.Payment.Application.csproj",
+        "projectName": "TicketMate.Payment.Application",
+        "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.Payment.Application.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -114,6 +377,9 @@
             "projectReferences": {
               "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Domain\\TicketMate.Payment.Domain.csproj": {
                 "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Domain\\TicketMate.Payment.Domain.csproj"
+              },
+              "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastructure.csproj"
               }
             }
           }
@@ -137,6 +403,10 @@
               "target": "Package",
               "version": "[13.0.1, )"
             },
+            "Braintree": {
+              "target": "Package",
+              "version": "[5.25.0, )"
+            },
             "Castle.Core": {
               "target": "Package",
               "version": "[5.1.1, )"
@@ -144,6 +414,18 @@
             "MailKit": {
               "target": "Package",
               "version": "[4.4.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -154,6 +436,18 @@
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[44.10.0-beta.1, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
             }
           },
           "imports": [
@@ -216,6 +510,36 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Braintree": {
+              "target": "Package",
+              "version": "[5.25.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[44.10.0-beta.1, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -236,12 +560,12 @@
         }
       }
     },
-    "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastrucure.csproj": {
+    "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastrucure.csproj",
-        "projectName": "TicketMate.Payment.Infrastrucure",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastrucure.csproj",
+        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastructure.csproj",
+        "projectName": "TicketMate.Payment.Infrastructure",
+        "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\obj\\",
         "projectStyle": "PackageReference",
@@ -262,9 +586,6 @@
             "projectReferences": {
               "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
                 "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj"
-              },
-              "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.payment.Application.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.payment.Application.csproj"
               },
               "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Domain\\TicketMate.Payment.Domain.csproj": {
                 "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Domain\\TicketMate.Payment.Domain.csproj"
@@ -287,7 +608,15 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.3, )"
             },
@@ -296,6 +625,22 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[44.10.0-beta.1, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
             }
           },
           "imports": [
@@ -342,14 +687,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.payment.Application.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.payment.Application.csproj"
+              "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj"
+              },
+              "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.Payment.Application.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.payment.Application\\TicketMate.Payment.Application.csproj"
               },
               "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Domain\\TicketMate.Payment.Domain.csproj": {
                 "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Domain\\TicketMate.Payment.Domain.csproj"
               },
-              "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastrucure.csproj": {
-                "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastrucure.csproj"
+              "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Payment.Infrastrucure\\TicketMate.Payment.Infrastructure.csproj"
               }
             }
           }
@@ -369,6 +717,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Braintree": {
+              "target": "Package",
+              "version": "[5.25.0, )"
+            },
             "MailKit": {
               "target": "Package",
               "version": "[4.4.0, )"
@@ -381,6 +733,10 @@
               "target": "Package",
               "version": "[2.2.0, )"
             },
+            "Microsoft.AspNetCore.SignalR": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.3, )"
@@ -391,9 +747,25 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.5.0, )"
+            },
+            "Stripe.net": {
+              "target": "Package",
+              "version": "[44.10.0-beta.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "iTextSharp": {
+              "target": "Package",
+              "version": "[5.5.13.3, )"
             }
           },
           "imports": [

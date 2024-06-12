@@ -1,6 +1,7 @@
 C:\Users\User\source\repos\Software-Project-PTES-backend\TicketMate\TicketMate.Payment.Domain\bin\Debug\net8.0\TicketMate.Payment.Domain.deps.json
 C:\Users\User\source\repos\Software-Project-PTES-backend\TicketMate\TicketMate.Payment.Domain\bin\Debug\net8.0\TicketMate.Payment.Domain.dll
 C:\Users\User\source\repos\Software-Project-PTES-backend\TicketMate\TicketMate.Payment.Domain\bin\Debug\net8.0\TicketMate.Payment.Domain.pdb
+C:\Users\User\source\repos\Software-Project-PTES-backend\TicketMate\TicketMate.Payment.Domain\obj\Debug\net8.0\TicketMate.Payment.Domain.csproj.AssemblyReference.cache
 C:\Users\User\source\repos\Software-Project-PTES-backend\TicketMate\TicketMate.Payment.Domain\obj\Debug\net8.0\TicketMate.Payment.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\source\repos\Software-Project-PTES-backend\TicketMate\TicketMate.Payment.Domain\obj\Debug\net8.0\TicketMate.Payment.Domain.AssemblyInfoInputs.cache
 C:\Users\User\source\repos\Software-Project-PTES-backend\TicketMate\TicketMate.Payment.Domain\obj\Debug\net8.0\TicketMate.Payment.Domain.AssemblyInfo.cs

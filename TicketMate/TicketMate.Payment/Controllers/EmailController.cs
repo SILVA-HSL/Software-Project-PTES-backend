@@ -5,6 +5,9 @@ using TicketMate.Payment.Data;
 using TicketMate.Payment.DTOs;
 using TicketMate.Payment.EmailService;
 using TicketMate.Admin.Infastructure;
+using System.Diagnostics.CodeAnalysis;
+using Microsoft.Identity.Client;
+
 
 namespace TicketMate.Payment.Controllers
 {
@@ -15,42 +18,34 @@ namespace TicketMate.Payment.Controllers
     {
         // Declaring a private readonly field to hold an instance of the email service
         private readonly IEmailService emailService;
-       //private readonly UserDataDBContext dbContext;
-        private readonly userDbContext dbContext;
+        // private readonly userDbContext dbContext;
+        private readonly userDataDBContext dbContext;
+        // private readonly userDbContext dbContext;
 
         // Constructor for the EmailController, injecting an instance of IEmailService
-        public EmailController(IEmailService emailService, userDbContext dbContext)
+        public EmailController(IEmailService emailService, userDataDBContext dbContext)
         {
             this.emailService = emailService;
             this.dbContext = dbContext;
 
         }
 
-        // HTTP GET endpoint to retrieve email address
-        //[HttpGet("GetEmilAddress")]
-        // public ActionResult<string> GetEmailAddress()
-        //{
-        //var name = dbContext.Users.FirstOrDefault(u => u.FirstName == "shanuka");
-
-        // return Ok(name.Email);
-        //}
-
-
-
 
 
         // HTTP POST endpoint for sending emails
-        [HttpPost("SendEmails")]
-        public ActionResult SendEmail(RequestDTO request)
+        [HttpPost("SendEmails/{Id?}")]
+        public ActionResult SendEmail(RequestDTO request, int Id)
         {
-            var emailAddress = GetEmailAddress(); // Call the GET endpoint to get the email address
-           // var emailAddress = "sandeepanirmh.21@uom.lk";
+
+            var emailAddress = GetEmailAddress(Id); // Call the GET endpoint to get the email address
+            // var emailAddress = "sandeepanirmh.21@uom.lk";
 
             // Assign the retrieved email address to the "To" property of the request DTO
             request.To = emailAddress.ToString();
-                       
-            request.Message = GetMessage();
-          
+
+
+            request.Message = GetMessage(Id);
+
 
             // Calling the SendEmail method of the injected email service
             var result = emailService.SendEmail(request);
@@ -58,43 +53,33 @@ namespace TicketMate.Payment.Controllers
             // Returning an HTTP response indicating success with a message
             return Ok("Mail sent!");
         }
-        public IActionResult GetEmailAddress()
+        private string GetEmailAddress(int Id)
         {
             // Retrieve the user from the database where FirstName is "shanuka"
             //var user = dbContext.Users.FirstOrDefault(u => u.FirstName == "himasha");
             //var user= dbContext.users.FirstOrDefault(u => u.FirstName == "himasha");
-            try
-            {
-                var user = dbContext.users.Where(u => u.FirstName == "himasha")
-                    .Select(u => new { u.Email }).FirstOrDefault();
-                if (user != null)
-                {
-                    return Ok(user);
-                }
-                return BadRequest("user not found");
 
-            }catch(Exception e)
-            {
-                return BadRequest(e.Message);
-            }
-          
+            // var user = dbContext.Users.Where(u => u.FirstName == "himasha").SingleOrDefault();
+            // return user != null ? user.Email : string.Empty;
 
 
             // If the user is found, return their email address; otherwise, return an empty string
-            //return user != null ? user.Email : string.Empty;
-           
+
+            var user = dbContext.Users.Find(Id);
+            return user != null ? user.Email : string.Empty;
 
         }
-        private string GetMessage()
+        private string GetMessage(int Id)
         {
             // Retrieve the user from the database where FirstName is "shanuka"
-           // var user = dbContext.Users.FirstOrDefault(u => u.FirstName == "himasha");
-           var user = dbContext.users.FirstOrDefault(u => u.FirstName == "himasha");
+            // var user = dbContext.Users.FirstOrDefault(u => u.FirstName == "himasha");
+            var user = dbContext.Users.Find(Id);
 
             // If the user is found, return their email address; otherwise, return an empty string
-            return user != null ? user.OwnVehicleType + " your payment receip is attached" : string.Empty;
+            return user != null ? " your payment receip is attached" : string.Empty;
         }
 
 
     }
 }
+

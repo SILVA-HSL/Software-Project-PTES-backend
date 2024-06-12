@@ -11,7 +11,7 @@ using TicketMate.Payment.Data;
 
 namespace TicketMate.Payment.Migrations
 {
-    [DbContext(typeof(UserDataDBContext))]
+    [DbContext(typeof(userDataDBContext))]
     [Migration("20240329063243_InitialMigration")]
     partial class InitialMigration
     {

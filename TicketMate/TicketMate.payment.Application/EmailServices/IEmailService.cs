@@ -1,6 +1,4 @@
-﻿
-
-using TicketMate.Payment.DTOs;
+﻿using TicketMate.Payment.DTOs;
 
 namespace TicketMate.Payment.EmailService
 {

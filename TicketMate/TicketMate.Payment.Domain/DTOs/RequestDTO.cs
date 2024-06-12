@@ -14,7 +14,7 @@ namespace TicketMate.Payment.DTOs
         {
 
        
-            Subject = "Your payment receipt"; // Set default value for Subject
+            Subject = "Your payment Status"; // Set default value for Subject
 
         }
     }
