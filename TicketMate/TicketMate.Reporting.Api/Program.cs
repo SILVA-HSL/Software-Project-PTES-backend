@@ -11,6 +11,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // Register services
 builder.Services.AddScoped<IAdminReportingService, AdminReportingService>();
+builder.Services.AddScoped<IBusOwnerReportingService, BusOwnerReportingService>();
+builder.Services.AddScoped<ITrainReportingService, TrainReportingService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>

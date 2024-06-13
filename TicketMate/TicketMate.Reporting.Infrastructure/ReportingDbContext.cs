@@ -11,6 +11,11 @@ namespace TicketMate.Reporting.Infrastructure
         public DbSet<RegisteredBus> RegisteredBuses { get; set; }
         public DbSet<BusBooking> BusBookings { get; set; }
         public DbSet<BusFeedBack> BusFeedBacks { get; set; }
+        public DbSet<ScheduledTrain> ScheduledTrains { get; set; }
+        public DbSet<TrainBooking> TrainBookings { get; set; }
+        public DbSet<TrainFeedBack> TrainFeedBacks { get; set; }
+
+
 
 
         public ReportingDbContext(DbContextOptions<ReportingDbContext> options) : base(options)
@@ -29,11 +34,7 @@ namespace TicketMate.Reporting.Infrastructure
             
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Todo>().HasKey(t => t.Id);
-            base.OnModelCreating(modelBuilder);
-        }
+        
     }
 }
 
