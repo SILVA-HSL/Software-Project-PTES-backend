@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // Register services
-builder.Services.AddScoped<IReportingService, ReportingService>();
+builder.Services.AddScoped<IAdminReportingService, AdminReportingService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>

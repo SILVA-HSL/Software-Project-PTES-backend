@@ -6,7 +6,12 @@ namespace TicketMate.Reporting.Infrastructure
 {
     public class ReportingDbContext : DbContext
     {
-        public DbSet<Todo> Todos { get; set; }
+        //public DbSet<Todo> Todos { get; set; }
+
+        public DbSet<RegisteredBus> RegisteredBuses { get; set; }
+        public DbSet<BusBooking> BusBookings { get; set; }
+        public DbSet<BusFeedBack> BusFeedBacks { get; set; }
+
 
         public ReportingDbContext(DbContextOptions<ReportingDbContext> options) : base(options)
         {
