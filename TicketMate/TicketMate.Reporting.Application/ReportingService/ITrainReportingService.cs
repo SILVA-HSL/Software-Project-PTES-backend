@@ -12,6 +12,7 @@ namespace TicketMate.Reporting.Application.ReportingService
 
     {
         public  Task<List<TrainReportDTO>> GenerateTrainReportAsync(string userId, DateFilter dateFilter);
+        public List<string> GetTrainOwnerUserIds();
 
 
 

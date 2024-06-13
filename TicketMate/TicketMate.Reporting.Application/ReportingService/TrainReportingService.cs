@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -53,12 +54,14 @@ namespace TicketMate.Reporting.Application.ReportingService
                     break;
             }
 
+            
+
             string startDateString = startDate.ToString("yyyy-MM-dd");
             string endDateString = endDate.ToString("yyyy-MM-dd");
 
             // Fetch all unique train names and their schedules
             var scheduledTrains = await _context.ScheduledTrains
-                                                .Where(train => train.DeleteState)
+                                                .Where(train => train.DeleteState && train.UserId == userId)
                                                 .GroupBy(train => train.TrainName)
                                                 .Select(group => new
                                                 {
@@ -116,6 +119,16 @@ namespace TicketMate.Reporting.Application.ReportingService
             }
 
             return report;
+        }
+
+
+        public List<string> GetTrainOwnerUserIds()
+        {
+            return _context.ScheduledTrains
+                .Where(rb => rb.DeleteState == true)
+                .Select(rb => rb.UserId)
+                .Distinct()
+                .ToList();
         }
 
 

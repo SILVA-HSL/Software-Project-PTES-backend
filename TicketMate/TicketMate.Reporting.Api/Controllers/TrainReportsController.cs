@@ -23,6 +23,13 @@ namespace TicketMate.Reporting.Api.Controllers
             var report = await _trainReportService.GenerateTrainReportAsync(userId, filter);
             return Ok(report);
         }
-    
+
+        [HttpGet("TrainOwners")]
+        public IActionResult GetBusOwnerUserIds()
+        {
+            var userIds = _trainReportService.GetTrainOwnerUserIds();
+            return Ok(userIds);
+        }
+
     }
 }
