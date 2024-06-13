@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "zaMBcQIge/xkl7vJv1lmr1E2jX+Me5v58/6AWqX4K0t0ViQ/TGzQxPgn0ZtepqDPFXRrdoPfFZ9/tNaGb9skXA==",
+  "dgSpecHash": "5RAaczfec9sQe+FCMsjzwurK89l6BYbt1sbAgAK7lSOiyTdwNnnutsTq6w5HqcD0TZHlVCGvWK8q68nzOMveKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Malinga\\Documents\\academic\\Software Project Backend\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Acer\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Acer\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
   "logs": []
 }
