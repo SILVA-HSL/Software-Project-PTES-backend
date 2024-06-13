@@ -17,6 +17,11 @@ namespace TicketMate.Vehicle.Domain.Models
         public string LocomotiveModel { get; set; }
         public string LocomotiveCapacity { get; set; }
         public string LocomotiveSpeed { get; set; }
+        public string UserId { get; set; }
+        public bool DeleteState { get; set; } = true;
+
+        [Required(AllowEmptyStrings = false)]
+        public string LicenseImgURL { get; set; }
 
         [JsonIgnore]
         public List<ScheduledLocomotive>? ScheduledLocomotives { get; set; }

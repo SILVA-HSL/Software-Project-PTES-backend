@@ -19,6 +19,8 @@ namespace TicketMate.Vehicle.Domain.Models
         public float Width { get; set; }
         public float Height { get; set; }
         public float Weight { get; set; }
+        public string UserId { get; set; }
+        public bool DeleteState { get; set; } = true;
 
         [JsonIgnore]
         public List<SelCarriageSeatStructure>? SelCarriageSeatStructures { get; set; }

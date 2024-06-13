@@ -12,6 +12,7 @@ namespace TicketMate.Vehicle.Domain.Models
     {
         [Key]
         public int SchedulId { get; set; }
+        public int TrainDriverId { get; set; }
         public string TrainRoutNo { get; set; }
         public string TrainName { get; set; }
         public string StartStation { get; set; }
@@ -22,6 +23,8 @@ namespace TicketMate.Vehicle.Domain.Models
         public string TrainType { get; set; }
         public decimal FirstClassTicketPrice { get; set; }
         public decimal SecondClassTicketPrice { get; set; }
+        public string UserId { get; set; }
+        public bool DeleteState { get; set; } = true;
 
         [JsonIgnore]
         public List<ScheduledCarriage>? ScheduledCarriages { get; set; }

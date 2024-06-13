@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TicketMate.Vehicle.Infastructure;
 
@@ -10,9 +11,11 @@ using TicketMate.Vehicle.Infastructure;
 namespace TicketMate.Vehicle.Infastructure.Migrations
 {
     [DbContext(typeof(VehicleDbContext))]
-    partial class VehicleDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240605053458_initial10")]
+    partial class initial10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -129,9 +132,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("DeleteState")
-                        .HasColumnType("bit");
-
                     b.Property<float>("Height")
                         .HasColumnType("real");
 
@@ -140,10 +140,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
 
                     b.Property<int>("SeatsCount")
                         .HasColumnType("int");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<float>("Weight")
                         .HasColumnType("real");
@@ -164,13 +160,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LocomotiveId"));
 
-                    b.Property<bool>("DeleteState")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LicenseImgURL")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("LocomotiveCapacity")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -188,10 +177,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LocomotiveType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -304,10 +289,10 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("RegisteredCarriageCarriageId")
+                    b.Property<int?>("RegisteredCarriageCarriageId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ScheduledTrainSchedulId")
+                    b.Property<int?>("ScheduledTrainSchedulId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -327,10 +312,10 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("RegisteredLocomotiveLocomotiveId")
+                    b.Property<int?>("RegisteredLocomotiveLocomotiveId")
                         .HasColumnType("int");
 
-                    b.Property<int>("ScheduledTrainSchedulId")
+                    b.Property<int?>("ScheduledTrainSchedulId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -349,9 +334,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SchedulId"));
-
-                    b.Property<bool>("DeleteState")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Duration")
                         .IsRequired()
@@ -379,9 +361,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TrainDriverId")
-                        .HasColumnType("int");
-
                     b.Property<string>("TrainName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -391,10 +370,6 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TrainType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -422,7 +397,7 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Property<bool>("IsCompleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ScheduledTrainSchedulId")
+                    b.Property<int?>("ScheduledTrainSchedulId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -443,12 +418,11 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                     b.Property<bool>("Avalability")
                         .HasColumnType("bit");
 
-                    b.Property<int>("RegisteredCarriageCarriageId")
+                    b.Property<int?>("RegisteredCarriageCarriageId")
                         .HasColumnType("int");
 
-                    b.Property<string>("SeatId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("SeatId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -516,7 +490,7 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
 
-                    b.Property<int>("ScheduledTrainSchedulId")
+                    b.Property<int?>("ScheduledTrainSchedulId")
                         .HasColumnType("int");
 
                     b.Property<string>("TrainDepartureTime")
@@ -679,15 +653,11 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                 {
                     b.HasOne("TicketMate.Vehicle.Domain.Models.RegisteredCarriage", "RegisteredCarriage")
                         .WithMany("ScheduledCarriages")
-                        .HasForeignKey("RegisteredCarriageCarriageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RegisteredCarriageCarriageId");
 
                     b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledTrain", "ScheduledTrain")
                         .WithMany("ScheduledCarriages")
-                        .HasForeignKey("ScheduledTrainSchedulId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ScheduledTrainSchedulId");
 
                     b.Navigation("RegisteredCarriage");
 
@@ -698,15 +668,11 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                 {
                     b.HasOne("TicketMate.Vehicle.Domain.Models.RegisteredLocomotive", "RegisteredLocomotive")
                         .WithMany("ScheduledLocomotives")
-                        .HasForeignKey("RegisteredLocomotiveLocomotiveId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RegisteredLocomotiveLocomotiveId");
 
                     b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledTrain", "ScheduledTrain")
                         .WithMany("ScheduledLocomotives")
-                        .HasForeignKey("ScheduledTrainSchedulId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ScheduledTrainSchedulId");
 
                     b.Navigation("RegisteredLocomotive");
 
@@ -717,9 +683,7 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                 {
                     b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledTrain", "ScheduledTrain")
                         .WithMany("ScheduledTrainDates")
-                        .HasForeignKey("ScheduledTrainSchedulId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ScheduledTrainSchedulId");
 
                     b.Navigation("ScheduledTrain");
                 });
@@ -728,9 +692,7 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                 {
                     b.HasOne("TicketMate.Vehicle.Domain.Models.RegisteredCarriage", "RegisteredCarriage")
                         .WithMany("SelCarriageSeatStructures")
-                        .HasForeignKey("RegisteredCarriageCarriageId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("RegisteredCarriageCarriageId");
 
                     b.Navigation("RegisteredCarriage");
                 });
@@ -761,9 +723,7 @@ namespace TicketMate.Vehicle.Infastructure.Migrations
                 {
                     b.HasOne("TicketMate.Vehicle.Domain.Models.ScheduledTrain", "ScheduledTrain")
                         .WithMany("SelectedTrainStations")
-                        .HasForeignKey("ScheduledTrainSchedulId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ScheduledTrainSchedulId");
 
                     b.Navigation("ScheduledTrain");
                 });
