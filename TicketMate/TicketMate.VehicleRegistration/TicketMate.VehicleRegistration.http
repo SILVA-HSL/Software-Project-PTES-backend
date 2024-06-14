@@ -1,0 +1,6 @@
+@TicketMate.VehicleRegistration_HostAddress = http://localhost:5147
+
+GET {{TicketMate.VehicleRegistration_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
