@@ -1,16 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace TicketMate.Booking.Domain.Models
 {
-    public class CancelledBusBooking
+    public class BusBookingCancelled
     {
         [Key]
-        public int BusBookingId { get; set; }
+
+       // [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
+        public int CancelledBusBookingId { get; set; }
+        public int OriginalBusBookingId { get; set; }
         public int BusScheduleId { get; set; }
         public int BusId { get; set; }
         public string PassengerId { get; set; }
@@ -29,5 +34,6 @@ namespace TicketMate.Booking.Domain.Models
         public decimal TicketPrice { get; set; }
         public decimal TotalPaymentAmount { get; set; }
         public bool PaymentStatus { get; set; }
+        public string CancellationDate { get; set; }
     }
 }

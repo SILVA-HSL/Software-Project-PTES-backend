@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TicketMate.Booking.Infrastructure;
 
@@ -10,9 +11,11 @@ using TicketMate.Booking.Infrastructure;
 namespace TicketMate.Booking.Infrastructure.Migrations
 {
     [DbContext(typeof(BookingDbContext))]
-    partial class BookingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240602210550_Migration-12")]
+    partial class Migration12
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -105,10 +108,6 @@ namespace TicketMate.Booking.Infrastructure.Migrations
 
                     b.Property<bool>("ACorNONAC")
                         .HasColumnType("bit");
-
-                    b.Property<string>("BusName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SetsCount")
                         .HasColumnType("int");
@@ -310,10 +309,6 @@ namespace TicketMate.Booking.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TrainName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("TrainRoutNo")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -341,9 +336,8 @@ namespace TicketMate.Booking.Infrastructure.Migrations
                     b.Property<int>("RegisteredCarriageCarriageId")
                         .HasColumnType("int");
 
-                    b.Property<string>("SeatId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("SeatId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -427,20 +421,6 @@ namespace TicketMate.Booking.Infrastructure.Migrations
                     b.ToTable("TrainRaliwayStations");
                 });
 
-            modelBuilder.Entity("TicketMate.Booking.Domain.Models.AspNetUsers", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("UserName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("AspNetUsers");
-                });
-
             modelBuilder.Entity("TicketMate.Booking.Domain.Models.BusBooking", b =>
                 {
                     b.Property<int>("BusBookingId")
@@ -483,18 +463,11 @@ namespace TicketMate.Booking.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsCancelled")
-                        .HasColumnType("bit");
-
                     b.Property<string>("PassengerId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PaymentDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PaymentId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -783,18 +756,11 @@ namespace TicketMate.Booking.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsCancelled")
-                        .HasColumnType("bit");
-
                     b.Property<string>("PassengerId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PaymentDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PaymentId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -829,44 +795,6 @@ namespace TicketMate.Booking.Infrastructure.Migrations
                     b.HasKey("TrainBookingId");
 
                     b.ToTable("TrainBookings");
-                });
-
-            modelBuilder.Entity("TicketMate.Booking.Domain.Models.TrainFeedBack", b =>
-                {
-                    b.Property<int>("FeedBackId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("FeedBackId"));
-
-                    b.Property<int>("BookingId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("FeedBack")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("GivenDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PassengerId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Rate")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("TrainName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("TrainScheduleId")
-                        .HasColumnType("int");
-
-                    b.HasKey("FeedBackId");
-
-                    b.ToTable("TrainFeedBacks");
                 });
 
             modelBuilder.Entity("TicketMate.Booking.Application.Dtos.SelectedBusStands", b =>

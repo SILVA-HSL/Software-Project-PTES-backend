@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TicketMate.Booking.Infrastructure;
 
@@ -10,9 +11,11 @@ using TicketMate.Booking.Infrastructure;
 namespace TicketMate.Booking.Infrastructure.Migrations
 {
     [DbContext(typeof(BookingDbContext))]
-    partial class BookingDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240606182300_Migration-14")]
+    partial class Migration14
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -341,9 +344,8 @@ namespace TicketMate.Booking.Infrastructure.Migrations
                     b.Property<int>("RegisteredCarriageCarriageId")
                         .HasColumnType("int");
 
-                    b.Property<string>("SeatId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("SeatId")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -482,9 +484,6 @@ namespace TicketMate.Booking.Infrastructure.Migrations
                     b.Property<string>("EndTime")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsCancelled")
-                        .HasColumnType("bit");
 
                     b.Property<string>("PassengerId")
                         .IsRequired()
@@ -782,9 +781,6 @@ namespace TicketMate.Booking.Infrastructure.Migrations
                     b.Property<string>("EndTime")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsCancelled")
-                        .HasColumnType("bit");
 
                     b.Property<string>("PassengerId")
                         .IsRequired()
