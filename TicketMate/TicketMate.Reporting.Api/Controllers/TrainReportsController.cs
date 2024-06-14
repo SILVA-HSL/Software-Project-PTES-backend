@@ -25,7 +25,7 @@ namespace TicketMate.Reporting.Api.Controllers
         }
 
         [HttpGet("TrainOwners")]
-        public IActionResult GetBusOwnerUserIds()
+        public IActionResult GetTrainOwnerUserIds()
         {
             var userIds = _trainReportService.GetTrainOwnerUserIds();
             return Ok(userIds);
