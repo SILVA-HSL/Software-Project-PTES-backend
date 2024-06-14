@@ -121,6 +121,7 @@ namespace TicketMate.Booking.Application.Services
         {
             return _context.BusBookings
                 .Where(b => b.PassengerId == passengerId)
+                 .Where(b => !b.IsCancelled)
                 .ToList();
         }
 
@@ -129,6 +130,7 @@ namespace TicketMate.Booking.Application.Services
         {
             return _context.TrainBookings
                .Where(b => b.PassengerId == passengerId)
+                .Where(b => !b.IsCancelled)
                .ToList();
         }
 
@@ -138,6 +140,7 @@ namespace TicketMate.Booking.Application.Services
             return _context.BusBookings
                 .Where(b => b.BusScheduleId == scheduleId)
                 .Where(b => b.BookingDate == selectedDate)
+                 .Where(b => !b.IsCancelled)
                 .ToList();
 
         }
@@ -148,6 +151,7 @@ namespace TicketMate.Booking.Application.Services
             return _context.TrainBookings
                 .Where(b => b.TrainScheduleId == scheduleId)
                 .Where(b => b.BookingDate == selectedDate)
+                 .Where(b => !b.IsCancelled)
                 .ToList();
         }
 
@@ -196,50 +200,23 @@ namespace TicketMate.Booking.Application.Services
             await _context.SaveChangesAsync();
         }
 
+        
         // Delete Bus booking
+
         public async Task DeleteBusBooking(int id)
         {
             var busBooking = _context.BusBookings.Find(id);
             if (busBooking == null)
             {
                 throw new Exception("Bus booking not found");
+
             }
+            busBooking.IsCancelled = true; // Set IsCancelled to true
 
-            // Find the maximum existing CancelledBusBookingId and increment it
-            // int newCancelledBusBookingId = _context.BusBookingCancels.Any() ? _context.BusBookingCancels.Max(b => b.CancelledBusBookingId) + 1 : 1;
-
-            /*  var cancelledBusBooking = new CanceledBusBooking
-              {
-                 // CancelledBusBookingId = newCancelledBusBookingId,
-                  OriginalBusBookingId = busBooking.BusBookingId,
-                  BusScheduleId = busBooking.BusScheduleId,
-                  BusId = busBooking.BusId,
-                  PassengerId = busBooking.PassengerId,
-                  RouteNo = busBooking.RouteNo,
-                  StartLocation = busBooking.StartLocation,
-                  EndLocation = busBooking.EndLocation,
-                  BoardingPoint = busBooking.BoardingPoint,
-                  DroppingPoint = busBooking.DroppingPoint,
-                  StartTime = busBooking.StartTime,
-                  EndTime = busBooking.EndTime,
-                  BookingDate = busBooking.BookingDate,
-                  PaymentDate = busBooking.PaymentDate,
-                  PaymentMethod = busBooking.PaymentMethod,
-
-                  BookingSeatNO = busBooking.BookingSeatNO,
-                  BookingSeatCount = busBooking.BookingSeatCount,
-                  TicketPrice = busBooking.TicketPrice,
-                  TotalPaymentAmount = busBooking.TotalPaymentAmount,
-                  PaymentStatus = busBooking.PaymentStatus,
-                  CancellationDate = DateTime.Now.ToString("yyyy-MM-dd")
-              };
-
-              _context.BusBookingCancels.Add(cancelledBusBooking); // Add the bus cancelled booking to the table before cancel
-            */
-
-            _context.BusBookings.Remove(busBooking); // Remove the bus booking from the table
+            _context.BusBookings.Update(busBooking); // Remove the bus booking from the table
             await _context.SaveChangesAsync();
         }
+
 
         public async Task DeleteTrainBooking(int id)
         {
@@ -248,40 +225,9 @@ namespace TicketMate.Booking.Application.Services
             {
                 throw new Exception("Bus booking not found");
             }
+            trainBooking.IsCancelled = true; // Set IsCancelled to true
 
-            // Find the maximum existing CancelledBusBookingId and increment it
-            //int newCancelledTrainBookingId = _context.TrainBookingCancels.Any() ? _context.TrainBookingCancels.Max(b => b.CancelledTrainBookingId) + 1 : 1;
-
-            /* var cancelledTrainBooking = new CanceledTrainBooking
-             {
-                // CancelledTrainBookingId = newCancelledTrainBookingId,
-                 OriginalTrainBookingId = trainBooking.TrainBookingId,
-                 TrainScheduleId = trainBooking.TrainScheduleId,
-                 PassengerId = trainBooking.PassengerId,
-                 RouteNo = trainBooking.RouteNo,
-                 StartLocation = trainBooking.StartLocation,
-                 EndLocation = trainBooking.EndLocation,
-                 BoardingPoint = trainBooking.BoardingPoint,
-                 DroppingPoint = trainBooking.DroppingPoint,
-                 StartTime = trainBooking.StartTime,
-                 EndTime = trainBooking.EndTime,
-                 BookingDate = trainBooking.BookingDate,
-                 PaymentDate = trainBooking.PaymentDate,
-                 PaymentMethod = trainBooking.PaymentMethod,
-                 BookingClass = trainBooking.BookingClass,
-                 BookingCarriageNo = trainBooking.BookingCarriageNo,
-                 BookingSeatNO = trainBooking.BookingSeatNO,
-                 BookingSeatCount = trainBooking.BookingSeatCount,
-                 TicketPrice = trainBooking.TicketPrice,
-                 TotalPaymentAmount = trainBooking.TotalPaymentAmount,
-                 PaymentStatus = trainBooking.PaymentStatus,
-                 CancellationDate = DateTime.Now.ToString("yyyy-MM-dd")
-             };
-
-             _context.TrainBookingCancels.Add(cancelledTrainBooking); // Add the cancelled train booking to the table before cancel
-
-             */
-            _context.TrainBookings.Remove(trainBooking); // Remove the booking from the table
+            _context.TrainBookings.Update(trainBooking); // Remove the booking from the table
             await _context.SaveChangesAsync();
         }
 

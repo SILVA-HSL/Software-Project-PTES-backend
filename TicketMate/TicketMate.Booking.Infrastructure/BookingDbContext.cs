@@ -20,7 +20,7 @@ namespace TicketMate.Booking.Infrastructure
 
         public DbSet<TrainBooking> TrainBookings { get; set; }
 
-        public DbSet<CanceledBusBooking> BusBookingCancels { get; set; }
+       public DbSet<CanceledBusBooking> BusBookingCancels { get; set; }
 
         public DbSet<CanceledTrainBooking> TrainBookingCancels { get; set; }
 

@@ -31,6 +31,7 @@ namespace TicketMate.Booking.Domain.Models
         public decimal TotalPaymentAmount { get; set; }
         public bool PaymentStatus { get; set; }
         public string PaymentId { get; set; }
+        public bool IsCancelled { get; set; } = false;
 
     }
 }
