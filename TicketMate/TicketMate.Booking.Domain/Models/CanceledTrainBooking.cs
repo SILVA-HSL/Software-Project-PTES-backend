@@ -12,8 +12,7 @@ namespace TicketMate.Booking.Domain.Models
     {
         [Key]
 
-         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CancelledTrainBookingId { get; set; }
+     public int CancelledTrainBookingId { get; set; }
         public int OriginalTrainBookingId { get; set; }
         public int TrainScheduleId { get; set; }
         public string PassengerId { get; set; }
