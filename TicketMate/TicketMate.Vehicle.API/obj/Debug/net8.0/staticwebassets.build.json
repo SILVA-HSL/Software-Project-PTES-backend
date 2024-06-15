@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "nqQVs80wyOnDoesT+Ji3kqM6AhX3GXpGuSrbIu/GtWw=",
+  "Source": "TicketMate.Vehicle.API",
+  "BasePath": "_content/TicketMate.Vehicle.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

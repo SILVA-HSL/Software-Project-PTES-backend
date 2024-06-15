@@ -40,16 +40,13 @@ builder.Services.AddCors(options =>
     });
 });
 
-
 var app = builder.Build();
-
 
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "TicketMate.TravelSearch.Api2"));
 }
-
 
 app.UseHttpsRedirection();
 
