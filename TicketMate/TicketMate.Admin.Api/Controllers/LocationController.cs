@@ -40,6 +40,8 @@ using TicketMate.Admin.Application.Services;
 using TicketMate.Admin.Domain.Models;
 using System.Threading.Tasks;
 using TicketMate.Admin.Infastructure;
+using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TicketMate.Admin.Api.Controllers
 {
@@ -62,6 +64,8 @@ namespace TicketMate.Admin.Api.Controllers
         public LocationController(IHubContext<LocationHub> locationHubContext)
         {
             _locationHubContext = locationHubContext;
+            
+
         }
 
 
@@ -72,7 +76,7 @@ namespace TicketMate.Admin.Api.Controllers
             {
                 await _locationHubContext.Clients.Group(model.RideId.ToString()).SendAsync("ReceiveLocation", model.Latitude, model.Longitude);
                // _context.SendLocation(model.RideId, model.Latitude, model.Longitude);
-               // _context.JoinRideGroup(model.RideId);
+               // _locationHubContext.JoinRideGroup(model.RideId);
             }
             catch(Exception e)
             {
@@ -101,12 +105,18 @@ namespace TicketMate.Admin.Api.Controllers
                 }
 
                 */
-
+        ///[Authorize(Roles = "DRIVER")]
         [HttpPost("StartRide/{rideId}")]
-        public async Task<IActionResult> StartRide(int rideId, [FromBody] string connectionId)
+        public async Task<IActionResult> StartRide(int rideId, [FromBody] ConnectionPayload payload)
         {
             try
             {
+              //  Console.WriteLine($"Received payload: {payload}"
+                string connectionId = payload.ConnectionId;
+                if (string.IsNullOrEmpty(connectionId))
+                {
+                    return BadRequest("ConnectionId is missing or empty.");
+                }
                 await _locationHubContext.Groups.AddToGroupAsync(connectionId, rideId.ToString());
                 return Ok();
             }
@@ -115,13 +125,17 @@ namespace TicketMate.Admin.Api.Controllers
                 return BadRequest("Error in backend API: " + e.Message);
             }
         }
-
+        //[Authorize(Roles = "DRIVER")]
         [HttpPost("EndRide/{rideId}")]
-        public async Task<IActionResult> EndRide(int rideId, [FromBody] string connectionId)
+        public async Task<IActionResult> EndRide(int rideId)
         {
             try
             {
-                await _locationHubContext.Groups.RemoveFromGroupAsync(connectionId, rideId.ToString());
+                //string connectionId = payload.connectionId;
+
+                // await _locationHubContext.Groups.RemoveFromGroupAsync(connectionId, rideId.ToString());
+                await _locationHubContext.Clients.Group(rideId.ToString()).SendAsync("EndRide", rideId);
+
                 return Ok();
             }
             catch (Exception e)
@@ -129,6 +143,12 @@ namespace TicketMate.Admin.Api.Controllers
                 return BadRequest("Error in backend API: " + e.Message);
             }
         }
+    }
+
+
+    public class ConnectionPayload
+    {
+        public string ConnectionId { get; set; }
     }
 }
 

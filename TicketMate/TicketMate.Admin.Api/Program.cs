@@ -35,6 +35,9 @@ builder.Services.AddDbContext<TicketMate.Admin.Infastructure.userDbContext>(opti
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddSingleton<LocationHub>();
+builder.Services.AddScoped<IMapConnections, MapConnections>();
+builder.Services.AddScoped<IUpdateUserdata, UpdateUserdata>();
+
 
 
 builder.Services.AddIdentityCore<IdentityUser>()
@@ -54,7 +57,7 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredUniqueChars = 1;
 });
 
-builder.Services.AddScoped<IUserService, UserService>();
+
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -80,7 +83,8 @@ builder.Services.AddCors(options =>
     {
         builder.WithOrigins("http://localhost:3000", "http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "http://localhost:5176")
                .AllowAnyHeader()
-               .AllowAnyMethod();
+               .AllowAnyMethod()
+               .AllowCredentials();
     });
 });
 
@@ -103,6 +107,7 @@ if (app.Environment.IsDevelopment())
 app.UseStaticFiles();
 app.UseRouting();
 app.UseHttpsRedirection();
+app.UseCors("AllowLocalhost");
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -113,20 +118,22 @@ app.UseAuthorization();
 */
 //app.UseExceptionHandler("/Home/Error");
 
-app.UseCors("AllowLocalhost");
-
-app.MapControllers();
-app.MapHub<LocationHub>("/locationHub");
-//app.MapHub<LocationHub>("https://localhost:7196/locationHub");
 
 
-/*
+//app.MapControllers();
+//app.MapHub<LocationHub>("/locationHub");
+
+
+
+
+
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllers();
     // Map the SignalR hub
-    endpoints.MapHub<LocationHub>("http://localhost:7196/locationHub");
+    endpoints.MapHub<LocationHub>("/locationHub");
 });
 
-*/
+
 app.Run();

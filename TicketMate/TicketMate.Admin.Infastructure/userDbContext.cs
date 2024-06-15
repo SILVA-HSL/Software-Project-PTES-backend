@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TicketMate.Admin.Domain.Models;
+using TicketMate.Booking.Domain.Models;
+
 
 namespace TicketMate.Admin.Infastructure
 {
@@ -14,5 +17,11 @@ namespace TicketMate.Admin.Infastructure
         }
 
         public DbSet<TicketMate.Admin.Domain.Models.userDataModel> users { get; set; }
+
+
+        public DbSet<BusBooking> BusBookings { get; set; }
+
+
+        public DbSet<TrainBooking> TrainBookings { get; set; }
     }
 }

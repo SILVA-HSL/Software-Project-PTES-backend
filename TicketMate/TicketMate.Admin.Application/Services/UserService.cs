@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TicketMate.Admin.Domain.Models;
 using TicketMate.Admin.Infastructure;
+using Microsoft.EntityFrameworkCore;
 
 namespace TicketMate.Admin.Application.Services
 {
@@ -128,6 +129,16 @@ namespace TicketMate.Admin.Application.Services
 
             _context.users.Add(userData);
             _context.SaveChanges();
+        }
+
+        public List<userDataModel> findUser(string username, string password)
+        {
+            var userData = _context.users.Where(u => u.UserName == username && u.Password == password).ToList();
+            if (userData != null)
+            {
+                return (userData);
+            }
+            return null;
         }
 
 
