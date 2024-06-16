@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TicketMate.Reporting.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+60d82e491afc2805826703e6018420ac8e71d2f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c9ab20e56c0e904e79653e5e8464800d4b52319")]
 [assembly: System.Reflection.AssemblyProductAttribute("TicketMate.Reporting.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TicketMate.Reporting.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

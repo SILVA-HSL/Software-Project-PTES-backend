@@ -13,6 +13,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IAdminReportingService, AdminReportingService>();
 builder.Services.AddScoped<IBusOwnerReportingService, BusOwnerReportingService>();
 builder.Services.AddScoped<ITrainReportingService, TrainReportingService>();
+builder.Services.AddScoped<IBusPredictionService, BusPredictionService>();
+builder.Services.AddScoped<IBusPredictionDataService, BusPredictionDataService>();
+builder.Services.AddScoped<IPredictionCacheService, PredictionCacheService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
