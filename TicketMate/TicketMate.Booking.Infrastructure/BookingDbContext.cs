@@ -9,6 +9,7 @@ using System.Reflection.Emit;
 using TicketMate.Booking.Application.Dtos;
 using TicketMate.Booking.Domain.Dtos;
 using TicketMate.Booking.Domain.Models;
+using TicketMate.Admin.Domain.Models;
 
 namespace TicketMate.Booking.Infrastructure
 {
@@ -20,10 +21,7 @@ namespace TicketMate.Booking.Infrastructure
 
         public DbSet<TrainBooking> TrainBookings { get; set; }
 
-       public DbSet<CanceledBusBooking> BusBookingCancels { get; set; }
-
-        public DbSet<CanceledTrainBooking> TrainBookingCancels { get; set; }
-
+      
         public DbSet<BusFeedBack> BusFeedBacks { get; set; }
 
         public DbSet<TrainFeedBack> TrainFeedBacks { get; set; }
@@ -48,7 +46,7 @@ namespace TicketMate.Booking.Infrastructure
 
         public DbSet<SelectedSeatStructures> SelectedSeatStructures { get; set; }
 
-        public DbSet<AspNetUsers> AspNetUsers { get; set; }
+        public DbSet<userDataModel> Users { get; set; }
 
 
         public BookingDbContext(DbContextOptions<BookingDbContext> options) : base(options)
