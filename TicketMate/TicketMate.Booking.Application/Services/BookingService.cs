@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using TicketMate.Admin.Domain.Models;
 using TicketMate.Booking.Api.Models;
 using TicketMate.Booking.Domain.Dtos;
 using TicketMate.Booking.Domain.Models;
@@ -62,7 +63,6 @@ namespace TicketMate.Booking.Application.Services
             // _context.SaveChangesAsync();
 
             return newTravelSearch;
-
 
         }
 
@@ -318,9 +318,9 @@ namespace TicketMate.Booking.Application.Services
                 .ToList();
         }
 
-        public List<AspNetUsers> GetUserName(string UserId)
+        public List<userDataModel> GetUserName(int UserId)
         {
-            return _context.AspNetUsers
+            return _context.Users
                 .Where(b => b.Id == UserId)
                 .ToList();
         }

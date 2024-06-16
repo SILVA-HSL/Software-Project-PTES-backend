@@ -16,7 +16,7 @@ namespace TicketMate.Booking.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetUserName(string UserId)
+        public IActionResult GetUserName(int UserId)
         {
             var userName = _userName.GetUserName(UserId);
             return Ok(userName);
