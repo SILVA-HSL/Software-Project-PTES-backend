@@ -23,6 +23,7 @@ namespace TicketMate.Admin.Application.Services
         public string handleReject(int Id);
         public string handleAccept(int Id);
         public void addUser(userDataModel userDatas);
+        public List<userDataModel> findUser(string username, string password);
 
 
 
