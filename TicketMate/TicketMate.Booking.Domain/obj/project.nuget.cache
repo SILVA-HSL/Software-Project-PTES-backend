@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "paDyMj/qhjYeVgkyA5nvHMa/rOd3mYk1ddoHTQH3Im8fFsg/vtaltB1HtgH4PkDSg1o7A9hD7KmsZIRhqGZ2iA==",
+  "dgSpecHash": "PE0oifAsjlxD5+kCR1WRX66wGEic/HvvRwPTT73FXhjkh3q9FGlsBlaGnOy+w5sGlgrx67cbiEUvSKjyaUX5NA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
+  "projectFilePath": "C:\\Users\\Malinga\\Documents\\academic\\Software Project Backend\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ME\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\ME\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
-    "C:\\Users\\ME\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\ME\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "C:\\Users\\Malinga\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Malinga\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Malinga\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Malinga\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
   "logs": []
 }
