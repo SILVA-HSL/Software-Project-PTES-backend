@@ -26,6 +26,21 @@ builder.Services.AddScoped<VehicleDbContext>();
 builder.Services.AddScoped<IRegBusSer, RegBusSer>();
 builder.Services.AddScoped<ISelSeaStrSer, SelSeaStrSer>();
 builder.Services.AddScoped<IScheduledBusSer, ScheduledBusSer>();
+builder.Services.AddScoped<ISchBusStandSer, SchBusStandSer>();
+builder.Services.AddScoped<IScheduledBusDateSer, ScheduledBusDateSer>();
+builder.Services.AddScoped<IBusRouteSer, BusRouteSer>();
+builder.Services.AddScoped<IBusRouteStandSer, BusRouteStandSer>();
+builder.Services.AddScoped<IuserDataSer, userDataSer>();
+builder.Services.AddScoped<IRegisteredLocomotiveSer, RegisteredLocomotiveSer>();
+builder.Services.AddScoped<IRegisteredCarriageSer, RegisteredCarriageSer>();
+builder.Services.AddScoped<IScheduledTrainSer, ScheduledTrainSer>();
+builder.Services.AddScoped<ISelCarriageSeatStructureSer, SelCarriageSeatStructureSer>();
+builder.Services.AddScoped<ISelectedTrainStationSer, SelectedTrainStationSer>();
+builder.Services.AddScoped<IScheduledTrainDateSer, ScheduledTrainDateSer>();
+builder.Services.AddScoped<ITrainRaliwaySer, TrainRaliwaySer>();
+builder.Services.AddScoped<ITrainRaliwayStationSer, TrainRaliwayStationSer>();
+builder.Services.AddScoped<IScheduledLocomotiveSer, ScheduledLocomotiveSer>();
+builder.Services.AddScoped<IScheduledCarriageSer, ScheduledCarriageSer>();
 
 
 builder.Services.AddCors();
