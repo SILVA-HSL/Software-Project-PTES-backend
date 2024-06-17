@@ -10,7 +10,7 @@ namespace TicketMate.Booking.Domain.Dtos
     public class SelCarriageSeatStructures
     {
         public int Id { get; set; }
-        public int SeatId { get; set; }
+        public string SeatId { get; set; }
         
         public bool Avalability { get; set; }
 

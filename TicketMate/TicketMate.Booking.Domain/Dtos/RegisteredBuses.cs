@@ -16,6 +16,8 @@ namespace TicketMate.Booking.Domain.Dtos
         public int SetsCount { get; set; }
         public bool ACorNONAC { get; set; }
 
+        public string BusName { get; set; }
+
         [JsonIgnore]
         public List<SelectedSeatStructures> SelectedSeatStructures { get; set; }
         [JsonIgnore]

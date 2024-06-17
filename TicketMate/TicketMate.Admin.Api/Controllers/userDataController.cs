@@ -44,6 +44,7 @@ using TicketMate.Admin.Domain.DTO;
 using Microsoft.Extensions.Logging;
 using Microsoft.CodeAnalysis.Elfie.Diagnostics;
 using TicketMate.Admin.Application.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace TicketMate.Admin.Api.Controllers
 {
@@ -99,6 +100,7 @@ namespace TicketMate.Admin.Api.Controllers
            }
 
            */
+       
         [HttpPost]
         public IActionResult addUser(userDataModel userData)
         {
@@ -115,7 +117,7 @@ namespace TicketMate.Admin.Api.Controllers
 
         }
 
-
+        [Authorize(Roles = "Admin,Owner,Driver,Passenger")]
         [HttpGet]
         public IActionResult GetUserData()
         {
@@ -135,7 +137,7 @@ namespace TicketMate.Admin.Api.Controllers
 
 
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPut("{Id?}")]
         public IActionResult UpdateUserData(int Id)
         {
@@ -151,7 +153,7 @@ namespace TicketMate.Admin.Api.Controllers
             }
         }
 
-
+        [Authorize(Roles = "Admin")]
         [HttpGet("{firstname?}")]
         public IActionResult searchUser(string firstname)
         {
@@ -169,7 +171,7 @@ namespace TicketMate.Admin.Api.Controllers
                 return BadRequest(e);
             }
         }
-        
+        [Authorize(Roles = "Admin")]
         [HttpGet("owner-requests")]
         public IActionResult GetOwnerRequests()
         {
@@ -191,8 +193,8 @@ namespace TicketMate.Admin.Api.Controllers
             }
         }
 
-        
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("handleReject/{Id?}")]
         public IActionResult handleReject(int Id)
         {
@@ -207,8 +209,8 @@ namespace TicketMate.Admin.Api.Controllers
                 return BadRequest(e);
             }
         }
-        
 
+        [Authorize(Roles = "Admin")]
         [HttpPut("handleAccept/{Id?}")]
         public IActionResult handleAccept(int Id)
         {
@@ -226,6 +228,25 @@ namespace TicketMate.Admin.Api.Controllers
                 return BadRequest(e);
             }
         }
+        [HttpGet("findUser/{username}/{password}")]
+        public IActionResult findUser(string username, string password)
+        {
+            try
+            {
+                var userData = _userService.findUser(username, password);
+                if (userData == null)
+                {
+                    return NotFound("User Data Not Found");
+                }
+                return Ok(userData);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
+        }
+
+
         
         
     }
