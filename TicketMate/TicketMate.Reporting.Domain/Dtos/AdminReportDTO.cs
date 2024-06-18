@@ -9,6 +9,7 @@
         public int TotalPassengers { get; set; }
         public DateTime Date { get; set; }
         public double AverageRate { get; set; }
+        public decimal MonthlyTotalPredictedIncome { get; set; }
     
 }
 }

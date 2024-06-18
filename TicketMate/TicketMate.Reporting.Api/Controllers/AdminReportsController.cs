@@ -11,6 +11,7 @@ namespace TicketMate.Reporting.Api.Controllers
     public class AdminReportController : ControllerBase
     {
         private readonly IAdminReportingService _adminReportingService;
+     
 
         public AdminReportController(IAdminReportingService reportingService)
         {
@@ -58,6 +59,31 @@ namespace TicketMate.Reporting.Api.Controllers
             var endDate = new DateTime(DateTime.Today.Year, 12, 31);
             var stats = _adminReportingService.GetStatistics(userId, startDate, endDate);
             return Ok(stats);
+        }
+
+
+        [HttpGet("total-predicted-income/{userId}")]
+        public IActionResult TotalPredictedIncomeForUser(string userId)
+        {
+            try
+            {
+                var result = _adminReportingService.GetTotalPredictedIncomeForUser(userId);
+
+                // Check if the result indicates that the user does not exist
+                if (result.StartsWith("User with ID"))
+                {
+                    return NotFound(result); // Return 404 status code with the message
+                }
+                return Ok(decimal.Parse(result));
+
+             
+            }
+            catch (Exception ex)
+            {
+                // Log exception and return an error response
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
         }
     }
 }

@@ -7,30 +7,30 @@ using TicketMate.Reporting.Domain.Dtos;
 
 namespace TicketMate.Reporting.Application.ReportingService
 {
-    public class PredictionCacheService: IPredictionCacheService
-    {
-        private const string CacheKey = "BusPredictions";
-        private List<BusPredictionOutputDTO> _cache;
-        private DateTime _cacheTime;
+    //public class PredictionCacheService: IPredictionCacheService
+    //{
+    //    private const string CacheKey = "BusPredictions";
+    //    private List<BusPredictionOutputDTO> _cache;
+    //    private DateTime _cacheTime;
 
-        private readonly TimeSpan _cacheDuration = TimeSpan.FromDays(1);
+    //    private readonly TimeSpan _cacheDuration = TimeSpan.FromDays(1);
 
-        public bool IsCacheValid()
-        {
-            return _cache != null && (DateTime.Now - _cacheTime) < _cacheDuration;
-        }
+    //    public bool IsCacheValid()
+    //    {
+    //        return _cache != null && (DateTime.Now - _cacheTime) < _cacheDuration;
+    //    }
 
-        public Task<List<BusPredictionOutputDTO>> GetPredictionsAsync()
-        {
-            return Task.FromResult(_cache);
-        }
+    //    public Task<List<BusPredictionOutputDTO>> GetPredictionsAsync()
+    //    {
+    //        return Task.FromResult(_cache);
+    //    }
 
-        public Task SetPredictionsAsync(List<BusPredictionOutputDTO> predictions)
-        {
-            _cache = predictions;
-            _cacheTime = DateTime.Now;
-            return Task.CompletedTask;
-        }
+    //    public Task SetPredictionsAsync(List<BusPredictionOutputDTO> predictions)
+    //    {
+    //        _cache = predictions;
+    //        _cacheTime = DateTime.Now;
+    //        return Task.CompletedTask;
+    //    }
 
         //    private List<BusPredictionOutputDTO> _cache = new List<BusPredictionOutputDTO>(); // Initialize to an empty list
         //    private DateTime _lastCacheTime;
@@ -51,5 +51,5 @@ namespace TicketMate.Reporting.Application.ReportingService
         //    {
         //        return _cache != null && (DateTime.Now - _lastCacheTime).TotalDays < 1;
         //    }
-    }
+   // }
 }

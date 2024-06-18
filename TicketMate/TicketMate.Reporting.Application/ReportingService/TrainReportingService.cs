@@ -87,6 +87,11 @@ namespace TicketMate.Reporting.Application.ReportingService
                                                              string.Compare(feedback.GivenDate, endDateString) <= 0)
                                           .ToListAsync();
 
+            // Fetch predicted monthly income for each train for the current date
+            var predictedIncomes = await _context.DailyTrainPredictions
+                                                .Where(prediction => prediction.PredictionDate == today)
+                                                .ToListAsync();
+
             // Generate report data for each unique train
             var report = new List<TrainReportDTO>();
 
@@ -104,12 +109,20 @@ namespace TicketMate.Reporting.Application.ReportingService
                     .Where(f => train.ScheduleIds.Contains(f.TrainScheduleId))
                     .Average(f => (double?)f.Rate) ?? 0;
 
+
+                var monthlyPredictedIncome = predictedIncomes
+                   .Where(prediction => prediction.TrainName == train.TrainName)
+                   .Select(prediction => prediction.PredictedIncome)
+                   .FirstOrDefault(); // Assuming there's only one prediction per train name per day
+
+
                 var trainReport = new TrainReportDTO
                 {
                     TrainName = train.TrainName,
                     ScheduleIds = train.ScheduleIds.ToList(),  // Change to include all ScheduleIds
                     TotalIncome = totalIncome,
                     TotalPassengers = totalPassengers,
+                    MonthlyPredictedIncome = monthlyPredictedIncome,
                     AverageRate = averageRate,
                     Date= today,
                     UserId=userId

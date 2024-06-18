@@ -36,6 +36,8 @@ namespace TicketMate.Reporting.Application.ReportingService
                 var predictionInput = new BusPredictionInputDTO
                 {
                     BusNo = bus.BusNo,
+                    BusId = bus.BusId,
+                    UserId= bus.UserId,
                     SeatCount = bus.SetsCount,
                     ACNonAC = bus.ACorNONAC ? 1 : 0, // Convert bool to int
                     TicketPrice = 0, // Initialize to 0 initially
@@ -114,8 +116,8 @@ namespace TicketMate.Reporting.Application.ReportingService
             // Fetch bookings for the bus in the previous month
             var bookings = _context.BusBookings
                 .Where(b => b.BusId == busId &&
-                            String.Compare(b.BookingDate, startDateString) >= 0 &&
-                            String.Compare(b.BookingDate, endDateString) <= 0 &&
+                            String.Compare(b.PaymentDate, startDateString) >= 0 &&
+                            String.Compare(b.PaymentDate, endDateString) <= 0 &&
                             !b.IsCancelled) // Filter out cancelled bookings
                 .ToList();
 

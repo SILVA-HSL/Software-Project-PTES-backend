@@ -16,6 +16,12 @@ namespace TicketMate.Reporting.Infrastructure
         public DbSet<TrainFeedBack> TrainFeedBacks { get; set; }
         public DbSet<ScheduledBuses> ScheduledBuses { get; set; }
         public DbSet<ScheduledBusDate> ScheduledBusDate { get; set; }
+        public DbSet<DailyBusPrediction> DailyBusPredictions { get; set; }
+        public DbSet<DailyTrainPrediction> DailyTrainPredictions { get; set; }
+        public DbSet<RegisteredCarriage> RegisteredCarriages { get; set; }
+        public DbSet<ScheduledTrainDate> ScheduledTrainDates { get; set; }
+        public DbSet<ScheduledCarriage> ScheduledCarriages { get; set; }
+
 
 
 

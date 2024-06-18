@@ -1,28 +1,23 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Data.SqlClient;
 using TicketMate.Reporting.Application.ReportingService;
-using TicketMate.Reporting.Domain.Dtos;
-using TicketMate.Reporting.Infrastructure;
 
 namespace TicketMate.Reporting.Api.Controllers
 {
-    [ApiController]
     [Route("api/[controller]")]
-    public class BusPredictionController : ControllerBase
+    [ApiController]
+    public class TrainPredictionController : ControllerBase
     {
-        private readonly IBusPredictionDataService _busPredictionDataService;
-        private readonly IBusPredictionService _busPredictionService;
-        private readonly ILogger<BusPredictionController> _logger;
+        private readonly ITrainPredictionDataService _trainPredictionDataService;
+        private readonly ITrainPredictionService _trainPredictionService;
+        private readonly ILogger<TrainPredictionController> _logger;
 
 
-
-
-        public BusPredictionController(IBusPredictionDataService predictionDataService, IBusPredictionService busPredictionService, ILogger<BusPredictionController> logger )//,IPredictionCacheService predictionCacheService
+        public TrainPredictionController(ITrainPredictionDataService trainpredictionDataService, ITrainPredictionService trainPredictionService, ILogger<TrainPredictionController> logger)//,IPredictionCacheService predictionCacheService
         {
-            _busPredictionDataService = predictionDataService;
+            _trainPredictionDataService = trainpredictionDataService;
             _logger = logger;
-            _busPredictionService = busPredictionService;
+            _trainPredictionService = trainPredictionService;
 
         }
         [HttpGet("predict")]
@@ -34,32 +29,31 @@ namespace TicketMate.Reporting.Api.Controllers
                 _logger.LogInformation("GetPredictedIncome called.");
 
                 //Check if predictions for today already exist
-                if (await _busPredictionService.PredictionsExistForTodayAsync())
+                if (await _trainPredictionService.TrainPredictionsExistForTodayAsync())
                 {
                     _logger.LogInformation("Predictions for today already exist. Skipping prediction generation.");
                     return Ok("Predictions for today already exist.");
-                }
+                } // Log the input and output data for verification
+
 
                 _logger.LogInformation("GetPredictedIncome called.");
-               
-                var predictionInputData = _busPredictionDataService.GetPredictionDataForAllBuses();
 
-                var predictedData = await _busPredictionService.GetPredictedIncome(predictionInputData);
+                var predictionInputData = _trainPredictionDataService.GetPredictionDataForAllTrains();
+
+                var predictedData = await _trainPredictionService.GetTrainPredictedIncome(predictionInputData);
 
                 _logger.LogInformation("Storing predictions in database.");
-                await _busPredictionService.StorePredictionsAsync(predictedData);
+                await _trainPredictionService.StoreTrainPredictionsAsync(predictedData);
                 return Ok(predictedData);
             }
             catch (Exception ex)
             {
-                
+
                 // Console.WriteLine($"An error occurred: {ex.Message}");
-            
+
                 _logger.LogError(ex, "An error occurred while getting predicted income.");
                 return StatusCode(500, "Internal server error");
             }
         }
-        
     }
 }
-

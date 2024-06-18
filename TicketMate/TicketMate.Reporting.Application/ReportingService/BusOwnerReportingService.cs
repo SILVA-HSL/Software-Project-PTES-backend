@@ -52,12 +52,15 @@ namespace TicketMate.Reporting.Application.ReportingService
         {
             string startDateString = startDate.ToString("yyyy-MM-dd");
             string endDateString = endDate.ToString("yyyy-MM-dd");
+            var today = DateTime.Today;
+
 
             var registeredBuses = await _context.RegisteredBuses
                                                 .Where(bus => bus.UserId == userId && bus.DeleteState)
                                                 .ToListAsync();
 
             var busIds = registeredBuses.Select(bus => bus.BusId).ToList();
+
 
             var bookings = await _context.BusBookings
                                          .Where(booking => busIds.Contains(booking.BusId) &&
@@ -73,15 +76,41 @@ namespace TicketMate.Reporting.Application.ReportingService
                                                              string.Compare(feedback.GivenDate, endDateString) <= 0)
                                           .ToListAsync();
 
-            var report = registeredBuses.Select(bus => new OwnerReportDTO
-            {
-                BusId = bus.BusId,
-                VehicleOwner = userId,
-                VehicleNo = bus.BusNo,
-                TotalIncome = bookings.Where(b => b.BusId == bus.BusId).Sum(b => b.TotalPaymentAmount),
-                TotalPassengers = bookings.Where(b => b.BusId == bus.BusId).Count(),
-                Date = startDate,
-                AverageRate = feedbacks.Where(f => f.BusId == bus.BusId).Average(f => (double?)f.Rate) ?? 0
+           
+            // Fetching predictions for the buses for today
+            var predictions = await _context.DailyBusPredictions
+                                            .Where(p => busIds.Contains(p.BusId) &&
+                                                        p.PredictionDate.Date == today)
+                                            .Select(p => new { p.BusId, p.PredictedIncome })
+                                            .ToListAsync();
+
+    
+
+            // Creating the report for each registered bus
+            var report = registeredBuses.Select(bus => {
+                // Summing predicted income for the current bus
+                var predictedIncome = predictions
+                    .Where(p => p.BusId == bus.BusId)
+                    .Sum(p => p.PredictedIncome);
+
+                // Creating a new report DTO for the current bus
+        return new OwnerReportDTO
+        {
+            BusId = bus.BusId,
+            VehicleOwner = userId,
+            VehicleNo = bus.BusNo,
+            TotalIncome = bookings
+                .Where(b => b.BusId == bus.BusId)
+                .Sum(b => b.TotalPaymentAmount),
+            TotalPassengers = bookings
+                .Where(b => b.BusId == bus.BusId)
+                .Count(),
+            Date = startDate,
+            AverageRate = feedbacks
+                .Where(f => f.BusId == bus.BusId)
+                .Average(f => (double?)f.Rate) ?? 0,
+            MonthlyPredictedIncome = predictedIncome
+        };
             }).ToList();
 
             return report;

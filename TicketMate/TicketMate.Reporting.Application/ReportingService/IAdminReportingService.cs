@@ -14,6 +14,7 @@ namespace TicketMate.Reporting.Application.ReportingService
         public AdminReportDTO GetStatistics(string userId, DateTime startDate, DateTime endDate);
 
         public List<string> GetBusOwnerUserIds();
+        public string GetTotalPredictedIncomeForUser(string userId);
 
     }
 

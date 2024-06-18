@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace TicketMate.Reporting.Domain.Dtos
 {
-    public class BusPredictionOutputDTO
+    public class TrainPredictionOutputDTO
     {
-        public String BusNo { get; set; }
-        public int BusId { get; set; }
-        public string UserId { get; set; }
+        public string TrainName { get; set; }
         public decimal PredictedIncome { get; set; }
         public DateTime PredictionDate { get; set; }
-
     }
 }

@@ -9,6 +9,8 @@ namespace TicketMate.Reporting.Domain.Dtos
     public class BusPredictionInputDTO
     {
         public string BusNo { get; set; }
+        public int BusId { get; set; }
+        public string UserId { get; set; }
 
         public int SeatCount { get; set; }
         public int ACNonAC { get; set; }

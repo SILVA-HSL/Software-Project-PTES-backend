@@ -13,8 +13,9 @@ namespace TicketMate.Reporting.Application.ReportingService
     public class AdminReportingService : IAdminReportingService
     {
         private readonly ReportingDbContext _context;
+       
 
-        public AdminReportingService(DbContextOptions<ReportingDbContext> dbContextOptions)
+        public AdminReportingService(DbContextOptions<ReportingDbContext> dbContextOptions, IBusPredictionService busPredictionService)
         {
             _context = new ReportingDbContext(dbContextOptions);
         }
@@ -47,6 +48,13 @@ namespace TicketMate.Reporting.Application.ReportingService
                 .Where(f => vehicleNoList.Contains(f.BusId))
                 .ToList();
 
+            var today = DateTime.Today;
+
+            var monthlyTotalPredictedIncome = _context.DailyBusPredictions
+             .Where(p => p.UserId == userId && p.PredictionDate.Date == today)
+             .Sum(p => p.PredictedIncome);
+
+
             var averageRate = feedbacks.Any() ? feedbacks.Average(f => f.Rate) : 0;
 
             return new AdminReportDTO
@@ -56,7 +64,8 @@ namespace TicketMate.Reporting.Application.ReportingService
                 TotalIncome = totalIncome,
                 TotalPassengers = totalPassengers,
                 Date = endDate,
-                AverageRate = (double)averageRate
+                AverageRate = (double)averageRate,
+                MonthlyTotalPredictedIncome = monthlyTotalPredictedIncome
             };
         }
 
@@ -67,6 +76,26 @@ namespace TicketMate.Reporting.Application.ReportingService
                 .Select(rb => rb.UserId)
                 .Distinct()
                 .ToList();
+        }
+
+        public  string GetTotalPredictedIncomeForUser(string userId)
+        {
+            var today= DateTime.Today;
+
+            var userExists = _context.DailyBusPredictions
+        .Any(p => p.UserId == userId);
+
+            if (!userExists)
+            {
+                return $"User with ID {userId} does not exist.";
+            }
+
+            // Retrieve the cached prediction data
+            var totalIncome = _context.DailyBusPredictions
+                .Where(p => p.UserId == userId && p.PredictionDate.Date==today)
+                .Sum(p => p.PredictedIncome);
+
+            return totalIncome.ToString("F2");
         }
     }
 }
