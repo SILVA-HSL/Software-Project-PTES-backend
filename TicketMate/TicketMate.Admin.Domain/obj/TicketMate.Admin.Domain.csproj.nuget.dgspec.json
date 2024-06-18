@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {}
+    "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
+    "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj",
+        "projectUniqueName": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj",
         "projectName": "TicketMate.Admin.Domain",
-        "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\obj\\",
+        "projectPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj",
+        "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
+        "outputPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,38 +34,59 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "MailKit": {
+            "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
-              "version": "[4.4.0, )"
+              "version": "[6.5.0, )"
             },
-            "Microsoft.AspNet.Cors": {
+            "Swashbuckle.AspNetCore.SwaggerGen": {
               "target": "Package",
-              "version": "[5.3.0, )"
+              "version": "[6.5.0, )"
             },
-            "Microsoft.AspNetCore.Cors": {
+            "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
-              "version": "[2.2.0, )"
+              "version": "[6.5.0, )"
+            }
+          },
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.2, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[8.0.2, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.4.0, )"
             }
           },
           "imports": [
@@ -84,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

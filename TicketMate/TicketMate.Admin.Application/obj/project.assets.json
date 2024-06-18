@@ -1741,6 +1741,25 @@
             "rid": "win"
           }
         }
+      },
+      "TicketMate.Admin.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.2",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "8.0.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.2",
+          "Microsoft.IdentityModel.Tokens": "7.4.0",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
+          "Swashbuckle.AspNetCore": "6.4.0",
+          "System.IdentityModel.Tokens.Jwt": "7.4.0"
+        },
+        "compile": {
+          "bin/placeholder/TicketMate.Admin.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TicketMate.Admin.Domain.dll": {}
+        }
       }
     }
   },
@@ -4666,33 +4685,40 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "TicketMate.Admin.Domain/1.0.0": {
+      "type": "project",
+      "path": "../TicketMate.Admin.Domain/TicketMate.Admin.Domain.csproj",
+      "msbuildProject": "../TicketMate.Admin.Domain/TicketMate.Admin.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "FluentValidation >= 11.9.0",
-      "MailKit >= 4.4.0",
-      "MediatR >= 12.2.0",
-      "Microsoft.AspNet.Cors >= 5.3.0",
-      "Microsoft.AspNetCore.Cors >= 2.2.0",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.3",
-      "Microsoft.EntityFrameworkCore.Tools >= 8.0.3"
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.2",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 8.0.2",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.2",
+      "Microsoft.EntityFrameworkCore.Tools >= 8.0.2",
+      "Microsoft.IdentityModel.Tokens >= 7.4.0",
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 8.0.2",
+      "Swashbuckle.AspNetCore >= 6.4.0",
+      "System.IdentityModel.Tokens.Jwt >= 7.4.0",
+      "TicketMate.Admin.Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\ME\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
+      "projectUniqueName": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
       "projectName": "TicketMate.Admin.Application",
-      "projectPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\source\\repos\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Application\\obj\\",
+      "projectPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Application\\TicketMate.Admin.Application.csproj",
+      "packagesPath": "C:\\Users\\ME\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ME\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4705,7 +4731,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
+              "projectPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4770,7 +4800,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
