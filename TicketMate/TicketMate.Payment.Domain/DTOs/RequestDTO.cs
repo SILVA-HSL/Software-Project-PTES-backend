@@ -14,7 +14,7 @@ namespace TicketMate.Payment.DTOs
         {
 
        
-            Subject = "Your payment Status"; // Set default value for Subject
+            Subject = "Booking Confirmation - Seat Reservation"; // Set default value for Subject
 
         }
     }

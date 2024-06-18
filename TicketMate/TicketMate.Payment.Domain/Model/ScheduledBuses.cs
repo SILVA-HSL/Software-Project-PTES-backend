@@ -25,6 +25,7 @@ namespace TicketMate.Payment.Domain.Model
         public string Comfortability { get; set; }
         public string Duration { get; set; }
         public decimal TicketPrice { get; set; }
+        public int UserId { get; set; }
 
 
 

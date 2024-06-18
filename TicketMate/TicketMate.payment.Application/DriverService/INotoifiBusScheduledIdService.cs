@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace TicketMate.Payment.Application.DriverService
 {
-    public interface IScheduledTrainService
+    public interface INotoifiBusScheduledIdService
     {
-        Task<IEnumerable<object>> GetScheduledTrainDetailsAsync(bool isCompleted, int Id);
+        Task<List<int>> GetBusScheduleIdsByPassengerId(string passengerId);
     }
 }

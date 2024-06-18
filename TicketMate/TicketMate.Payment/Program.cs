@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TicketMate.Payment.Data;
-using TicketMate.Admin.Infastructure;
+//using TicketMate.Admin.Infastructure;
 using Stripe;
 using TicketMate.Payment.Application.DriverService;
 using TicketMate.Payment.Application.BookingServices;
@@ -28,7 +28,10 @@ builder.Services.AddScoped<IBusBookingService, BusBookingService>();
 builder.Services.AddScoped<IScheduledTrainService, ScheduledTrainService>();
 builder.Services.AddScoped<ITrainBookingService, TrainBookingService>();
 builder.Services.AddScoped<IDriverBreakdownService, DriverBreakdownService>();
-
+builder.Services.AddScoped<IBusLiveUpdateService, BusLiveUpdateService>();
+builder.Services.AddScoped<ITrainLiveUpdateService, TrainLiveUpdateService>();
+builder.Services.AddScoped<INotoifiBusScheduledIdService, NotoifiBusScheduledIdService>();
+builder.Services.AddScoped<INotifiTrainScheduledIdService, NotifiTrainScheduledIdService>();
 
 builder.Services.AddCors(options =>
 {
@@ -36,7 +39,8 @@ builder.Services.AddCors(options =>
     {
         builder.WithOrigins("http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "http://localhost:5176")
                .AllowAnyHeader()
-               .AllowAnyMethod();
+               .AllowAnyMethod()
+               .AllowCredentials(); // This line is crucial
     });
 });
 
@@ -50,12 +54,15 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
+
 }
 
-app.UseCors("AllowLocalhost");
+
 
 app.UseHttpsRedirection();
-
+app.UseRouting();
+app.UseCors("AllowLocalhost");
 app.UseAuthorization();
 
 app.MapControllers();
@@ -65,13 +72,18 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 }
 
-app.UseRouting();
+app.MapHub<NotificationHub>("/notificationHub");
 
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-    endpoints.MapHub<NotificationHub>("/notificationHub");
-});
+
+
+
+//app.UseEndpoints(endpoints =>
+//{
+// endpoints.MapControllerRoute(
+//  name: "default",
+// pattern: "{controller=Home}/{action=Index}/{id?}");
+// endpoints.MapHub<NotificationHub>("/notificationHub");
+//});
 
 
 app.Run();

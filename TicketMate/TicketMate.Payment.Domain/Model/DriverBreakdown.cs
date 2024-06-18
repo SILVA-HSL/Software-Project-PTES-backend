@@ -14,6 +14,8 @@ namespace TicketMate.Payment.Domain.Model
 
         [Required]
         public int DriverId { get; set; }
+        [Required]
+        public string BusNo { get; set; }
 
         [Required]
         public DateTime Date { get; set; }

@@ -21,7 +21,8 @@ namespace TicketMate.Payment.Domain.Model
         public string TrainType { get; set; }
         public decimal FirstClassTicketPrice { get; set; }
         public decimal SecondClassTicketPrice { get; set; }
-        public string UserId { get; set; }
+        public int TrainDriverId { get; set; }
+        public int UserId { get; set; }
         public bool DeleteState { get; set; } = true;
 
 

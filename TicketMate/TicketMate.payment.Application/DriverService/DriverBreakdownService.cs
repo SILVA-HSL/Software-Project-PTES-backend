@@ -18,11 +18,12 @@ namespace TicketMate.Payment.Application.DriverService
                 _context = context;
             }
 
-            public async Task<DriverBreakdown> CreateDriverBreakdownAsync(int driverId)
+            public async Task<DriverBreakdown> CreateDriverBreakdownAsync(int driverId,string BusNo)
             {
                 var breakdown = new DriverBreakdown
                 {
                     DriverId = driverId,
+                    BusNo = BusNo,
                     Date = DateTime.UtcNow,
                     BreakdownStatus = 1
                 };

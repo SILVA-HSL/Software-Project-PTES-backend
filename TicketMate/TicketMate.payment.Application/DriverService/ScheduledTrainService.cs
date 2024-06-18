@@ -17,11 +17,11 @@ namespace TicketMate.Payment.Application.DriverService
         _context = context;
     }
 
-    public async Task<IEnumerable<object>> GetScheduledTrainDetailsAsync(bool isCompleted, string Id)
+    public async Task<IEnumerable<object>> GetScheduledTrainDetailsAsync(bool isCompleted, int Id)
     {
             var result = await   (from std in _context.ScheduledTrainDates
                           join st in _context.ScheduledTrains on std.ScheduledTrainSchedulId equals st.SchedulId
-                          where st.UserId == Id && std.IsCompleted == isCompleted
+                          where st.TrainDriverId == Id && std.IsCompleted == isCompleted
                           select new
                           {
                               std.Id,
@@ -30,7 +30,9 @@ namespace TicketMate.Payment.Application.DriverService
                               st.StartStation,            
                               st.EndStation,
                               st.TrainDepartureTime,
-                              st.TrainArrivalTime
+                              st.TrainArrivalTime,
+                              st.TrainName,
+                              
                           }).ToListAsync();
 
             return result;

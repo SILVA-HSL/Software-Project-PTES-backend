@@ -9,6 +9,6 @@ namespace TicketMate.Payment.Application.DriverService
 {
     public interface IDriverBreakdownService
     {
-        Task<DriverBreakdown> CreateDriverBreakdownAsync(int driverId);
+        Task<DriverBreakdown> CreateDriverBreakdownAsync(int driverId,string BusNo);
     }
 }

@@ -19,7 +19,7 @@ namespace TicketMate.Payment.Api.Controllers
         {
             if (ModelState.IsValid)
             {
-                var breakdown = await _driverBreakdownService.CreateDriverBreakdownAsync(request.DriverId);
+                var breakdown = await _driverBreakdownService.CreateDriverBreakdownAsync(request.DriverId,request.BusNo);
                 return Ok(breakdown);
             }
 
@@ -30,5 +30,6 @@ namespace TicketMate.Payment.Api.Controllers
     public class DriverBreakdownRequest
     {
         public int DriverId { get; set; }
+        public string BusNo { get; set; }
     }
 }

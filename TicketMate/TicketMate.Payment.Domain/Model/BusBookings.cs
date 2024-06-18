@@ -11,8 +11,8 @@ namespace TicketMate.Payment.Domain.Model
     {
         [Key]
         public int BusBookingId { get; set; }
-        public string BusScheduleId { get; set; }
-        public string BusId { get; set; }
+        public int BusScheduleId { get; set; }
+        public int BusId { get; set; }
         public string PassengerId { get; set; }
         public string RouteNo { get; set; }
         public string StartLocation { get; set; }
@@ -26,8 +26,8 @@ namespace TicketMate.Payment.Domain.Model
         public string PaymentMethod { get; set; }
         public string BookingSeatNO { get; set; }
         public string BookingSeatCount { get; set; }
-        public string TicketPrice { get; set; }
-        public string TotalPaymentAmount { get; set; }
+        public decimal TicketPrice { get; set; }
+        public decimal TotalPaymentAmount { get; set; }
         public bool PaymentStatus { get; set; }
         public string PaymentId { get; set; }
 

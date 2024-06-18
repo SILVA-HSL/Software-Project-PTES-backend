@@ -16,7 +16,7 @@ namespace TicketMate.Payment.Api.Controllers
 
 
         [HttpGet("details")]
-        public async Task<ActionResult<IEnumerable<object>>> GetScheduledTrainDetails([FromQuery] bool isCompleted, string Id)
+        public async Task<ActionResult<IEnumerable<object>>> GetScheduledTrainDetails([FromQuery] bool isCompleted, int Id)
         {
             var result = await _scheduledTrainService.GetScheduledTrainDetailsAsync(isCompleted, Id);
             return Ok(result);

@@ -27,7 +27,9 @@ namespace TicketMate.Payment.Application.DriverService
                                     sb.StartLocation,
                                     sb.EndLocation,
                                     sb.DepartureTime,
-                                    sb.ArrivalTime
+                                    sb.ArrivalTime,
+                                    sb.BusNo,
+                                    sb.RegisteredBusBusId
                                 }).ToListAsync();
 
             return result;

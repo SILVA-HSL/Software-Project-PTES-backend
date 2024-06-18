@@ -30,7 +30,6 @@ namespace TicketMate.Payment.Domain.Model
         public decimal TicketPrice { get; set; }
         public decimal TotalPaymentAmount { get; set; }
         public bool PaymentStatus { get; set; }
-        
-
+        public string PaymentId { get; set; }
     }
 }

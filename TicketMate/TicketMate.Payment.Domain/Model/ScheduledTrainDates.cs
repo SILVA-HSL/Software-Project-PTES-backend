@@ -16,7 +16,7 @@ namespace TicketMate.Payment.Domain.Model
         public string ArrivalDate { get; set; }
         public string DepartureDate { get; set; }
         public int ScheduledTrainSchedulId { get; set; }
-        public bool IsCompleted { get; set; } = false;
+        public bool IsCompleted { get; set; } 
 
 
     }
