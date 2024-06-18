@@ -4,10 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using TicketMate.Admin.Application.Handlers;
 using TicketMate.Admin.Application.Services;
 using TicketMate.Admin.Infastructure;
-
 
 
 
@@ -25,20 +23,12 @@ builder.Services.AddDbContext<AuthDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("AuthConnection"));
 });
 
-
-
 builder.Services.AddDbContext<TicketMate.Admin.Infastructure.userDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("AuthConnection"));
 });
 
 builder.Services.AddScoped<ITokenRepository, TokenRepository>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddSingleton<LocationHub>();
-builder.Services.AddScoped<IMapConnections, MapConnections>();
-builder.Services.AddScoped<IUpdateUserdata, UpdateUserdata>();
-
-
 
 builder.Services.AddIdentityCore<IdentityUser>()
     .AddRoles<IdentityRole>()
@@ -81,10 +71,9 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowLocalhost", builder =>
     {
-        builder.WithOrigins("http://localhost:3000", "http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "http://localhost:5176")
+        builder.WithOrigins("http://localhost:5173", "http://localhost:5174", "http://localhost:5175", "http://localhost:5176")
                .AllowAnyHeader()
-               .AllowAnyMethod()
-               .AllowCredentials();
+               .AllowAnyMethod();
     });
 });
 
@@ -92,48 +81,38 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 
 }
+//configure the http request pipeline.
+/*    if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Home/Error");
 
+    app.UseHsts();
+}
+*/
 
-
-
-
-
-
-app.UseStaticFiles();
-app.UseRouting();
 app.UseHttpsRedirection();
-app.UseCors("AllowLocalhost");
+app.UseStaticFiles();
+
+
+app.UseRouting();
+
+app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-/*app.MapControllerRoute(
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 */
 //app.UseExceptionHandler("/Home/Error");
 
+app.UseCors("AllowLocalhost");
 
-
-//app.MapControllers();
-//app.MapHub<LocationHub>("/locationHub");
-
-
-
-
-
-
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();
-    // Map the SignalR hub
-    endpoints.MapHub<LocationHub>("/locationHub");
-});
-
+app.MapControllers();
 
 app.Run();

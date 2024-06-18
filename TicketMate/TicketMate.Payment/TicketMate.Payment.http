@@ -1,0 +1,6 @@
+@TicketMate.Payment_HostAddress = http://localhost:5070
+
+GET {{TicketMate.Payment_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
