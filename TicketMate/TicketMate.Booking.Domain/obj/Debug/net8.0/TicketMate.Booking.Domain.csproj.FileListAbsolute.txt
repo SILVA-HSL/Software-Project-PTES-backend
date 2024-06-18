@@ -24,3 +24,6 @@ H:\TicketmateBackend\RepoWorksNew2\TicketMate\TicketMate.Booking.Domain\obj\Debu
 H:\TicketmateBackend\RepoWorksNew2\TicketMate\TicketMate.Booking.Domain\obj\Debug\net8.0\refint\TicketMate.Booking.Domain.dll
 H:\TicketmateBackend\RepoWorksNew2\TicketMate\TicketMate.Booking.Domain\obj\Debug\net8.0\TicketMate.Booking.Domain.pdb
 H:\TicketmateBackend\RepoWorksNew2\TicketMate\TicketMate.Booking.Domain\obj\Debug\net8.0\ref\TicketMate.Booking.Domain.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Booking.Domain\obj\Debug\net8.0\TicketMate.Booking.Domain.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Booking.Domain\obj\Debug\net8.0\refint\TicketMate.Booking.Domain.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Booking.Domain\obj\Debug\net8.0\TicketMate.Booking.Domain.pdb

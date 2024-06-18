@@ -85,3 +85,6 @@ H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\Ticke
 H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Api\obj\Debug\net8.0\TicketMate.Admin.Api.pdb
 H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Api\obj\Debug\net8.0\TicketMate.Admin.Api.genruntimeconfig.cache
 H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Api\obj\Debug\net8.0\ref\TicketMate.Admin.Api.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Api\obj\Debug\net8.0\TicketMate.Admin.Api.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Api\obj\Debug\net8.0\refint\TicketMate.Admin.Api.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Api\obj\Debug\net8.0\TicketMate.Admin.Api.pdb

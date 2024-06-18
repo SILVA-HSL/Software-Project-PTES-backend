@@ -18,3 +18,6 @@ C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Application\obj\Debug\net8.
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Application\obj\Debug\net8.0\TicketMate.Admin.Application.csproj.CopyComplete
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Application\bin\Debug\net8.0\TicketMate.Admin.Infastructure.dll
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Application\bin\Debug\net8.0\TicketMate.Admin.Infastructure.pdb
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Application\obj\Debug\net8.0\TicketMate.Admin.Application.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Application\obj\Debug\net8.0\refint\TicketMate.Admin.Application.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Application\obj\Debug\net8.0\TicketMate.Admin.Application.pdb

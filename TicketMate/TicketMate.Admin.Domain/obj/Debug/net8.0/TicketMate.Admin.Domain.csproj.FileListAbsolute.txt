@@ -11,3 +11,6 @@ H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\Ticke
 H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
 H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll
 H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb

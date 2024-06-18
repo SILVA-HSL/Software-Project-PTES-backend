@@ -16,3 +16,6 @@ C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.genruntimeconfig.cache
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\ref\TicketMate.Admin.Infastructure.dll
 C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.csproj.CopyComplete
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\refint\TicketMate.Admin.Infastructure.dll
+C:\Users\Malinga\Documents\academic\Software Project Backend\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Infastructure\obj\Debug\net8.0\TicketMate.Admin.Infastructure.pdb
