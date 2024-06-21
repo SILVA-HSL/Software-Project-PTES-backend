@@ -11,6 +11,7 @@ using TicketMate.Admin.Infastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddSignalR();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -93,10 +94,7 @@ if (app.Environment.IsDevelopment())
 }
 */
 
-
-
-
-
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 
@@ -106,7 +104,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-/*app.MapControllerRoute(
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 

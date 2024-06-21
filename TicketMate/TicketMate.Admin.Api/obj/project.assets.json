@@ -3722,6 +3722,8 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
           "Swashbuckle.AspNetCore": "6.4.0",
           "System.IdentityModel.Tokens.Jwt": "7.4.0",
+          "TicketMate.Admin.Domain": "1.0.0",
+          "TicketMate.Admin.Infastructure": "1.0.0"
           "TicketMate.Admin.Domain": "1.0.0"
           "FluentValidation": "11.9.0",
           "MediatR": "12.2.0",
@@ -3819,7 +3821,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "8.0.2",
           "Swashbuckle.AspNetCore": "6.4.0",
           "System.IdentityModel.Tokens.Jwt": "7.4.0",
-          "TicketMate.Admin.Application": "1.0.0",
           "TicketMate.Admin.Domain": "1.0.0"
         },
         "compile": {
@@ -11006,6 +11007,9 @@
       "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
       "outputPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Api\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"

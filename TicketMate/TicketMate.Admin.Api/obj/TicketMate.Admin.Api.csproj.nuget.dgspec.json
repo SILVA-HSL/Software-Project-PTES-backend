@@ -13,6 +13,9 @@
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
         "outputPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Admin.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -144,7 +147,14 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
+                "projectPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj"
+              },
+              "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj": {
+                "projectPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Infastructure\\TicketMate.Admin.Infastructure.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -309,6 +319,9 @@
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
         "outputPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Acer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -393,8 +406,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj": {
-                "projectPath": "H:\\TicketmateBackend\\RepoWorksNew\\Software-Project-PTES-backend\\TicketMate\\TicketMate.Booking.Domain\\TicketMate.Booking.Domain.csproj"
+              "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj": {
+                "projectPath": "C:\\Users\\ME\\Desktop\\PTES\\TicketMate\\TicketMate.Admin.Domain\\TicketMate.Admin.Domain.csproj"
               }
             }
           }

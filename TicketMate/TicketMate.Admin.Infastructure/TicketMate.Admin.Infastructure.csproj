@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TicketMate.Admin.Application\TicketMate.Admin.Application.csproj" />
     <ProjectReference Include="..\TicketMate.Admin.Domain\TicketMate.Admin.Domain.csproj" />
   </ItemGroup>
 

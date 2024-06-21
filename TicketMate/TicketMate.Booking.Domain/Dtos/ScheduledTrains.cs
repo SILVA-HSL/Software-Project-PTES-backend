@@ -22,7 +22,7 @@ namespace TicketMate.Booking.Domain.Dtos
         public decimal FirstClassTicketPrice { get; set; }
         public decimal SecondClassTicketPrice { get; set; }
 
-
+        public string TrainName { get; set; }
         [JsonIgnore]
         public List<ScheduledTrainDates> ScheduledTrainDates { get; set; }
 
