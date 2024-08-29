@@ -17,7 +17,7 @@ namespace TicketMate.Vehicle.Infastructure
         public DbSet<SelectedBusStand> SelectedBusStands { get; set; }
         public DbSet<RegisteredBus> RegisteredBuses { get; set; }
         public DbSet<ScheduledBus> ScheduledBuses { get; set; }
-        public DbSet<ScheduledBusDate> ScheduledBusDates {  get; set; }
+        public DbSet<ScheduledBusDate> ScheduledBusDates { get; set; }
         public DbSet<SelectedSeatStructure> SelectedSeatStructures { get; set; }
         public DbSet<RegisteredLocomotive> RegisteredLocomotives { get; set; }
         public DbSet<RegisteredCarriage> RegisteredCarriages { get; set; }
@@ -26,12 +26,12 @@ namespace TicketMate.Vehicle.Infastructure
         public DbSet<ScheduledLocomotive> ScheduledLocomotives { get; set; }
         public DbSet<ScheduledTrainDate> ScheduledTrainDates { get; set; }
         public DbSet<SelCarriageSeatStructure> SelCarriageSeatStructures { get; set; }
-        public DbSet<BusRoute>  BusRoutes { get; set; }
+        public DbSet<BusRoute> BusRoutes { get; set; }
         public DbSet<BusRouteStand> BusRouteStands { get; set; }
         public DbSet<TrainRaliway> TrainRaliways { get; set; }
         public DbSet<TrainRaliwayStation> TrainRaliwayStations { get; set; }
         public DbSet<SelectedTrainStation> SelectedTrainStations { get; set; }
-        public DbSet<userDataModel>users { get; set; }
+        public DbSet<userDataModel> users { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //var connectionString = "server = MSI; database = Vehicle; Integrated Security = True; MultipleActiveResultSets = true; MultipleActiveResultSets = true; TrustServerCertificate = True;";

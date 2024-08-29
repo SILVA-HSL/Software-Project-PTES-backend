@@ -4,6 +4,9 @@ using TicketMate.Vehicle.Infastructure;
 using TicketMate.Vehicle.API.Controllers;
 using Microsoft.Extensions.Configuration;
 using TicketMate.Vehicle.Application.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,9 +29,42 @@ builder.Services.AddScoped<VehicleDbContext>();
 builder.Services.AddScoped<IRegBusSer, RegBusSer>();
 builder.Services.AddScoped<ISelSeaStrSer, SelSeaStrSer>();
 builder.Services.AddScoped<IScheduledBusSer, ScheduledBusSer>();
+builder.Services.AddScoped<ISchBusStandSer, SchBusStandSer>();
+builder.Services.AddScoped<IScheduledBusDateSer, ScheduledBusDateSer>();
+builder.Services.AddScoped<IBusRouteSer, BusRouteSer>();
+builder.Services.AddScoped<IBusRouteStandSer, BusRouteStandSer>();
+builder.Services.AddScoped<IuserDataSer, userDataSer>();
+builder.Services.AddScoped<IRegisteredLocomotiveSer, RegisteredLocomotiveSer>();
+builder.Services.AddScoped<IRegisteredCarriageSer, RegisteredCarriageSer>();
+builder.Services.AddScoped<IScheduledTrainSer, ScheduledTrainSer>();
+builder.Services.AddScoped<ISelCarriageSeatStructureSer, SelCarriageSeatStructureSer>();
+builder.Services.AddScoped<ISelectedTrainStationSer, SelectedTrainStationSer>();
+builder.Services.AddScoped<IScheduledTrainDateSer, ScheduledTrainDateSer>();
+builder.Services.AddScoped<ITrainRaliwaySer, TrainRaliwaySer>();
+builder.Services.AddScoped<ITrainRaliwayStationSer, TrainRaliwayStationSer>();
+builder.Services.AddScoped<IScheduledLocomotiveSer, ScheduledLocomotiveSer>();
+builder.Services.AddScoped<IScheduledCarriageSer, ScheduledCarriageSer>();
 
 
 builder.Services.AddCors();
+
+
+// Add JWT authentication configuration
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["jwt:Issuer"],
+            ValidAudience = builder.Configuration["jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["jwt:Key"]))
+        };
+    });
+
 
 var app = builder.Build();
 
@@ -46,12 +82,12 @@ app.UseCors(builder =>
     .AllowAnyOrigin()
     .AllowAnyMethod()
     .AllowAnyHeader();
-}); 
+});
 //
 
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
