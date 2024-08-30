@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using TicketMate.Reporting.Api.Controllers;
 using TicketMate.Reporting.Application.ReportingService;
 using TicketMate.Reporting.Infrastructure;
 
@@ -10,12 +12,60 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 // Register services
-builder.Services.AddScoped<IAdminReportingService, AdminReportingService>();
-builder.Services.AddScoped<IBusOwnerReportingService, BusOwnerReportingService>();
-builder.Services.AddScoped<ITrainReportingService, TrainReportingService>();
+
+//builder.Services.AddScoped<IAdminReportingService, AdminReportingService>();
+//builder.Services.AddScoped<IBusOwnerReportingService, BusOwnerReportingService>();
+//builder.Services.AddScoped<ITrainReportingService, TrainReportingService>();
 builder.Services.AddScoped<IBusPredictionService, BusPredictionService>();
 builder.Services.AddScoped<IBusPredictionDataService, BusPredictionDataService>();
-builder.Services.AddScoped<IPredictionCacheService, PredictionCacheService>();
+//builder.Services.AddScoped<IPredictionCacheService, PredictionCacheService>();
+builder.Services.AddScoped<ITrainPredictionDataService, TrainPredictionDataService>();
+builder.Services.AddScoped<ITrainPredictionService, TrainPredictionService>();
+// Register your services
+builder.Services.AddScoped<ILeaveRequestService, LeaveRequestService>();
+
+
+
+
+builder.Services.AddHttpClient<IAdminReportingService, AdminReportingService>();
+
+builder.Services.AddScoped<IAdminReportingService>(sp =>
+{
+    var httpClient = sp.GetRequiredService<IHttpClientFactory>().CreateClient();
+    var dbContextOptions = sp.GetRequiredService<DbContextOptions<ReportingDbContext>>();
+
+    return new AdminReportingService(dbContextOptions, httpClient);
+});
+
+
+// Register HttpClient for BusOwnerReportingService
+builder.Services.AddHttpClient<IBusOwnerReportingService, BusOwnerReportingService>();
+// Explicit scoped registration using factory pattern
+builder.Services.AddScoped<IBusOwnerReportingService>(sp =>
+{
+    var httpClient = sp.GetRequiredService<IHttpClientFactory>().CreateClient();
+    var dbContextOptions = sp.GetRequiredService<DbContextOptions<ReportingDbContext>>();
+    return new BusOwnerReportingService(dbContextOptions, httpClient);
+});
+
+
+builder.Services.AddHttpClient<ITrainReportingService, TrainReportingService>();
+builder.Services.AddScoped<ITrainReportingService>(sp =>
+{
+    var httpClient = sp.GetRequiredService<IHttpClientFactory>().CreateClient();
+    var dbContextOptions = sp.GetRequiredService<DbContextOptions<ReportingDbContext>>();
+    return new TrainReportingService(dbContextOptions, httpClient);
+});
+
+
+// Configure logging
+builder.Services.AddLogging(logging =>
+{
+    logging.ClearProviders();
+    logging.AddConsole();
+    logging.AddDebug();
+    logging.AddEventSourceLogger();
+});
 
 builder.Services.AddControllers()
     .AddJsonOptions(options =>
@@ -25,7 +75,7 @@ builder.Services.AddControllers()
 // Configure the database context
 builder.Services.AddDbContext<ReportingDbContext>(options =>
 {
-    options.UseSqlServer("Server=tcp:ptesserver.database.windows.net,1433;Initial Catalog=ptescentral;Persist Security Info=False;User ID=AdminPTES;Password=PTES@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+    options.UseSqlServer("DefaultConnection",
         sqlServerOptions =>
         {
             sqlServerOptions.EnableRetryOnFailure();

@@ -11,7 +11,7 @@ namespace TicketMate.Reporting.Api.Controllers
     public class AdminReportController : ControllerBase
     {
         private readonly IAdminReportingService _adminReportingService;
-     
+
 
         public AdminReportController(IAdminReportingService reportingService)
         {
@@ -21,22 +21,38 @@ namespace TicketMate.Reporting.Api.Controllers
         [HttpGet("busowners")]
         public IActionResult GetBusOwnerUserIds()
         {
+
+
             var userIds = _adminReportingService.GetBusOwnerUserIds();
+            return Ok(userIds);
+        }
+
+        [HttpGet("trainOwners")]
+        public IActionResult GetTrainOwnerUserIds()
+        {
+
+
+            var userIds = _adminReportingService.GetTrainOwnerUserIds();
             return Ok(userIds);
         }
 
 
         [HttpGet("daily/{userId}")]
-        public IActionResult GetDailyStatistics(string userId)
+        public async Task<IActionResult> GetDailyStatistics(string userId)
         {
+            await _adminReportingService.EnsurePredictionsAreAvailableAsync();
+
             var today = DateTime.Today;
             var stats = _adminReportingService.GetStatistics(userId, today, today);
             return Ok(stats);
         }
 
         [HttpGet("monthly/{userId}")]
-        public IActionResult GetMonthlyStatistics(string userId)
+        public async Task<IActionResult> GetMonthlyStatistics(string userId)
         {
+            await _adminReportingService.EnsurePredictionsAreAvailableAsync();
+            // Determine the start and end dates for the previous month
+
             var startDate = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
             var endDate = startDate.AddMonths(1).AddDays(-1);
             var stats = _adminReportingService.GetStatistics(userId, startDate, endDate);
@@ -44,8 +60,11 @@ namespace TicketMate.Reporting.Api.Controllers
         }
 
         [HttpGet("3months/{userId}")]
-        public IActionResult GetThreeMonthsStatistics(string userId)
+        public async Task<IActionResult> GetThreeMonthsStatistics(string userId)
         {
+            await _adminReportingService.EnsurePredictionsAreAvailableAsync();
+
+
             var endDate = DateTime.Today;
             var startDate = endDate.AddMonths(-3);
             var stats = _adminReportingService.GetStatistics(userId, startDate, endDate);
@@ -53,8 +72,11 @@ namespace TicketMate.Reporting.Api.Controllers
         }
 
         [HttpGet("yearly/{userId}")]
-        public IActionResult GetYearlyStatistics(string userId)
+        public async Task<IActionResult> GetYearlyStatistics(string userId)
         {
+            await _adminReportingService.EnsurePredictionsAreAvailableAsync();
+
+
             var startDate = new DateTime(DateTime.Today.Year, 1, 1);
             var endDate = new DateTime(DateTime.Today.Year, 12, 31);
             var stats = _adminReportingService.GetStatistics(userId, startDate, endDate);
@@ -63,28 +85,26 @@ namespace TicketMate.Reporting.Api.Controllers
 
 
         [HttpGet("total-predicted-income/{userId}")]
-        public IActionResult TotalPredictedIncomeForUser(string userId)
+        public async Task<IActionResult> TotalPredictedIncomeForUser(string userId)
         {
             try
             {
-                var result = _adminReportingService.GetTotalPredictedIncomeForUser(userId);
+                var result = await _adminReportingService.GetTotalPredictedIncomeForUserAsync(userId);
 
-                // Check if the result indicates that the user does not exist
                 if (result.StartsWith("User with ID"))
                 {
-                    return NotFound(result); // Return 404 status code with the message
+                    return NotFound(result);
                 }
                 return Ok(decimal.Parse(result));
-
-             
             }
             catch (Exception ex)
             {
-                // Log exception and return an error response
                 Console.WriteLine($"An error occurred: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }
+
+
     }
 }
 

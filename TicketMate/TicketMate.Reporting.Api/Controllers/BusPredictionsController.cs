@@ -18,7 +18,7 @@ namespace TicketMate.Reporting.Api.Controllers
 
 
 
-        public BusPredictionController(IBusPredictionDataService predictionDataService, IBusPredictionService busPredictionService, ILogger<BusPredictionController> logger )//,IPredictionCacheService predictionCacheService
+        public BusPredictionController(IBusPredictionDataService predictionDataService, IBusPredictionService busPredictionService, ILogger<BusPredictionController> logger)//,IPredictionCacheService predictionCacheService
         {
             _busPredictionDataService = predictionDataService;
             _logger = logger;
@@ -41,7 +41,7 @@ namespace TicketMate.Reporting.Api.Controllers
                 }
 
                 _logger.LogInformation("GetPredictedIncome called.");
-               
+
                 var predictionInputData = _busPredictionDataService.GetPredictionDataForAllBuses();
 
                 var predictedData = await _busPredictionService.GetPredictedIncome(predictionInputData);
@@ -52,14 +52,14 @@ namespace TicketMate.Reporting.Api.Controllers
             }
             catch (Exception ex)
             {
-                
+
                 // Console.WriteLine($"An error occurred: {ex.Message}");
-            
+
                 _logger.LogError(ex, "An error occurred while getting predicted income.");
                 return StatusCode(500, "Internal server error");
             }
         }
-        
+
     }
 }
 

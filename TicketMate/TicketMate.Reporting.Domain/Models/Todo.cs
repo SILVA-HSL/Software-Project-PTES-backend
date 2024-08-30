@@ -11,6 +11,6 @@ namespace TicketMate.Reporting.Domain.Models
     {
         [Key]
         public int Id { get; set; } // This is the primary key
-         public required string Name { get; set; }
+        public required string Name { get; set; }
     }
 }

@@ -10,7 +10,7 @@ using TicketMate.Reporting.Infrastructure;
 
 namespace TicketMate.Reporting.Application.ReportingService
 {
-    public class BusPredictionDataService: IBusPredictionDataService
+    public class BusPredictionDataService : IBusPredictionDataService
 
     {
         private readonly ReportingDbContext _context;
@@ -37,7 +37,7 @@ namespace TicketMate.Reporting.Application.ReportingService
                 {
                     BusNo = bus.BusNo,
                     BusId = bus.BusId,
-                    UserId= bus.UserId,
+                    UserId = bus.UserId,
                     SeatCount = bus.SetsCount,
                     ACNonAC = bus.ACorNONAC ? 1 : 0, // Convert bool to int
                     TicketPrice = 0, // Initialize to 0 initially
@@ -45,7 +45,7 @@ namespace TicketMate.Reporting.Application.ReportingService
                     NumberOfRides = 0,
                     WorkingDays = 0,
                     PreviousMonthIncome = 0,
-                    BaseMonthlyIncome=0,
+                    BaseMonthlyIncome = 0,
                     AC = 0,
                     SemiLux = 0,
                     Normal = 0,
@@ -105,13 +105,19 @@ namespace TicketMate.Reporting.Application.ReportingService
         public void CalculatePreviousMonthData(BusPredictionInputDTO predictionInput, int busId)
         {
             // Determine the start and end dates for the previous month
-            var today = DateTime.Today;
-            var firstDayOfMonth = new DateTime(today.Year, today.Month, 1);
-            var lastDayOfPreviousMonth = firstDayOfMonth.AddDays(-1);
-            var firstDayOfPreviousMonth = new DateTime(lastDayOfPreviousMonth.Year, lastDayOfPreviousMonth.Month, 1);
+            //var today = DateTime.Today;
+            //var firstDayOfMonth = new DateTime(today.Year, today.Month, 1);
+            //var lastDayOfPreviousMonth = firstDayOfMonth.AddDays(-1);
+            //var firstDayOfPreviousMonth = new DateTime(lastDayOfPreviousMonth.Year, lastDayOfPreviousMonth.Month, 1);
 
-            string startDateString = firstDayOfPreviousMonth.ToString("yyyy-MM-dd");
-            string endDateString = lastDayOfPreviousMonth.ToString("yyyy-MM-dd");
+            //string startDateString = firstDayOfPreviousMonth.ToString("yyyy-MM-dd");
+            //string endDateString = lastDayOfPreviousMonth.ToString("yyyy-MM-dd");
+
+            var endDate = DateTime.Today;
+            var startDate = endDate.AddDays(-30);
+
+            string startDateString = startDate.ToString("yyyy-MM-dd");
+            string endDateString = endDate.ToString("yyyy-MM-dd");
 
             // Fetch bookings for the bus in the previous month
             var bookings = _context.BusBookings

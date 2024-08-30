@@ -21,8 +21,18 @@ namespace TicketMate.Reporting.Infrastructure
         public DbSet<RegisteredCarriage> RegisteredCarriages { get; set; }
         public DbSet<ScheduledTrainDate> ScheduledTrainDates { get; set; }
         public DbSet<ScheduledCarriage> ScheduledCarriages { get; set; }
+        public DbSet<LeaveRequest> LeaveRequests { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
 
+            modelBuilder.Entity<LeaveRequest>()
+                .ToTable("leaveRequests")
+                .HasKey(lr => lr.Id);
+
+            // Additional configurations if necessary
+        }
 
 
 
@@ -36,13 +46,13 @@ namespace TicketMate.Reporting.Infrastructure
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
-                var connectionString = "Server=tcp:ptesserver.database.windows.net,1433;Initial Catalog=ptescentral;Persist Security Info=False;User ID=AdminPTES;Password=PTES@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-                optionsBuilder.UseSqlServer(connectionString);
-            
+
+            var connectionString = "Server=tcp:ptesserver.database.windows.net,1433;Initial Catalog=ptescentral;Persist Security Info=False;User ID=AdminPTES;Password=PTES@admin;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
+            optionsBuilder.UseSqlServer(connectionString);
+
         }
 
-        
+
     }
 }
 

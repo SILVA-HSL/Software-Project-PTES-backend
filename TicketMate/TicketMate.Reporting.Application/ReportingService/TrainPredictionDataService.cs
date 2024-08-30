@@ -10,7 +10,7 @@ using TicketMate.Reporting.Infrastructure;
 
 namespace TicketMate.Reporting.Application.ReportingService
 {
-    public class TrainPredictionDataService:ITrainPredictionDataService
+    public class TrainPredictionDataService : ITrainPredictionDataService
     {
         private readonly ReportingDbContext _context;
 
@@ -82,12 +82,18 @@ namespace TicketMate.Reporting.Application.ReportingService
 
         private decimal CalculatePreviousMonthIncome(List<int> scheduleIds)
         {
-            DateTime today = DateTime.Today;
-            DateTime firstDayOfPreviousMonth = new DateTime(today.Year, today.Month, 1).AddMonths(-1);
-            DateTime lastDayOfPreviousMonth = firstDayOfPreviousMonth.AddMonths(1).AddDays(-1);
+            //DateTime today = DateTime.Today;
+            //DateTime firstDayOfPreviousMonth = new DateTime(today.Year, today.Month, 1).AddMonths(-1);
+            //DateTime lastDayOfPreviousMonth = firstDayOfPreviousMonth.AddMonths(1).AddDays(-1);
 
-            string startDateString = firstDayOfPreviousMonth.ToString("yyyy-MM-dd");
-            string endDateString = lastDayOfPreviousMonth.ToString("yyyy-MM-dd");
+            //string startDateString = firstDayOfPreviousMonth.ToString("yyyy-MM-dd");
+            //string endDateString = lastDayOfPreviousMonth.ToString("yyyy-MM-dd");
+            var endDate = DateTime.Today;
+            var startDate = endDate.AddDays(-30);
+
+            string startDateString = startDate.ToString("yyyy-MM-dd");
+            string endDateString = endDate.ToString("yyyy-MM-dd");
+
 
             return _context.TrainBookings
                 .Where(booking => scheduleIds.Contains(booking.TrainScheduleId)

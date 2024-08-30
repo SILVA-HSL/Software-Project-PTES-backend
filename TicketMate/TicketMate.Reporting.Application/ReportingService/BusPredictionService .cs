@@ -54,7 +54,7 @@ namespace TicketMate.Reporting.Application.ReportingService
                     SemiLux = inputData.SemiLux,
                     Normal = inputData.Normal,
                     Luxury = inputData.Luxury,
-                    
+
                 };
 
                 var jsonInputData = JsonConvert.SerializeObject(inputForModel);
@@ -78,7 +78,7 @@ namespace TicketMate.Reporting.Application.ReportingService
                             BusId = inputData.BusId,
                             UserId = inputData.UserId,
                             PredictedIncome = predictionResult.PredictedIncomeFormatted,
-                            PredictionDate = DateTime.Now 
+                            PredictionDate = DateTime.Now
                         };
 
 
@@ -127,7 +127,7 @@ namespace TicketMate.Reporting.Application.ReportingService
             return await _context.DailyBusPredictions.AnyAsync(p => p.PredictionDate.Date == today);
         }
 
-        
+
 
     }
 }

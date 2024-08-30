@@ -20,16 +20,18 @@ namespace TicketMate.Reporting.Api.Controllers
         [HttpGet("{userId}/{filter}")]
         public async Task<ActionResult<List<TrainReportDTO>>> GetTrainReport(string userId, DateFilter filter)
         {
+            await _trainReportService.EnsurePredictionsExistForTodayAsync();
+
             var report = await _trainReportService.GenerateTrainReportAsync(userId, filter);
             return Ok(report);
         }
 
-        [HttpGet("TrainOwners")]
-        public IActionResult GetTrainOwnerUserIds()
-        {
-            var userIds = _trainReportService.GetTrainOwnerUserIds();
-            return Ok(userIds);
-        }
+        //[HttpGet("TrainOwners")]
+        //public IActionResult GetTrainOwnerUserIds()
+        //{
+        //    var userIds = _trainReportService.GetTrainOwnerUserIds();
+        //    return Ok(userIds);
+        //}
 
     }
 }
