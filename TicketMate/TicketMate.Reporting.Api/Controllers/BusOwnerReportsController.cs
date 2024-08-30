@@ -8,14 +8,14 @@ namespace TicketMate.Reporting.Api.Controllers
     [ApiController]
     public class BusOwnerReportsController : ControllerBase
     {
-   
-       
-            private readonly IBusOwnerReportingService _busOwnerReportingService;
 
-            public BusOwnerReportsController(IBusOwnerReportingService busOwnerReportingService)
-            {
+
+        private readonly IBusOwnerReportingService _busOwnerReportingService;
+
+        public BusOwnerReportsController(IBusOwnerReportingService busOwnerReportingService)
+        {
             _busOwnerReportingService = busOwnerReportingService;
-            }
+        }
 
         [HttpGet("GetOwnerReport/{userId}")]
         public async Task<IActionResult> GetOwnerReport(string userId)

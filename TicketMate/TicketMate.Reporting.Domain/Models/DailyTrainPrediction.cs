@@ -12,7 +12,7 @@ namespace TicketMate.Reporting.Domain.Models
         [Key]
         public int Id { get; set; }
         public string TrainName { get; set; }
-      
+
         public decimal PredictedIncome { get; set; }
         public DateTime PredictionDate { get; set; }
     }

@@ -10,7 +10,7 @@ namespace TicketMate.Reporting.Domain.Models
     public class DailyBusPrediction
     {
 
-        [Key] 
+        [Key]
         public int Id { get; set; }
         public string BusNo { get; set; }
         public int BusId { get; set; }

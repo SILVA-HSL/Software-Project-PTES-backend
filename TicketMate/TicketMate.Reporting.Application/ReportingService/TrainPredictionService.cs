@@ -13,13 +13,13 @@ using TicketMate.Reporting.Infrastructure;
 
 namespace TicketMate.Reporting.Application.ReportingService
 {
-    public class TrainPredictionService:ITrainPredictionService
+    public class TrainPredictionService : ITrainPredictionService
     {
         private readonly IConfiguration _configuration;
         private readonly ReportingDbContext _context;
         private readonly string predictionApiUrl = "http://127.0.0.1:5000/trainpredict";
-        private readonly ILogger<BusPredictionService> _logger;
-        public TrainPredictionService(ReportingDbContext context, IConfiguration configuration, ILogger<BusPredictionService> logger)
+        private readonly ILogger<TrainPredictionService> _logger;
+        public TrainPredictionService(ReportingDbContext context, IConfiguration configuration, ILogger<TrainPredictionService> logger)
         {
             _configuration = configuration;
             _context = context;
@@ -44,10 +44,10 @@ namespace TicketMate.Reporting.Application.ReportingService
                     WorkingDays = inputData.WorkingDays,
                     PreviousMonthIncome = inputData.PreviousMonthIncome,
                     TrainType = inputData.TrainType,
-                    
-             
-    
-    };
+
+
+
+                };
 
                 var jsonInputData = JsonConvert.SerializeObject(inputForModel);
                 var content = new StringContent(jsonInputData, Encoding.UTF8, "application/json");
@@ -62,10 +62,10 @@ namespace TicketMate.Reporting.Application.ReportingService
                         var resultJson = await response.Content.ReadAsStringAsync();
                         var predictionResult = JsonConvert.DeserializeObject<TrainPredictionResponceDTO>(resultJson);
 
-
                         // Log the input and output data for verification
                         Console.WriteLine($"Input: {jsonInputData}");
                         Console.WriteLine($"Output: {resultJson}");
+                        //Console.WriteLine($"Output: {predictionResult.predicted_income}");
                         var prediction = new TrainPredictionOutputDTO
                         {
                             TrainName = inputData.TrainName,
@@ -73,7 +73,7 @@ namespace TicketMate.Reporting.Application.ReportingService
                             PredictionDate = DateTime.Now
                         };
 
-
+                        Console.Write(prediction.PredictedIncome);
                         allPredictions.Add(prediction);
                     }
                     catch (HttpRequestException httpEx)
@@ -88,7 +88,7 @@ namespace TicketMate.Reporting.Application.ReportingService
                     }
                 }
             }
-
+            Console.Write(allPredictions);
             return allPredictions;
         }
 

@@ -11,9 +11,9 @@ namespace TicketMate.Reporting.Application.ReportingService
     public interface IBusPredictionService
     {
 
-        public  Task<List<BusPredictionOutputDTO>> GetPredictedIncome(List<BusPredictionInputDTO> inputDataList);
+        public Task<List<BusPredictionOutputDTO>> GetPredictedIncome(List<BusPredictionInputDTO> inputDataList);
         public Task StorePredictionsAsync(List<BusPredictionOutputDTO> predictions);
-        public  Task<bool> PredictionsExistForTodayAsync();
+        public Task<bool> PredictionsExistForTodayAsync();
 
         //public Task<List<BusPredictionOutputDTO>> GetTodaysPredictionsAsync();
 

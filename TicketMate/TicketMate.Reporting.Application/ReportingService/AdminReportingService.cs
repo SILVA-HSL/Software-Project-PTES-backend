@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using TicketMate.Reporting.Domain.Dtos;
@@ -13,11 +14,33 @@ namespace TicketMate.Reporting.Application.ReportingService
     public class AdminReportingService : IAdminReportingService
     {
         private readonly ReportingDbContext _context;
-       
+        private readonly HttpClient _httpClient;
 
-        public AdminReportingService(DbContextOptions<ReportingDbContext> dbContextOptions, IBusPredictionService busPredictionService)
+
+
+        public AdminReportingService(DbContextOptions<ReportingDbContext> dbContextOptions, HttpClient httpClient)
         {
             _context = new ReportingDbContext(dbContextOptions);
+            _httpClient = httpClient;
+
+        }
+
+        // Added method to ensure predictions are available
+        public async Task EnsurePredictionsAreAvailableAsync()
+        {
+            var today = DateTime.Today;
+            bool predictionsExist = _context.DailyBusPredictions.Any(p => p.PredictionDate.Date == today);
+
+            if (!predictionsExist)
+            {
+                // Call the prediction endpoint
+                var response = await _httpClient.GetAsync("http://localhost:5050/api/BusPrediction/predict");
+
+                if (!response.IsSuccessStatusCode)
+                {
+                    throw new Exception("Failed to generate predictions.");
+                }
+            }
         }
 
         public AdminReportDTO GetStatistics(string userId, DateTime startDate, DateTime endDate)
@@ -50,9 +73,12 @@ namespace TicketMate.Reporting.Application.ReportingService
 
             var today = DateTime.Today;
 
+            //var monthlyTotalPredictedIncome = _context.DailyBusPredictions
+            // .Where(p => p.UserId == userId && p.PredictionDate.Date == today)
+            // .Sum(p => p.PredictedIncome);
             var monthlyTotalPredictedIncome = _context.DailyBusPredictions
-             .Where(p => p.UserId == userId && p.PredictionDate.Date == today)
-             .Sum(p => p.PredictedIncome);
+              .Where(p => p.UserId == userId && p.PredictionDate.Date == today && p.PredictedIncome >= 0)
+              .Sum(p => p.PredictedIncome);
 
 
             var averageRate = feedbacks.Any() ? feedbacks.Average(f => f.Rate) : 0;
@@ -78,9 +104,20 @@ namespace TicketMate.Reporting.Application.ReportingService
                 .ToList();
         }
 
-        public  string GetTotalPredictedIncomeForUser(string userId)
+        public List<string> GetTrainOwnerUserIds()
         {
-            var today= DateTime.Today;
+            return _context.ScheduledTrains
+                .Where(rb => rb.DeleteState == true)
+                .Select(rb => rb.UserId)
+                .Distinct()
+                .ToList();
+        }
+        public async Task<string> GetTotalPredictedIncomeForUserAsync(string userId)
+        {
+
+            await EnsurePredictionsAreAvailableAsync();
+
+            var today = DateTime.Today;
 
             var userExists = _context.DailyBusPredictions
         .Any(p => p.UserId == userId);
@@ -92,11 +129,14 @@ namespace TicketMate.Reporting.Application.ReportingService
 
             // Retrieve the cached prediction data
             var totalIncome = _context.DailyBusPredictions
-                .Where(p => p.UserId == userId && p.PredictionDate.Date==today)
+                .Where(p => p.UserId == userId && p.PredictionDate.Date == today)
                 .Sum(p => p.PredictedIncome);
 
             return totalIncome.ToString("F2");
         }
+
+
+
     }
 }
 

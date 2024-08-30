@@ -19,7 +19,7 @@ namespace TicketMate.Reporting.Domain.Dtos
         public int NumberOfRides { get; set; }
         public int WorkingDays { get; set; }
         public double PreviousMonthIncome { get; set; }
-       public double BaseMonthlyIncome { get; set; }
+        public double BaseMonthlyIncome { get; set; }
         public int AC { get; set; }
         public int SemiLux { get; set; }
         public int Normal { get; set; }

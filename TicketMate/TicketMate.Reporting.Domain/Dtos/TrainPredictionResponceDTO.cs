@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,8 @@ namespace TicketMate.Reporting.Domain.Dtos
 {
     public class TrainPredictionResponceDTO
     {
-        public decimal Trainpredicted_income { get; set; }
-        public decimal TrainPredictedIncomeFormatted => Math.Round(Trainpredicted_income, 2);
+
+        public decimal predicted_income { get; set; }
+        public decimal TrainPredictedIncomeFormatted => Math.Round(predicted_income, 2);
     }
 }

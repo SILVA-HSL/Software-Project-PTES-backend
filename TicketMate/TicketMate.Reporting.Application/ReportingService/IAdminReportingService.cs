@@ -10,11 +10,15 @@ namespace TicketMate.Reporting.Application.ReportingService
 {
     public interface IAdminReportingService
     {
-      
-        public AdminReportDTO GetStatistics(string userId, DateTime startDate, DateTime endDate);
 
+        public AdminReportDTO GetStatistics(string userId, DateTime startDate, DateTime endDate);
+        public Task EnsurePredictionsAreAvailableAsync();
         public List<string> GetBusOwnerUserIds();
-        public string GetTotalPredictedIncomeForUser(string userId);
+        public List<string> GetTrainOwnerUserIds();
+
+        public Task<string> GetTotalPredictedIncomeForUserAsync(string userId);
+
+
 
     }
 
