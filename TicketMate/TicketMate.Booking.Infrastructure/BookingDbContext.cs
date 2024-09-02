@@ -21,7 +21,7 @@ namespace TicketMate.Booking.Infrastructure
 
         public DbSet<TrainBooking> TrainBookings { get; set; }
 
-      
+
         public DbSet<BusFeedBack> BusFeedBacks { get; set; }
 
         public DbSet<TrainFeedBack> TrainFeedBacks { get; set; }
@@ -47,6 +47,8 @@ namespace TicketMate.Booking.Infrastructure
         public DbSet<SelectedSeatStructures> SelectedSeatStructures { get; set; }
 
         public DbSet<userDataModel> Users { get; set; }
+
+        public DbSet<LeaveRequest> leaveRequests { get; set; }
 
 
         public BookingDbContext(DbContextOptions<BookingDbContext> options) : base(options)

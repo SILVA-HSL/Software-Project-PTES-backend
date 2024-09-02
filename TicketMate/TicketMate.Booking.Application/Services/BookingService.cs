@@ -200,7 +200,7 @@ namespace TicketMate.Booking.Application.Services
             await _context.SaveChangesAsync();
         }
 
-        
+
         // Delete Bus booking
 
         public async Task DeleteBusBooking(int id)
@@ -256,7 +256,7 @@ namespace TicketMate.Booking.Application.Services
                 .ToList();
         }
 
-        public List<TrainFeedBack> GetTrainFeedBackForOperations(string passengerId, string trainName , int bookingId)
+        public List<TrainFeedBack> GetTrainFeedBackForOperations(string passengerId, string trainName, int bookingId)
         {
             return _context.TrainFeedBacks
                 .Where(b => b.PassengerId == passengerId)
