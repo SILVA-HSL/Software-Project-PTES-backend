@@ -21,5 +21,12 @@ namespace TicketMate.Payment.Api.Controllers
             var result = await _scheduledTrainService.GetScheduledTrainDetailsAsync(isCompleted, Id);
             return Ok(result);
         }
+
+        [HttpPut("endtraintrip/{id}")]
+        public IActionResult endbustrip(int id)
+        {
+            _scheduledTrainService.endtraintrip(id);
+            return Ok();
+        }
     }
 }

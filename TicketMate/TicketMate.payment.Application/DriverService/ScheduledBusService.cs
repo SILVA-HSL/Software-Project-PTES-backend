@@ -14,7 +14,7 @@ namespace TicketMate.Payment.Application.DriverService
             _context = context;
         }
 
-        public async Task<IEnumerable<object>> GetScheduledBusDetailsAsync(int isCompleted,int Id)
+        public async Task<IEnumerable<object>> GetScheduledBusDetailsAsync(bool isCompleted,int Id)
         {
             var result = await (from sbd in _context.ScheduledBusDates
                                 join sb in _context.ScheduledBuses on sbd.ScheduledBusScheduleId equals sb.ScheduleId
@@ -33,6 +33,21 @@ namespace TicketMate.Payment.Application.DriverService
                                 }).ToListAsync();
 
             return result;
+        }
+
+        public void endbustrip(int id)
+        {
+            var scheduledBusDates = _context.ScheduledBusDates.Find(id);
+           if(scheduledBusDates != null)
+            {
+                scheduledBusDates.IsCompleted = true;
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Scheduled Bus Date Not Found");
+            }
+
         }
     }
 }

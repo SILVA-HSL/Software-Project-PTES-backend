@@ -6,9 +6,14 @@ using TicketMate.Payment.Application.DriverService;
 using TicketMate.Payment.Application.BookingServices;
 using TicketMate.Payment.Infrastructure;
 using TicketMate.Payment.EmailService;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddJsonFile("appsettings.json");
+
 
 // Add services to the container.
 
@@ -32,6 +37,8 @@ builder.Services.AddScoped<IBusLiveUpdateService, BusLiveUpdateService>();
 builder.Services.AddScoped<ITrainLiveUpdateService, TrainLiveUpdateService>();
 builder.Services.AddScoped<INotoifiBusScheduledIdService, NotoifiBusScheduledIdService>();
 builder.Services.AddScoped<INotifiTrainScheduledIdService, NotifiTrainScheduledIdService>();
+builder.Services.AddScoped<IBusRelevantIdsByPassengerId, BusRelevantIdsByPassengerId>();
+builder.Services.AddScoped<ITrainRelevantIdsByPassengerId, TrainRelevantIdsByPassengerId>();
 
 builder.Services.AddCors(options =>
 {
@@ -45,6 +52,24 @@ builder.Services.AddCors(options =>
 });
 
 StripeConfiguration.ApiKey = "sk_test_51PKw0t04aP7UQrlkwHDYjmlkU6z88Q7bS3Ng1LFcHQK026XyYCtoEkZUMi1O6of3OkQcIACZbssQB0HLInrrzCX300iJm10YSj";
+
+
+// Add JWT authentication configuration
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["jwt:Issuer"],
+            ValidAudience = builder.Configuration["jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["jwt:Key"]))
+        };
+    });
+
 
 
 var app = builder.Build();
@@ -63,6 +88,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowLocalhost");
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

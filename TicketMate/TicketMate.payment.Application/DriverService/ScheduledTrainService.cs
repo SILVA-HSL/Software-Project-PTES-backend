@@ -37,5 +37,23 @@ namespace TicketMate.Payment.Application.DriverService
 
             return result;
     }
+        public void endtraintrip(int id)
+        {
+            var scheduledTrainDates = _context.ScheduledTrainDates.Find(id);
+            if (scheduledTrainDates != null)
+            {
+                scheduledTrainDates.IsCompleted = true;
+                _context.SaveChanges();
+            }
+            else
+            {
+                throw new Exception("Scheduled Bus Date Not Found");
+            }
+        }
+
+
+
+
+
     }
 }

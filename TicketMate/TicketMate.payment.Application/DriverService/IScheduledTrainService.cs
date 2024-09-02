@@ -9,5 +9,7 @@ namespace TicketMate.Payment.Application.DriverService
     public interface IScheduledTrainService
     {
         Task<IEnumerable<object>> GetScheduledTrainDetailsAsync(bool isCompleted, int Id);
+
+        public void endtraintrip(int id);
     }
 }
