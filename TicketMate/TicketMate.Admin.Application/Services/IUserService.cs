@@ -25,6 +25,7 @@ namespace TicketMate.Admin.Application.Services
         public void addUser(userDataModel userDatas);
         public List<userDataModel> findUser(string username, string password);
 
+        public void AddOwnerData(userDataModel userDatas);
 
 
     }

@@ -11,3 +11,165 @@ H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\Ticke
 H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
 H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll
 H:\TicketmateBackend\RepoWorksNew\Software-Project-PTES-backend\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.deps.json
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.runtimeconfig.json
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.dll
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.pdb
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfoInputs.cache
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfo.cs
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.sourcelink.json
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CopyComplete
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.genruntimeconfig.cache
+C:\Users\ME\Desktop\PTES\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.deps.json
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.runtimeconfig.json
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.dll
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.pdb
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfoInputs.cache
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfo.cs
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.sourcelink.json
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CopyComplete
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.genruntimeconfig.cache
+C:\Users\ME\Desktop\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.deps.json
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.runtimeconfig.json
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.dll
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.pdb
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfoInputs.cache
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfo.cs
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CoreCompileInputs.cache
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.sourcelink.json
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMa.781DAFB6.Up2Date
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.genruntimeconfig.cache
+H:\Academic\L2S2\Software Project\Backend All folders (2024-6-29)\project-final-repo\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.deps.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.runtimeconfig.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfoInputs.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfo.cs
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.sourcelink.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMa.781DAFB6.Up2Date
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.genruntimeconfig.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.deps.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.runtimeconfig.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfoInputs.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfo.cs
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.sourcelink.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMa.781DAFB6.Up2Date
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.genruntimeconfig.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo Updated2\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.deps.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.runtimeconfig.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfoInputs.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfo.cs
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.sourcelink.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMa.781DAFB6.Up2Date
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.genruntimeconfig.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.deps.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.runtimeconfig.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfoInputs.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfo.cs
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.sourcelink.json
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMa.781DAFB6.Up2Date
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.genruntimeconfig.cache
+C:\Users\hp\OneDrive - University of Moratuwa\Desktop\BackDown 7.1\project-final-repo UpdatedZip-me  New\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.deps.json
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.runtimeconfig.json
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.dll
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.pdb
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfoInputs.cache
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfo.cs
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.sourcelink.json
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CopyComplete
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.genruntimeconfig.cache
+C:\Users\ME\Desktop\final demo-backend\Final-backend-repo(himasha)\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.deps.json
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.runtimeconfig.json
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.dll
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\bin\Debug\net8.0\TicketMate.Booking.Domain.pdb
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfoInputs.cache
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.AssemblyInfo.cs
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.sourcelink.json
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMa.781DAFB6.Up2Date
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.dll
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\refint\TicketMate.Admin.Domain.dll
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.pdb
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\TicketMate.Admin.Domain.genruntimeconfig.cache
+C:\Users\User\Desktop\Software Project\Final-backend-repo-v2\Final-backend-repo-v1\TicketMate\TicketMate.Admin.Domain\obj\Debug\net8.0\ref\TicketMate.Admin.Domain.dll

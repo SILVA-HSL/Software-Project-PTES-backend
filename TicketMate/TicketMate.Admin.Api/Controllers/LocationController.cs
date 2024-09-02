@@ -1,39 +1,4 @@
-﻿/*using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SignalR;
-using TicketMate.Admin.Application.Services;
-using TicketMate.Admin.Domain.Models;
-using System.Threading.Tasks;
-using TicketMate.Admin.Infastructure;
-
-namespace TicketMate.Admin.Api.Controllers
-{
-    [Route("api/[controller]")]
-    [ApiController]
-    public class LocationController : ControllerBase
-    {
-        private readonly ILocationHub _locationService;
-        private readonly LocationContext _context;
-
-        public LocationController(ILocationHub locationService)
-        {
-            _locationService = locationService;
-        }
-
-        public async Task<IActionResult> UpdateLocation([FromBody] LocationUpdateModel model)
-        {
-            await _context.Clients.Group(model.RideId.ToString()).SendAsync("ReceiveLocation", model.Latitude, model.Longitude);
-            return Ok();
-        }
-
-    }
-
-
-    */
-
-
-
-
+﻿
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using TicketMate.Admin.Application.Services;

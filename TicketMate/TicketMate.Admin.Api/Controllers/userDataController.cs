@@ -117,6 +117,24 @@ namespace TicketMate.Admin.Api.Controllers
 
         }
 
+        [HttpPost("addOwner")]
+        public IActionResult AddOwnerData(userDataModel userData)
+        {
+            try
+            {
+                _userService.AddOwnerData(userData);
+                return Ok("successfully added owner.");
+
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e);
+            }
+
+        }
+
+
+
         [Authorize(Roles = "Admin,Owner,Driver,Passenger")]
         [HttpGet]
         public IActionResult GetUserData()
