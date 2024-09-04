@@ -1,0 +1,27 @@
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\bin\Debug\net8.0\TicketMate.Reporting.Domain.deps.json
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\bin\Debug\net8.0\TicketMate.Reporting.Domain.dll
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\bin\Debug\net8.0\TicketMate.Reporting.Domain.pdb
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.AssemblyInfoInputs.cache
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.AssemblyInfo.cs
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.csproj.CoreCompileInputs.cache
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.sourcelink.json
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.dll
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\refint\TicketMate.Reporting.Domain.dll
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.pdb
+C:\Users\nethm\Desktop\backend_clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\ref\TicketMate.Reporting.Domain.dll
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\bin\Debug\net8.0\TicketMate.Reporting.Domain.deps.json
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\bin\Debug\net8.0\TicketMate.Reporting.Domain.dll
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\bin\Debug\net8.0\TicketMate.Reporting.Domain.pdb
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.AssemblyInfoInputs.cache
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.AssemblyInfo.cs
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.sourcelink.json
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.dll
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\refint\TicketMate.Reporting.Domain.dll
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.pdb
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\ref\TicketMate.Reporting.Domain.dll
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\bin\Debug\net8.0\TicketMate.Reporting.Domain.runtimeconfig.json
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive\Desktop\back clone\TicketMate\TicketMate.Reporting.Domain\obj\Debug\net8.0\TicketMate.Reporting.Domain.genruntimeconfig.cache
