@@ -51,7 +51,7 @@ builder.Services.AddCors(options =>
     });
 });
 
-StripeConfiguration.ApiKey = "sk_test_51PKw0t04aP7UQrlkwHDYjmlkU6z88Q7bS3Ng1LFcHQK026XyYCtoEkZUMi1O6of3OkQcIACZbssQB0HLInrrzCX300iJm10YSj";
+StripeConfiguration.ApiKey = "secret-key";
 
 
 // Add JWT authentication configuration
